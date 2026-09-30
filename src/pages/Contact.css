@@ -2860,3 +2860,15 @@
     margin-top: 16px !important;
   }
 }
+
+/* =========================================================
+   GET IN TOUCH - MOBILE HERO POSITION
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .contact-hero-content {
+    transform: translateY(20px) !important;
+  }
+
+}
