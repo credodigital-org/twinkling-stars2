@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://twinkling-stars-sooty.vercel.app/sitemap.xml

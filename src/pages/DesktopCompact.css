@@ -1,0 +1,104 @@
+/* Desktop-only size correction for inner pages.
+   Home page sections are intentionally excluded.
+   Tablet/mobile rules are untouched. */
+
+@media (min-width: 1200px) {
+  /* PROGRAMS */
+  .programs-page .programs-hero { max-width: 78rem; }
+  .programs-page .hero-text h1 { font-size: clamp(2.8rem, 4.3vw, 4.2rem); }
+  .programs-page .hero-text p { font-size: clamp(1rem, 1.35vw, 1.35rem); }
+  .programs-page .hero-image img { max-width: 25rem; }
+  .programs-page .regular-programs,
+  .programs-page .special-programs { max-width: 1050px; margin-top: 55px; }
+  .programs-page .program-card { min-height: 195px; padding: 16px 22px; gap: 32px; }
+  .programs-page .program-description { font-size: 15px; line-height: 1.45; }
+  .programs-page .program-image-box { width: 165px; min-width: 165px; height: 158px; }
+  .programs-page .program-image-box img { width: 82px; height: 82px; }
+  .programs-page .special-programs h2 { font-size: 50px; }
+  .programs-page .benefits-section h2 { margin-bottom: 40px; font-size: 26px; }
+  .programs-page .benefits-grid { max-width: 1000px; gap: 35px; }
+  .programs-page .admission-section { height: 610px; }
+  .programs-page .admission-image-wrapper { width: 560px; height: 390px; left: -5px; }
+  .programs-page .admission-image { width: 530px; }
+  .programs-page .admission-content { top: 45px; }
+  .programs-page .admission-title { margin-top: 40px; font-size: 42px; }
+  .programs-page .admission-description { margin-top: 30px; font-size: 28px; line-height: 1.55; }
+  .programs-page .admission-button { top: 485px; width: 360px; height: 85px; font-size: 40px; border-radius: 18px; }
+
+  /* GALLERY */
+  .gallery-page { margin-top: -120px; }
+  .gallery-hero { min-height: 570px; padding-top: 100px; padding-bottom: 65px; }
+  .gallery-hero h1 { font-size: clamp(3.4rem, 5vw, 4.6rem); margin-bottom: 30px; }
+  .gallery-hero p { font-size: clamp(1.1rem, 1.55vw, 1.55rem); }
+  .visit-button { min-width: 190px; padding: 15px 25px; margin-top: 110px; font-size: 20px; }
+  .gallery-section { padding: 30px 24px 65px; }
+  .gallery-grid { max-width: 1250px; gap: 28px 24px; }
+  .gallery-card { height: 470px; border-radius: 22px; }
+  .gallery-label { min-height: 62px; padding: 14px 22px; font-size: clamp(20px, 1.7vw, 30px); }
+  .gallery-admission-section { min-height: 620px; background: linear-gradient(to bottom,#fff0c5 0,#fff0c5 540px,#fff 540px,#fff 100%); }
+  .gallery-admission-section .admission-image-wrapper { width: 40%; max-width: 560px; height: 400px; left: 5%; }
+  .gallery-admission-section .admission-image { max-width: 530px; max-height: 400px; }
+  .gallery-admission-section .admission-content { top: 55px; left: 47%; width: 48%; }
+  .gallery-admission-section .admission-title { font-size: clamp(34px, 3.1vw, 48px); }
+  .gallery-admission-section .admission-description { margin-top: 30px; font-size: clamp(20px, 2vw, 30px); line-height: 1.55; }
+  .gallery-admission-button { top: 490px; width: 360px; height: 85px; font-size: 40px; border-radius: 18px; }
+
+  /* CONTACT */
+  .contact-hero { min-height: 520px; padding-left: 7%; padding-right: 7%; }
+  .contact-hero h1 { margin-bottom: 32px; font-size: clamp(3.2rem, 5vw, 4.6rem); }
+  .contact-hero p { font-size: clamp(1.1rem, 1.5vw, 1.55rem); }
+  .contact-section { padding: 0 32px 55px; }
+  .contact-card { max-width: 1280px; min-height: 650px; padding: 105px 50px 70px; border-radius: 34px; }
+  .discount-badge { width: min(380px, calc(100% - 100px)); min-height: 46px; font-size: 20px; }
+  .discount-badge img { width: 52px; }
+  .contact-grid { gap: 60px; }
+  .info-block h2 { margin-bottom: 25px; font-size: clamp(34px, 3vw, 46px); }
+  .info-block p { margin-bottom: 18px; font-size: clamp(15px, 1.35vw, 19px); letter-spacing: 3px; }
+  .address-block { margin-top: 38px; }
+  .address-block h3 { font-size: clamp(20px, 1.7vw, 25px); letter-spacing: 5px; }
+  .address-block p { font-size: clamp(14px, 1.2vw, 17px); letter-spacing: 3px; }
+  .working-hours { margin-top: 80px; padding-left: 20px; }
+  .working-hours h3 { font-size: 22px; }
+  .working-hours li { font-size: 17px; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { font-size: 18px; margin-bottom: 7px; }
+  .form-group input, .form-group textarea { font-size: 17px; border-radius: 16px; }
+  .form-group input { height: 54px; }
+  .form-group textarea { height: 165px; padding: 15px; }
+  .send-button { width: 220px; height: 55px; margin-top: 22px; font-size: 18px; }
+}
+
+/* Shared desktop footer: keep logos in normal flow so the footer height
+   grows with its content instead of clipping absolute-positioned logos. */
+@media (min-width: 1200px) {
+  .site-footer {
+    overflow: visible;
+  }
+
+  .site-footer .footer-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-footer .footer-logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 55px;
+  }
+
+  .site-footer .footer-wonder-logo {
+    align-self: flex-start;
+  }
+
+  .site-footer .footer-winkling-logo {
+    margin-left: clamp(70px, 7vw, 110px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .site-footer .footer-logo { margin-top: 70px; }
+  .site-footer .footer-winkling-logo { margin-left: 100px; }
+}

@@ -1,0 +1,552 @@
+/* =========================================================
+   HERO
+
+   ONE fluid layout that adapts, instead of a fixed layout per
+   device. Sizes are driven by the viewport width AND height
+   (--unit-h = 1svh), and the text block by its own column width
+   (container query units, cqi), so the heading can never overflow
+   its column and the whole Hero always fits the first screen.
+
+   The Hero is exactly "one screen minus the fixed header":
+
+        +--------------------------------+
+        |  hero-content   (1fr, grows)   |   text + child image
+        +--------------------------------+
+        |  ticker         (fixed row)    |   always the last row
+        +--------------------------------+
+
+   Because the ticker is a real grid row (not absolutely
+   positioned) it can never fall off the bottom, and the next
+   section can never creep into the first screen.
+
+   Decorations are absolutely positioned inside the Hero, so they
+   never affect its height.
+
+   Order in this file:
+     1. Hero shell            5. Decorations
+     2. Content grid (wide)   6. Ticker
+     3. Text                  7. Animations
+     4. Child image           8. Layout variants
+                                 - stacked  (portrait tablets + phones)
+                                 - short    (landscape phones / short windows)
+                                 - tiny     (very small phones)
+                              9. Reduced motion
+========================================================= */
+
+
+/* =========================================================
+   1. HERO SHELL
+========================================================= */
+
+.hero-section {
+  --ticker-h: clamp(1.9rem, 1.45rem + 1.2vw, 3rem);
+  --flower-w: clamp(2rem, 8vw, 4rem);
+
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-rows: 1fr var(--ticker-h);
+
+  width: 100%;
+
+  /* One screen, minus the fixed header. There is deliberately no
+     pixel floor: the 1fr row can never shrink below its content, so
+     a very short window simply makes the Hero as tall as its content. */
+  min-height: calc(var(--unit-h) * 100 - var(--header-h));
+
+  background: #ffffff;
+
+  font-family: var(--font-body);
+
+  /* Clips the ticker and the floating decorations to the Hero */
+  overflow: hidden;
+}
+
+.hero-section.reveal {
+  transform: translateY(20px);
+}
+
+.hero-section.reveal.show {
+  transform: none;
+}
+
+
+/* =========================================================
+   2. CONTENT GRID  (wide layout: text left, image right)
+========================================================= */
+
+.hero-content {
+  grid-row: 1;
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 110rem;
+  margin-inline: auto;
+
+  padding:
+    clamp(0.25rem, calc(var(--unit-h) * 1.6), 1.25rem)
+    var(--gutter);
+
+  display: grid;
+  grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+  align-items: center;
+  column-gap: clamp(1rem, 3vw, 3.5rem);
+}
+
+
+/* =========================================================
+   3. TEXT
+========================================================= */
+
+.hero-text {
+  /* Lets the heading/button size themselves from THIS column's width */
+  container-type: inline-size;
+
+  position: relative;
+  z-index: 2;
+
+  min-width: 0;
+}
+
+.hero-text h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.hero-text h1 span {
+  display: block;
+  white-space: nowrap;
+
+  /* Fallback (no container-query units): width + height based */
+  font-size: clamp(1.6rem, min(5.4vw, calc(var(--unit-h) * 10.4)), 6.25rem);
+}
+
+.hero-text h1 span:nth-child(1) { color: var(--c-red); }
+.hero-text h1 span:nth-child(2) { color: var(--c-blue); }
+.hero-text h1 span:nth-child(3) { color: var(--c-green); }
+
+.hero-text p {
+  max-width: 16em;
+  margin-top: clamp(0.6rem, calc(var(--unit-h) * 2.4), 1.75rem);
+
+  color: #111111;
+
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, min(2vw, calc(var(--unit-h) * 3.7)), 2rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.admission-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(100%, 19em);
+  margin-top: clamp(0.9rem, calc(var(--unit-h) * 3.6), 2.5rem);
+  padding: 0.85em 1.2em;
+
+  background: var(--c-yellow);
+  color: var(--c-navy);
+
+  font-family: var(--font-display);
+  font-size: clamp(0.8rem, min(1.7vw, calc(var(--unit-h) * 3.2)), 1.9rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-align: center;
+
+  border: 0;
+  border-radius: 0.6em;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admission-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admission-button:focus-visible {
+  outline: 3px solid var(--c-navy);
+  outline-offset: 3px;
+}
+
+/* Modern browsers: size everything from the column width itself.
+   12.4cqi keeps "Grow Together!" (~7.7em wide in Rowdies) inside its column. */
+@supports (width: 1cqi) {
+  .hero-text h1 span {
+    font-size: clamp(1.6rem, min(12.4cqi, calc(var(--unit-h) * 10.4)), 6.25rem);
+  }
+
+  .hero-text p {
+    font-size: clamp(0.85rem, min(4.9cqi, calc(var(--unit-h) * 3.7)), 2rem);
+  }
+
+  .admission-button {
+    font-size: clamp(0.8rem, min(4.4cqi, calc(var(--unit-h) * 3.2)), 1.9rem);
+  }
+}
+
+
+/* =========================================================
+   4. CHILD IMAGE
+   The <img> fills its cell absolutely, so its natural size
+   never pushes the Hero taller; object-fit keeps it undistorted
+   and fully visible at any size.
+========================================================= */
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+
+  align-self: stretch;
+  justify-self: end;
+
+  width: 100%;
+  /* The PNG is 748px wide - do not upscale past its native size */
+  max-width: 46rem;
+  min-height: 0;
+}
+
+.hero-image img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  animation: heroChildFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   5. DECORATIONS  (positioned relative to the Hero)
+========================================================= */
+
+.hero-decoration {
+  position: absolute;
+  z-index: 3;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-sun {
+  top: 2.5%;
+  left: 27%;
+  width: clamp(2.6rem, 5.4vw, 6rem);
+  animation: sunFloat 5s ease-in-out infinite;
+}
+
+.hero-cloud {
+  top: 3%;
+  right: 4.5%;
+  width: clamp(3.5rem, 7.4vw, 8rem);
+  animation: cloudFloat 7s ease-in-out infinite;
+}
+
+.hero-bee {
+  top: 24%;
+  left: 47%;
+  width: clamp(2.4rem, 4.4vw, 5rem);
+  animation: beeFly 3.5s ease-in-out infinite;
+}
+
+.hero-flower {
+  bottom: calc(var(--ticker-h) + 3%);
+  left: 46%;
+  width: clamp(2.6rem, 4.8vw, 5.6rem);
+  transform-origin: bottom center;
+  animation: flowerSway 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   6. TICKER  ("● COLOURFUL START FOR A BRIGHT FUTURE")
+========================================================= */
+
+.colorful-line {
+  grid-row: 2;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  height: var(--ticker-h);
+
+  color: var(--c-red);
+
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 0.52rem + 0.68vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+
+  overflow: hidden;
+}
+
+.colorful-line-track {
+  display: flex;
+  flex: none;
+
+  width: max-content;
+
+  animation: colorfulMove 34s linear infinite;
+  will-change: transform;
+}
+
+.colorful-line-group {
+  display: flex;
+  flex: none;
+}
+
+.colorful-line-item {
+  display: flex;
+  align-items: center;
+  flex: none;
+
+  padding-right: 3.2em;
+
+  line-height: 1;
+}
+
+.colorful-line-item span {
+  margin-right: 0.7em;
+
+  font-size: 1em;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   7. ANIMATIONS
+========================================================= */
+
+@keyframes heroChildFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-0.7%); }
+}
+
+@keyframes sunFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(clamp(-10px, -0.8vw, -4px)) rotate(5deg); }
+}
+
+@keyframes cloudFloat {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(clamp(-14px, -1.1vw, -5px)); }
+}
+
+@keyframes beeFly {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25%      { transform: translate(clamp(3px, 0.55vw, 8px), clamp(-8px, -0.55vw, -3px)) rotate(3deg); }
+  50%      { transform: translate(clamp(6px, 1vw, 15px), 0) rotate(-3deg); }
+  75%      { transform: translate(clamp(3px, 0.5vw, 7px), clamp(3px, 0.55vw, 8px)) rotate(2deg); }
+}
+
+@keyframes flowerSway {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(5deg); }
+}
+
+@keyframes colorfulMove {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+
+/* =========================================================
+   8a. STACKED LAYOUT
+   Portrait-ish screens (width / height <= 6:5): portrait tablets
+   such as 1032x1376 and 960x1440, and all phones.
+
+   Order: image, Explore / Learn. / Grow Together!, description,
+   button, ticker. The image is the flexible item: it takes
+   whatever height is left after the text, so nothing overflows
+   and no blank gap opens up.
+========================================================= */
+
+@media (max-aspect-ratio: 6/5) {
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 52rem;
+
+    /* Room for the flower that sits between the button and the ticker */
+    padding-block:
+      clamp(0.25rem, calc(var(--unit-h) * 1), 0.75rem)
+      calc(var(--flower-w) + 0.9rem);
+
+    gap: clamp(0.4rem, calc(var(--unit-h) * 1.6), 1.25rem);
+
+    text-align: center;
+  }
+
+  /* Image first, and it absorbs the leftover height */
+  .hero-image {
+    order: -1;
+
+    flex: 1 1 0;
+    align-self: stretch;
+    justify-self: auto;
+
+    max-width: none;
+    min-height: clamp(9rem, 44vw, 20rem);
+  }
+
+  .hero-text {
+    flex: none;
+
+    width: 100%;
+    max-width: 44rem;
+  }
+
+  .hero-text h1 span {
+    font-size: clamp(1.75rem, min(12.4cqi, calc(var(--unit-h) * 8.2)), 6.25rem);
+  }
+
+  .hero-text p {
+    max-width: 20em;
+    margin-inline: auto;
+    margin-top: clamp(0.5rem, calc(var(--unit-h) * 1.8), 1.5rem);
+
+    font-size: clamp(1rem, min(4.9cqi, calc(var(--unit-h) * 3.2)), 1.9rem);
+  }
+
+  .admission-button {
+    /* narrower than the text column so the fixed call/WhatsApp
+       widget (bottom-right) never covers it on phones */
+    width: min(100%, 17em);
+    margin-top: clamp(0.7rem, calc(var(--unit-h) * 2.2), 1.75rem);
+
+    font-size: clamp(0.95rem, min(4.4cqi, calc(var(--unit-h) * 2.9)), 1.75rem);
+  }
+
+  /* ---- decorations around the (now top) image ---- */
+
+  .hero-sun {
+    top: 1.5%;
+    left: 5%;
+    width: clamp(2.2rem, 9vw, 5rem);
+  }
+
+  .hero-cloud {
+    top: 2%;
+    right: 6%;
+    width: clamp(3rem, 14vw, 7rem);
+  }
+
+  .hero-bee {
+    top: 16%;
+    left: 10%;
+    width: clamp(2rem, 8vw, 4.2rem);
+  }
+
+  /* centred under the button, above the ticker */
+  .hero-flower {
+    bottom: calc(var(--ticker-h) + 0.3rem);
+    left: 50%;
+    margin-left: calc(var(--flower-w) / -2);
+    width: var(--flower-w);
+  }
+}
+
+
+/* =========================================================
+   8b. SHORT SCREENS
+   Landscape phones and very short browser windows, where the
+   wide layout has little vertical room.
+========================================================= */
+
+@media (min-aspect-ratio: 6/5) and (max-height: 560px) {
+
+  .hero-content {
+    padding-block: 0.25rem;
+  }
+
+  .hero-text p {
+    margin-top: 0.4rem;
+    line-height: 1.25;
+  }
+
+  .admission-button {
+    margin-top: 0.6rem;
+    padding-block: 0.65em;
+  }
+
+  .hero-bee,
+  .hero-flower {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   8c. TINY PHONES  (e.g. iPhone SE 375x667, 320x568)
+========================================================= */
+
+@media (max-aspect-ratio: 6/5) and (max-height: 700px) {
+
+  .hero-content {
+    gap: 0.3rem;
+  }
+
+  .hero-text p {
+    margin-top: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .admission-button {
+    margin-top: 0.55rem;
+    padding-block: 0.7em;
+  }
+}
+
+
+/* Narrow phones: keep the button clear of the fixed call / WhatsApp widget */
+@media (max-aspect-ratio: 6/5) and (max-width: 380px) {
+
+  .admission-button {
+    width: min(88%, 15.5em);
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (max-aspect-ratio: 6/5) and (max-width: 340px) {
+
+  .admission-button {
+    width: min(80%, 13.5em);
+  }
+}
+
+
+/* =========================================================
+   9. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-section.reveal {
+    transform: none;
+  }
+
+  .hero-image img,
+  .hero-decoration,
+  .colorful-line-track {
+    animation: none;
+  }
+}

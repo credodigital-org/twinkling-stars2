@@ -1,0 +1,1663 @@
+/* =========================================================
+   FOOTER RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.site-footer,
+.site-footer * {
+  box-sizing: border-box;
+}
+
+.site-footer {
+  width: 100%;
+  min-height: 925px;
+
+  background: #b4c0ff;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================================================
+   MAIN FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+  width: 100%;
+  min-height: 925px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  column-gap: 80px;
+
+  padding: 98px 100px 70px;
+}
+
+
+/* =========================================================
+   COLUMNS
+========================================================= */
+
+.footer-column {
+  min-width: 0;
+  position: relative;
+}
+
+.footer-left {
+  padding: 0;
+}
+
+.footer-right {
+  padding: 66px 0 0;
+}
+
+
+/* =========================================================
+   ADDRESS HEADING
+========================================================= */
+
+.footer-heading {
+  margin: 0 0 25px;
+
+  color: #000000;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 9px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ADDRESS TEXT
+========================================================= */
+
+.footer-address {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  line-height: 1.25;
+
+  letter-spacing: 5px;
+
+  white-space: nowrap;
+}
+
+.footer-address p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   RIGHT ADDRESS
+========================================================= */
+
+.right-address {
+  margin: 0;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.footer-email {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOGOS
+========================================================= */
+
+.footer-logo {
+  position: absolute;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-logo img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Wonder Bees logo */
+.footer-wonder-logo {
+  left: 10px;
+  top: 420px;
+}
+
+.footer-wonder-logo img {
+  width: 335px;
+}
+
+
+/* Winkling Stars logo */
+.footer-winkling-logo {
+  left: 220px;
+  top: 405px;
+}
+
+.footer-winkling-logo img {
+  width: 430px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+  .site-footer {
+    min-height: 925px;
+  }
+
+  .footer-container {
+    min-height: 925px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    column-gap: 80px;
+
+    padding: 98px 100px 70px;
+  }
+
+  .footer-heading {
+    font-size: 42px;
+    letter-spacing: 9px;
+    margin-bottom: 25px;
+  }
+
+  .footer-address {
+    font-size: 28px;
+    letter-spacing: 5px;
+    line-height: 1.25;
+  }
+
+  .footer-wonder-logo {
+    left: 10px;
+    top: 420px;
+  }
+
+  .footer-wonder-logo img {
+    width: 335px;
+  }
+
+  .footer-winkling-logo {
+    left: 220px;
+    top: 405px;
+  }
+
+  .footer-winkling-logo img {
+    width: 430px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1200px - 1599px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .site-footer {
+    min-height: 760px;
+  }
+
+  .footer-container {
+    min-height: 760px;
+
+    column-gap: 55px;
+
+    padding: 78px 65px 55px;
+  }
+
+  .footer-heading {
+    font-size: 35px;
+    letter-spacing: 7px;
+
+    margin-bottom: 22px;
+  }
+
+  .footer-address {
+    font-size: 23px;
+    letter-spacing: 3.5px;
+    line-height: 1.28;
+  }
+
+  .footer-right {
+    padding-top: 55px;
+  }
+
+  .footer-wonder-logo {
+    left: 5px;
+    top: 355px;
+  }
+
+  .footer-wonder-logo img {
+    width: 285px;
+  }
+
+  .footer-winkling-logo {
+    left: 125px;
+    top: 345px;
+  }
+
+  .footer-winkling-logo img {
+    width: 365px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   1024px - 1199px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .site-footer {
+    min-height: 680px;
+  }
+
+  .footer-container {
+    min-height: 680px;
+
+    column-gap: 35px;
+
+    padding: 60px 45px 45px;
+  }
+
+  .footer-heading {
+    font-size: 31px;
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+  }
+
+  .footer-address {
+    font-size: 19px;
+    letter-spacing: 2.5px;
+    line-height: 1.3;
+  }
+
+  .footer-right {
+    padding-top: 48px;
+  }
+
+  .footer-wonder-logo {
+    left: 0;
+    top: 315px;
+  }
+
+  .footer-wonder-logo img {
+    width: 235px;
+  }
+
+  .footer-winkling-logo {
+    left: 65px;
+    top: 305px;
+  }
+
+  .footer-winkling-logo img {
+    width: 300px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1023px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-footer {
+    min-height: 600px;
+  }
+
+  .footer-container {
+    min-height: 600px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    column-gap: 25px;
+
+    padding: 48px 30px 40px;
+  }
+
+  .footer-heading {
+    font-size: 27px;
+    letter-spacing: 5px;
+
+    margin-bottom: 18px;
+  }
+
+  .footer-address {
+    font-size: 16px;
+    letter-spacing: 1.8px;
+    line-height: 1.32;
+  }
+
+  .footer-right {
+    padding-top: 43px;
+  }
+
+  .footer-wonder-logo {
+    left: 0;
+    top: 280px;
+  }
+
+  .footer-wonder-logo img {
+    width: 190px;
+  }
+
+  .footer-winkling-logo {
+    left: 35px;
+    top: 270px;
+  }
+
+  .footer-winkling-logo img {
+    width: 245px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 767px
+========================================================= */
+
+/* @media (max-width: 767px) {
+  .site-footer {
+    min-height: auto;
+
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  .footer-container {
+    width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 40px 25px 55px;
+  }
+
+  .footer-column {
+    width: 100%;
+    min-width: 0;
+
+    padding: 0;
+  }
+
+  .footer-left {
+    padding: 0;
+  }
+
+  .footer-right {
+    padding: 55px 0 0;
+  }
+
+
+  .footer-heading {
+    margin: 0 0 20px;
+
+    font-size: 30px;
+    letter-spacing: 6px;
+    line-height: 1;
+  }
+
+  .footer-address {
+    width: 100%;
+
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 1.38;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .footer-email {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+
+  .footer-logo {
+    position: static;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-left: 0;
+  }
+
+  .footer-wonder-logo {
+    margin-top: 40px;
+  }
+
+  .footer-wonder-logo img {
+    width: 300px;
+    max-width: 82%;
+  }
+
+  .footer-winkling-logo {
+    margin-top: 40px;
+  }
+
+  .footer-winkling-logo img {
+    width: 360px;
+    max-width: 90%;
+  }
+} */
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+/* @media (max-width: 480px) {
+  .footer-container {
+    padding: 25px 18px 45px;
+  }
+
+  .footer-heading {
+    font-size: 28px;
+    letter-spacing: 5px;
+
+    margin-bottom: 18px;
+  }
+
+  .footer-address {
+    font-size: 16px;
+    letter-spacing: 1.35px;
+    line-height: 1.42;
+  }
+
+  .footer-right {
+    padding-top: 48px;
+  }
+
+  .footer-wonder-logo {
+    margin-top: 32px;
+  }
+
+  .footer-wonder-logo img {
+    width: 275px;
+    max-width: 84%;
+  }
+
+  .footer-winkling-logo {
+    margin-top: 32px;
+  }
+
+  .footer-winkling-logo img {
+    width: 330px;
+    max-width: 88%;
+  }
+} */
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 375px
+========================================================= */
+
+/* @media (max-width: 375px) {
+  .footer-container {
+    padding: 25px 18px 40px;
+  }
+
+  .footer-heading {
+    font-size: 27px;
+    letter-spacing: 4px;
+  }
+
+  .footer-address {
+    font-size: 15px;
+    letter-spacing: 1.1px;
+    line-height: 1.45;
+  }
+
+  .footer-right {
+    padding-top: 42px;
+  }
+
+  .footer-wonder-logo img {
+    max-width: 82%;
+  }
+
+  .footer-winkling-logo img {
+    max-width: 86%;
+  }
+} */
+
+/* =========================================================
+   MOBILE
+   TWO ADDRESS COLUMNS + SINGLE CENTER HEADING
+   <= 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .site-footer {
+    width: 100%;
+    min-height: auto;
+    background: #b4c0ff;
+    overflow: hidden;
+  }
+
+  /* =======================================================
+     FOOTER CONTAINER
+  ======================================================= */
+
+  .footer-container {
+    position: relative;
+
+    width: 100%;
+    min-height: 620px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 18px;
+    row-gap: 0;
+
+    padding: 75px 18px 35px;
+  }
+
+
+  /* =======================================================
+     COLUMNS
+  ======================================================= */
+
+  .footer-column {
+    width: 100%;
+    min-width: 0;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+  }
+
+  .footer-left,
+  .footer-right {
+    padding: 0;
+  }
+
+
+  /* =======================================================
+     SINGLE CENTER ADDRESS HEADING
+  ======================================================= */
+
+  .footer-heading {
+    position: absolute;
+
+    top: -35px;
+    left: 50%;
+
+    width: 100%;
+
+    margin: 0;
+
+    color: #000000;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    z-index: 5;
+  }
+
+
+  /* =======================================================
+     REMOVE RIGHT ADDRESS HEADING
+  ======================================================= */
+
+  .footer-right::before {
+    content: none !important;
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     ADDRESS TEXT
+  ======================================================= */
+
+  .footer-address {
+    width: 100%;
+
+    margin: 0;
+
+    color: #000000;
+
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    line-height: 1.55;
+
+    letter-spacing: 1.15px;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .footer-address p {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* =======================================================
+     EMAIL
+  ======================================================= */
+
+  .footer-email {
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+
+  /* =======================================================
+     LOGOS
+  ======================================================= */
+
+  .footer-logo {
+    position: static;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 0;
+  }
+
+
+  /* =======================================================
+     WONDER BEES - BOTTOM LEFT
+  ======================================================= */
+
+  .footer-wonder-logo {
+    margin-top: 55px;
+  }
+
+  .footer-wonder-logo img {
+    width: 190px;
+
+    max-width: 100%;
+
+    height: auto;
+  }
+
+
+  /* =======================================================
+     TWINKLING STARS - BOTTOM RIGHT
+  ======================================================= */
+
+  .footer-winkling-logo {
+    margin-top: 55px;
+  }
+
+  .footer-winkling-logo img {
+    width: 205px;
+
+    max-width: 100%;
+
+    height: auto;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .footer-container {
+    min-height: 560px;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 12px;
+
+    padding: 65px 12px 30px;
+  }
+
+
+  /* CENTER ADDRESS */
+
+  .footer-heading {
+    top: -32px;
+    left: 50%;
+
+    width: 100%;
+
+    font-size: 20px;
+    letter-spacing: 3px;
+
+    text-align: center;
+  }
+
+
+  /* REMOVE SECOND HEADING */
+
+  .footer-right::before {
+    display: none !important;
+    content: none !important;
+  }
+
+
+  /* ADDRESS */
+
+  .footer-address {
+    font-size: 11px;
+
+    letter-spacing: 0.8px;
+
+    line-height: 1.55;
+  }
+
+
+  /* LOGOS */
+
+  .footer-wonder-logo {
+    margin-top: 45px;
+  }
+
+  .footer-wonder-logo img {
+    width: 155px;
+
+    max-width: 100%;
+  }
+
+  .footer-winkling-logo {
+    margin-top: 45px;
+  }
+
+  .footer-winkling-logo img {
+    width: 165px;
+
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 375px
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .footer-container {
+    min-height: 520px;
+
+    column-gap: 9px;
+
+    padding: 60px 10px 25px;
+  }
+
+
+  /* CENTER ADDRESS */
+
+  .footer-heading {
+    top: -32px;
+    left: 50%;
+
+    font-size: 18px;
+
+    letter-spacing: 2.5px;
+
+    text-align: center;
+  }
+
+
+  /* ADDRESS */
+
+  .footer-address {
+    font-size: 10px;
+
+    letter-spacing: 0.65px;
+
+    line-height: 1.55;
+  }
+
+
+  /* LOGOS */
+
+  .footer-wonder-logo {
+    margin-top: 38px;
+  }
+
+  .footer-wonder-logo img {
+    width: 140px;
+  }
+
+  .footer-winkling-logo {
+    margin-top: 38px;
+  }
+
+  .footer-winkling-logo img {
+    width: 150px;
+  }
+}
+
+/* =========================================================
+   FOOTER — MATCH REFERENCE DESIGN
+   Desktop
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .site-footer {
+    width: 100%;
+    background: #aeb9f5;
+    overflow: visible;
+    height: auto;
+    min-height: 0;
+  }
+
+  .footer-container {
+    width: 100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 70px;
+
+    padding: 48px 60px 45px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =====================================================
+     COLUMNS
+  ===================================================== */
+
+  .footer-column {
+    position: relative;
+    min-width: 0;
+
+    padding-bottom: 190px;
+  }
+
+  .footer-left {
+    padding-top: 0;
+  }
+
+  .footer-right {
+    padding-top: 35px;
+  }
+
+
+  /* =====================================================
+     ADDRESS HEADING
+  ===================================================== */
+
+  .footer-heading {
+    margin: 0 0 15px;
+
+    font-family:
+      "Courier New",
+      Courier,
+      monospace;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 4px;
+
+    color: #000;
+
+    text-transform: uppercase;
+  }
+
+
+  /* =====================================================
+     ADDRESS TEXT
+  ===================================================== */
+
+  .footer-address {
+
+    margin: 0;
+
+    width: 100%;
+
+    font-family:
+      "Courier New",
+      Courier,
+      monospace;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.38;
+
+    letter-spacing: 1.4px;
+
+    color: #000;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+  }
+
+
+  .footer-address p {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* EMAIL */
+
+  .footer-email {
+    font-family:
+      "Courier New",
+      Courier,
+      monospace;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================================================
+     LOGOS
+  ===================================================== */
+
+  .footer-logo {
+
+    position: absolute;
+
+    bottom: 0;
+
+    top: auto;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    margin: 0;
+
+    z-index: 2;
+  }
+
+  .footer-logo img {
+
+    display: block;
+
+    height: auto;
+
+    object-fit: contain;
+  }
+
+
+  /* =====================================================
+     WONDER BEES LOGO
+  ===================================================== */
+
+  .footer-wonder-logo {
+
+    left: 0;
+
+    bottom: 0;
+  }
+
+  .footer-wonder-logo img {
+
+    width: 205px;
+
+    max-width: 100%;
+  }
+
+
+  /* =====================================================
+     TWINKLING STARS LOGO
+  ===================================================== */
+
+  .footer-winkling-logo {
+
+    left: 70px;
+
+    bottom: 0;
+  }
+
+  .footer-winkling-logo img {
+
+    width: 245px;
+
+    max-width: 100%;
+  }
+}
+/* =========================================================
+   FINAL FOOTER — DESKTOP
+   Correct font + placement + reduced empty space
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .site-footer {
+    width: 100%;
+    height: auto;
+    min-height: 0 !important;
+    background: #aeb9f5;
+    overflow: visible;
+  }
+
+  .footer-container {
+    width: 100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 70px;
+
+    /* REDUCED TOP/BOTTOM SPACE */
+    padding: 35px 60px 30px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =====================================================
+     COLUMNS
+  ===================================================== */
+
+  .footer-column {
+    position: relative;
+    min-width: 0;
+
+    /*
+      Reduced from 190px.
+      This removes the large empty area.
+    */
+    padding-bottom: 125px;
+  }
+
+  .footer-left {
+    padding-top: 0;
+  }
+
+  .footer-right {
+    padding-top: 35px;
+  }
+
+
+  /* =====================================================
+     HEADING
+  ===================================================== */
+
+  .footer-heading {
+    margin: 0 0 15px;
+
+    font-family:
+      "Courier New",
+      Courier,
+      monospace;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 4px;
+
+    color: #000;
+    text-transform: uppercase;
+  }
+
+
+  /* =====================================================
+     ADDRESS
+  ===================================================== */
+
+  .footer-address {
+    width: 100%;
+    margin: 0;
+
+    font-family:
+      "Courier New",
+      Courier,
+      monospace;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.38;
+    letter-spacing: 1.4px;
+
+    color: #000;
+
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .footer-address p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-email {
+    font-family:
+      "Courier New",
+      Courier,
+      monospace;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================================================
+     LOGOS
+  ===================================================== */
+
+  .footer-logo {
+    position: absolute;
+
+    top: auto;
+    bottom: 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    margin: 0;
+
+    z-index: 2;
+  }
+
+  .footer-logo img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+  /* =====================================================
+     WONDER BEES
+  ===================================================== */
+
+  .footer-wonder-logo {
+    left: 0;
+    bottom: 0;
+  }
+
+  .footer-wonder-logo img {
+    width: 175px;
+    max-width: 100%;
+  }
+
+
+  /* =====================================================
+     TWINKLING STARS
+  ===================================================== */
+
+  .footer-winkling-logo {
+    left: 60px;
+    bottom: 0;
+  }
+
+  .footer-winkling-logo img {
+    width: 215px;
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   1200–1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+  .footer-container {
+    padding: 30px 45px 25px;
+    column-gap: 45px;
+  }
+
+  .footer-column {
+    padding-bottom: 105px;
+  }
+
+  .footer-heading {
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+  }
+
+  .footer-address {
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 1px;
+  }
+
+  .footer-right {
+    padding-top: 28px;
+  }
+
+  .footer-wonder-logo img {
+    width: 160px;
+  }
+
+  .footer-winkling-logo {
+    left: 45px;
+  }
+
+  .footer-winkling-logo img {
+    width: 195px;
+  }
+}
+
+
+/* =========================================================
+   1400–1599px
+========================================================= */
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+
+  .footer-container {
+    padding: 35px 55px 30px;
+    column-gap: 55px;
+  }
+
+  .footer-column {
+    padding-bottom: 115px;
+  }
+
+  .footer-heading {
+    font-size: 26px;
+    letter-spacing: 3.5px;
+  }
+
+  .footer-address {
+    font-size: 15px;
+    line-height: 1.38;
+    letter-spacing: 1.2px;
+  }
+
+  .footer-wonder-logo img {
+    width: 170px;
+  }
+
+  .footer-winkling-logo {
+    left: 55px;
+  }
+
+  .footer-winkling-logo img {
+    width: 210px;
+  }
+}
+
+
+/* =========================================================
+   1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .footer-container {
+    padding: 40px 70px 35px;
+    column-gap: 70px;
+  }
+
+  .footer-column {
+    padding-bottom: 125px;
+  }
+
+  .footer-heading {
+    font-size: 29px;
+    letter-spacing: 4px;
+  }
+
+  .footer-address {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 1.3px;
+  }
+
+  .footer-wonder-logo img {
+    width: 190px;
+  }
+
+  .footer-winkling-logo {
+    left: 65px;
+  }
+
+  .footer-winkling-logo img {
+    width: 230px;
+  }
+}
+
+/* =========================================================
+   FINAL FIX — REMOVE OLD FOOTER HEIGHT
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .site-footer {
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .footer-container {
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
+
+  .footer-column {
+    min-height: 0 !important;
+    height: auto !important;
+
+    /* Only enough room for the logos */
+    padding-bottom: 115px !important;
+  }
+
+  .footer-wonder-logo img {
+    width: 175px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 215px !important;
+  }
+}
+
+
+/* =========================================================
+   1200–1399
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+  .footer-container {
+    min-height: 0 !important;
+    padding: 30px 45px 25px !important;
+  }
+
+  .footer-column {
+    padding-bottom: 100px !important;
+  }
+
+  .footer-wonder-logo img {
+    width: 160px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 195px !important;
+  }
+}
+
+
+/* =========================================================
+   1400–1599
+========================================================= */
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+
+  .footer-container {
+    min-height: 0 !important;
+    padding: 35px 55px 25px !important;
+  }
+
+  .footer-column {
+    padding-bottom: 105px !important;
+  }
+
+  .footer-wonder-logo img {
+    width: 170px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 205px !important;
+  }
+}
+
+
+/* =========================================================
+   1600+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .footer-container {
+    min-height: 0 !important;
+    padding: 35px 70px 25px !important;
+  }
+
+  .footer-column {
+    padding-bottom: 110px !important;
+  }
+
+  .footer-wonder-logo img {
+    width: 185px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 220px !important;
+  }
+}
+/* =========================================================
+   FINAL DESKTOP FOOTER LOGO SIZE
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .footer-wonder-logo {
+    left: 0 !important;
+    bottom: 0 !important;
+    top: auto !important;
+  }
+
+  .footer-wonder-logo img {
+    width: 145px !important;
+    height: auto !important;
+  }
+
+  .footer-winkling-logo {
+    left: 60px !important;
+    bottom: 0 !important;
+    top: auto !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 175px !important;
+    height: auto !important;
+  }
+}
+
+
+/* =========================================================
+   1200–1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+  .footer-wonder-logo img {
+    width: 135px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 165px !important;
+  }
+}
+
+
+/* =========================================================
+   1400–1599px
+========================================================= */
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+
+  .footer-wonder-logo img {
+    width: 145px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 175px !important;
+  }
+}
+
+
+/* =========================================================
+   1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .footer-wonder-logo img {
+    width: 155px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 185px !important;
+  }
+}
+/* =========================================================
+   FINAL LOGO SIZE FIX — DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  /* Wonder Bees */
+  .footer-wonder-logo {
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+
+  .footer-wonder-logo img {
+    width: 115px !important;
+    max-width: 115px !important;
+    height: auto !important;
+  }
+
+
+  /* Twinkling Stars */
+  .footer-winkling-logo {
+    left: 60px !important;
+    bottom: 0 !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 145px !important;
+    max-width: 145px !important;
+    height: auto !important;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP — 1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .footer-wonder-logo img {
+    width: 125px !important;
+    max-width: 125px !important;
+  }
+
+  .footer-winkling-logo img {
+    width: 155px !important;
+    max-width: 155px !important;
+  }
+}

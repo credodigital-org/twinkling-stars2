@@ -1,0 +1,23 @@
+/* =========================================================
+   PUBLIC LAYOUT
+========================================================= */
+
+.public-layout {
+  width: 100%;
+  min-height: calc(var(--unit-h) * 100);
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+}
+
+.public-content {
+  width: 100%;
+  flex: 1;
+
+  /* The header is position:fixed, so the page is pushed below it.
+     --header-h is the same token the header uses (see index.css),
+     so the two can never get out of sync. */
+  padding-top: var(--header-h);
+}

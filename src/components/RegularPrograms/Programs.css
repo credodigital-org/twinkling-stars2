@@ -1,0 +1,1673 @@
+
+/* =========================================================
+   REGULAR PROGRAMS
+========================================================= */
+
+.regular-programs,
+.regular-programs * {
+  box-sizing: border-box;
+}
+
+.regular-programs {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+
+  padding: 55px 0 90px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.regular-programs__container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1882px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TITLE ANIMATION
+========================================================= */
+
+.regular-programs__title {
+  margin: 0;
+  padding: 0 20px;
+
+  color: #df2080;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+
+  text-align: center;
+  white-space: nowrap;
+
+  opacity: 0;
+
+  animation:
+    titleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+    0.1s forwards;
+}
+
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.regular-programs__carousel {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 58px;
+
+  overflow: hidden;
+
+  animation:
+    carouselReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+    0.25s both;
+}
+
+@keyframes carouselReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   VIEWPORT
+========================================================= */
+
+.regular-programs__viewport {
+  position: relative;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  scroll-snap-type: x proximity;
+}
+
+.regular-programs__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.regular-programs__track {
+  --card-width: 442px;
+  --card-gap: 54px;
+
+  display: flex;
+
+  flex-wrap: nowrap;
+
+  gap: var(--card-gap);
+
+  width: max-content;
+
+  padding-left: 45px;
+  padding-right: 45px;
+
+  will-change: scroll-position;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.regular-programs__card {
+  position: relative;
+
+  flex: 0 0 var(--card-width);
+
+  width: var(--card-width);
+  height: 546px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 65px 25px 28px;
+
+  background: var(--card-background);
+
+  border-radius: 13px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  scroll-snap-align: center;
+
+  opacity: 0;
+
+  animation:
+    cardReveal
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--animation-delay)
+    forwards;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   CARD SHINE EFFECT
+========================================================= */
+
+.regular-programs__card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.28),
+    transparent
+  );
+
+  transform: skewX(-18deg);
+
+  transition: left 0.8s ease;
+
+  pointer-events: none;
+}
+
+.regular-programs__card:hover::before {
+  left: 140%;
+}
+
+
+/* =========================================================
+   CARD REVEAL
+========================================================= */
+
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(70px)
+      scale(0.88)
+      rotateX(8deg);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1)
+      rotateX(0);
+  }
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.regular-programs__card:hover {
+  transform:
+    translateY(-14px)
+    scale(1.025);
+
+  box-shadow:
+    0 22px 45px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.regular-programs__image-area {
+  width: 100%;
+  height: 220px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.regular-programs__image {
+  display: block;
+
+  width: 230px;
+  height: 210px;
+
+  max-width: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: translateY(0) scale(1);
+
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s ease;
+
+  animation:
+    imageFloat 4s ease-in-out
+    var(--animation-delay)
+    infinite;
+}
+
+
+/* Floating animation */
+
+@keyframes imageFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(1deg);
+  }
+}
+
+
+/* Hover image */
+
+.regular-programs__card:hover .regular-programs__image {
+  transform:
+    translateY(-8px)
+    scale(1.08)
+    rotate(-2deg);
+
+  filter: drop-shadow(
+    0 12px 10px rgba(0, 0, 0, 0.12)
+  );
+
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.regular-programs__card-title {
+  width: 100%;
+
+  margin: 7px 0 0;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  line-height: 1.12;
+
+  text-align: center;
+
+  opacity: 0;
+
+  animation:
+    contentReveal
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    calc(var(--animation-delay) + 0.25s)
+    forwards;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.regular-programs__card:hover .regular-programs__card-title {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   AGE
+========================================================= */
+
+.regular-programs__age {
+  width: 100%;
+
+  margin: 18px 0 0;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  animation:
+    contentReveal
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    calc(var(--animation-delay) + 0.35s)
+    forwards;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.regular-programs__description {
+  width: 100%;
+
+  margin: 30px 0 0;
+
+  color: #555555;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  line-height: 1.18;
+
+  text-align: center;
+
+  opacity: 0;
+
+  animation:
+    contentReveal
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    calc(var(--animation-delay) + 0.45s)
+    forwards;
+}
+
+
+/* =========================================================
+   CONTENT REVEAL
+========================================================= */
+
+@keyframes contentReveal {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   LEARN MORE
+========================================================= */
+
+.regular-programs__learn-more {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: auto;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  opacity: 0;
+
+  animation:
+    buttonReveal
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    calc(var(--animation-delay) + 0.55s)
+    forwards;
+
+  transition:
+    transform 0.35s ease,
+    letter-spacing 0.35s ease;
+}
+
+@keyframes buttonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Arrow */
+
+.learn-more-arrow {
+  display: inline-block;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+/* Button hover */
+
+.regular-programs__learn-more:hover {
+  transform: translateY(-4px);
+
+  letter-spacing: 1px;
+}
+
+.regular-programs__learn-more:hover .learn-more-arrow {
+  transform: translateX(7px);
+}
+
+
+/* Focus */
+
+.regular-programs__learn-more:focus-visible {
+  outline: 2px solid #111111;
+
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.regular-programs__controls {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px;
+
+  pointer-events: none;
+
+  z-index: 20;
+}
+
+
+.regular-programs__control {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #111111;
+
+  font-size: 35px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  pointer-events: auto;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease;
+}
+
+
+/* Show arrows */
+
+.regular-programs__carousel:hover .regular-programs__control {
+  opacity: 0.4;
+}
+
+
+/* Arrow hover */
+
+.regular-programs__control:hover {
+  opacity: 1 !important;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  transform: scale(1.12);
+}
+
+
+/* Arrow click */
+
+.regular-programs__control:active {
+  transform: scale(0.9);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .regular-programs {
+    padding-top: 55px;
+  }
+
+  .regular-programs__title {
+    font-size: 52px;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 58px;
+  }
+
+  .regular-programs__track {
+    --card-width: 442px;
+    --card-gap: 54px;
+
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .regular-programs__card {
+    height: 546px;
+  }
+}
+
+
+/* =========================================================
+   1440px - 1599px
+========================================================= */
+
+@media (max-width: 1599px) and (min-width: 1440px) {
+
+  .regular-programs__title {
+    font-size: 64px;
+  }
+
+  .regular-programs__track {
+    --card-width: 420px;
+    --card-gap: 50px;
+
+    padding-left: 45px;
+  }
+
+  .regular-programs__card {
+    height: 530px;
+  }
+
+  .regular-programs__image-area {
+    height: 215px;
+  }
+
+  .regular-programs__image {
+    width: 220px;
+    height: 205px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 29px;
+  }
+
+  .regular-programs__age {
+    font-size: 24px;
+  }
+
+  .regular-programs__description {
+    font-size: 24px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 23px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+
+  .regular-programs {
+    padding-top: 50px;
+  }
+
+  .regular-programs__title {
+    font-size: 64px;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 52px;
+  }
+
+  .regular-programs__track {
+    --card-width: 390px;
+    --card-gap: 48px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .regular-programs__card {
+    height: 510px;
+
+    padding: 55px 22px 25px;
+  }
+
+  .regular-programs__image-area {
+    height: 205px;
+  }
+
+  .regular-programs__image {
+    width: 205px;
+    height: 190px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 27px;
+  }
+
+  .regular-programs__age {
+    font-size: 22px;
+    margin-top: 16px;
+  }
+
+  .regular-programs__description {
+    margin-top: 27px;
+    font-size: 22px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+========================================================= */
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+
+  .regular-programs {
+    padding-top: 45px;
+    padding-bottom: 75px;
+  }
+
+  .regular-programs__title {
+    font-size: 55px;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 45px;
+  }
+
+  .regular-programs__track {
+    --card-width: 360px;
+    --card-gap: 38px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .regular-programs__card {
+    height: 490px;
+
+    padding: 48px 20px 24px;
+  }
+
+  .regular-programs__image-area {
+    height: 195px;
+  }
+
+  .regular-programs__image {
+    width: 190px;
+    height: 180px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 25px;
+  }
+
+  .regular-programs__age {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .regular-programs__description {
+    margin-top: 25px;
+    font-size: 20px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1023px) and (min-width: 768px) {
+
+  .regular-programs {
+    padding: 42px 0 70px;
+  }
+
+  .regular-programs__title {
+    font-size: 48px;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 42px;
+  }
+
+  .regular-programs__track {
+    --card-width: 350px;
+    --card-gap: 30px;
+
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .regular-programs__card {
+    height: 475px;
+
+    padding: 42px 18px 22px;
+  }
+
+  .regular-programs__image-area {
+    height: 185px;
+  }
+
+  .regular-programs__image {
+    width: 175px;
+    height: 170px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 24px;
+  }
+
+  .regular-programs__age {
+    font-size: 19px;
+    margin-top: 14px;
+  }
+
+  .regular-programs__description {
+    margin-top: 23px;
+    font-size: 18px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .regular-programs {
+    padding: 38px 0 60px;
+  }
+
+  .regular-programs__container {
+    width: 100%;
+  }
+
+  .regular-programs__title {
+    padding: 0 15px;
+
+    font-size: 48px;
+
+    line-height: 1.08;
+
+    white-space: normal;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 35px;
+  }
+
+  .regular-programs__track {
+    --card-width: calc(100vw - 40px);
+    --card-gap: 20px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .regular-programs__card {
+    width: calc(100vw - 40px);
+
+    height: 450px;
+
+    padding: 38px 20px 24px;
+
+    border-radius: 13px;
+  }
+
+  .regular-programs__image-area {
+    height: 180px;
+  }
+
+  .regular-programs__image {
+    width: 175px;
+    height: 165px;
+  }
+
+  .regular-programs__card-title {
+    margin-top: 8px;
+    font-size: 25px;
+  }
+
+  .regular-programs__age {
+    margin-top: 14px;
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .regular-programs__description {
+    margin-top: 25px;
+    font-size: 19px;
+    line-height: 1.2;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 20px;
+  }
+
+  .regular-programs__controls {
+    padding: 0 8px;
+  }
+
+  .regular-programs__control {
+    width: 38px;
+    height: 38px;
+    font-size: 31px;
+  }
+
+  .regular-programs__card:hover {
+    transform: translateY(-7px) scale(1.01);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 479px) {
+
+  .regular-programs {
+    padding: 32px 0 55px;
+  }
+
+  .regular-programs__title {
+    font-size: 40px;
+    padding: 0 12px;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 30px;
+  }
+
+  .regular-programs__track {
+    --card-width: calc(100vw - 28px);
+    --card-gap: 14px;
+
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .regular-programs__card {
+    width: calc(100vw - 28px);
+
+    height: 430px;
+
+    padding: 32px 17px 22px;
+
+    border-radius: 12px;
+  }
+
+  .regular-programs__image-area {
+    height: 165px;
+  }
+
+  .regular-programs__image {
+    width: 155px;
+    height: 150px;
+  }
+
+  .regular-programs__card-title {
+    margin-top: 7px;
+    font-size: 23px;
+  }
+
+  .regular-programs__age {
+    margin-top: 13px;
+    font-size: 18px;
+  }
+
+  .regular-programs__description {
+    margin-top: 23px;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 18px;
+  }
+
+  .regular-programs__control {
+    width: 34px;
+    height: 34px;
+    font-size: 28px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 359px) {
+
+  .regular-programs {
+    padding-top: 28px;
+  }
+
+  .regular-programs__title {
+    font-size: 35px;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 26px;
+  }
+
+  .regular-programs__card {
+    height: 410px;
+    padding-top: 28px;
+  }
+
+  .regular-programs__image-area {
+    height: 155px;
+  }
+
+  .regular-programs__image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 21px;
+  }
+
+  .regular-programs__age {
+    font-size: 16px;
+  }
+
+  .regular-programs__description {
+    font-size: 15px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .regular-programs__title,
+  .regular-programs__carousel,
+  .regular-programs__card,
+  .regular-programs__card-title,
+  .regular-programs__age,
+  .regular-programs__description,
+  .regular-programs__learn-more,
+  .regular-programs__image {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .regular-programs__viewport {
+    scroll-behavior: auto;
+  }
+
+  .regular-programs__control,
+  .regular-programs__card,
+  .regular-programs__image,
+  .regular-programs__learn-more {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   REGULAR PROGRAM ANIMATION
+========================================================= */
+
+.regular-programs {
+  overflow: hidden;
+}
+
+.regular-programs__title {
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.regular-programs.show .regular-programs__title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.regular-programs__track > .regular-programs__card {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.regular-programs.show .regular-programs__track > .regular-programs__card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.regular-programs.show
+.regular-programs__track
+> .regular-programs__card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.regular-programs.show
+.regular-programs__track
+> .regular-programs__card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.regular-programs.show
+.regular-programs__track
+> .regular-programs__card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.regular-programs.show
+.regular-programs__track
+> .regular-programs__card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.regular-programs__card:hover {
+  transform: translateY(-12px) scale(1.015) !important;
+  box-shadow:
+    0 20px 35px rgba(0, 0, 0, 0.13);
+}
+
+.regular-programs__image {
+  transition:
+    transform 0.6s ease;
+}
+
+.regular-programs__card:hover
+.regular-programs__image {
+  transform: scale(1.08) rotate(1deg);
+}
+
+.regular-programs__learn-more {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.regular-programs__learn-more:hover {
+  transform: translateX(7px);
+}
+
+.learn-more-arrow {
+  display: inline-block;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.regular-programs__learn-more:hover
+.learn-more-arrow {
+  transform: translateX(6px);
+}
+
+/* =========================================================
+   FINAL — SLIGHTLY SMALLER PROGRAM CARDS
+========================================================= */
+
+/* Desktop */
+@media (min-width: 1440px) {
+
+  .regular-programs__track {
+    --card-width: 390px;
+    --card-gap: 40px;
+  }
+
+  .regular-programs__card {
+    width: 390px;
+    height: 500px;
+    padding: 50px 22px 24px;
+  }
+
+  .regular-programs__image-area {
+    height: 195px;
+  }
+
+  .regular-programs__image {
+    width: 205px;
+    height: 190px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 27px;
+  }
+
+  .regular-programs__age {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+
+  .regular-programs__description {
+    font-size: 21px;
+    margin-top: 25px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP — 1200px to 1439px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .regular-programs__track {
+    --card-width: 360px;
+    --card-gap: 35px;
+  }
+
+  .regular-programs__card {
+    width: 360px;
+    height: 480px;
+    padding: 45px 20px 22px;
+  }
+
+  .regular-programs__image-area {
+    height: 185px;
+  }
+
+  .regular-programs__image {
+    width: 190px;
+    height: 175px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 25px;
+  }
+
+  .regular-programs__age {
+    font-size: 20px;
+    margin-top: 14px;
+  }
+
+  .regular-programs__description {
+    font-size: 20px;
+    margin-top: 23px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE — 1024px to 1199px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  .regular-programs__track {
+    --card-width: 320px;
+    --card-gap: 28px;
+  }
+
+  .regular-programs__card {
+    width: 320px;
+    height: 450px;
+    padding: 38px 17px 20px;
+  }
+
+  .regular-programs__image-area {
+    height: 170px;
+  }
+
+  .regular-programs__image {
+    width: 165px;
+    height: 155px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 23px;
+  }
+
+  .regular-programs__age {
+    font-size: 18px;
+    margin-top: 13px;
+  }
+
+  .regular-programs__description {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   TABLET — 768px to 1023px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .regular-programs__track {
+    --card-width: 300px;
+    --card-gap: 24px;
+  }
+
+  .regular-programs__card {
+    width: 300px;
+    height: 425px;
+    padding: 34px 15px 18px;
+  }
+
+  .regular-programs__image-area {
+    height: 155px;
+  }
+
+  .regular-programs__image {
+    width: 150px;
+    height: 145px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 21px;
+  }
+
+  .regular-programs__age {
+    font-size: 17px;
+    margin-top: 12px;
+  }
+
+  .regular-programs__description {
+    font-size: 16px;
+    margin-top: 19px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   FINAL — MEDIUM PROGRAM CARD SIZE
+========================================================= */
+
+/* HEADING */
+@media (min-width: 768px) {
+
+  .regular-programs__title {
+    font-size: clamp(32px, 2.9vw, 44px) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP — 1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .regular-programs__track {
+    --card-width: 330px;
+    --card-gap: 30px;
+  }
+
+  .regular-programs__card {
+    width: 330px;
+    height: 430px;
+    padding: 36px 17px 17px;
+  }
+
+  .regular-programs__image-area {
+    height: 160px;
+  }
+
+  .regular-programs__image {
+    width: 170px;
+    height: 155px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 23px;
+  }
+
+  .regular-programs__age {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .regular-programs__description {
+    font-size: 17px;
+    margin-top: 17px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP — 1200px to 1439px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .regular-programs__track {
+    --card-width: 315px;
+    --card-gap: 27px;
+  }
+
+  .regular-programs__card {
+    width: 315px;
+    height: 415px;
+    padding: 34px 16px 16px;
+  }
+
+  .regular-programs__image-area {
+    height: 155px;
+  }
+
+  .regular-programs__image {
+    width: 160px;
+    height: 145px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 22px;
+  }
+
+  .regular-programs__age {
+    font-size: 17px;
+    margin-top: 9px;
+  }
+
+  .regular-programs__description {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE — 1024px to 1199px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  .regular-programs__track {
+    --card-width: 280px;
+    --card-gap: 21px;
+  }
+
+  .regular-programs__card {
+    width: 280px;
+    height: 395px;
+    padding: 31px 14px 15px;
+  }
+
+  .regular-programs__image-area {
+    height: 145px;
+  }
+
+  .regular-programs__image {
+    width: 140px;
+    height: 130px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 20px;
+  }
+
+  .regular-programs__age {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .regular-programs__description {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   TABLET — 768px to 1023px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .regular-programs__track {
+    --card-width: 260px;
+    --card-gap: 19px;
+  }
+
+  .regular-programs__card {
+    width: 260px;
+    height: 375px;
+    padding: 29px 12px 14px;
+  }
+
+  .regular-programs__image-area {
+    height: 135px;
+  }
+
+  .regular-programs__image {
+    width: 125px;
+    height: 120px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 19px;
+  }
+
+  .regular-programs__age {
+    font-size: 14px;
+    margin-top: 7px;
+  }
+
+  .regular-programs__description {
+    font-size: 13.5px;
+    margin-top: 14px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 14px;
+  }
+}
+/* =========================================================
+   REGULAR PROGRAMS — MATCH SPECIAL PROGRAMS HEADING
+========================================================= */
+
+@media (min-width: 1440px) {
+  .regular-programs__title {
+    font-size: 50px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .regular-programs__title {
+    font-size: 47px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .regular-programs__title {
+    font-size: 43px !important;
+  }
+}

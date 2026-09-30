@@ -1,0 +1,2862 @@
+/* =========================================================
+   CONTACT PAGE
+   FULL RESPONSIVE VERSION
+
+   Desktop
+   Laptop
+   Tablet
+   Mobile
+   Small Mobile
+   Extra Small Mobile
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+);
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+.get-touch-page,
+.get-touch-page *,
+.get-touch-page *::before,
+.get-touch-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+/* .get-touch-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background-color: #ffffff;
+
+  background-image: url("../assets/images/background.jpeg");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: auto;
+
+  font-family: "Nunito", sans-serif;
+
+  color: #1d2228;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+} */
+
+.get-touch-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background-color: #ffffff;
+
+  background-image: url("../assets/images/background.jpeg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  font-family: "Nunito", sans-serif;
+
+  color: #1d2228;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.contact-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 590px;
+
+  padding: 135px 7.5% 60px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: visible;
+}
+
+
+.contact-hero-content {
+  width: 100%;
+  max-width: 1100px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.contact-hero h1 {
+  margin: -300px 0 45px;
+
+  color: #279c04;
+
+  font-family: Poppins, "Nunito", sans-serif;
+
+  font-size: clamp(55px, 6vw, 82px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.contact-hero p {
+  margin: 0;
+
+  max-width: 1000px;
+
+  color: #292d33;
+
+  font-size: clamp(22px, 2vw, 32px);
+
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 0 40px 70px;
+
+  margin-top: -300px;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 1400px;
+
+  min-height: 760px;
+
+  margin: 0 auto;
+
+  padding: 130px 60px 90px;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(219, 241, 244, 0.96),
+      rgba(204, 230, 232, 0.94)
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SOFT DECORATIVE BLUR
+========================================================= */
+
+.contact-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  left: 28%;
+  top: -50px;
+
+  border-radius: 50%;
+
+  background: rgba(147, 204, 220, 0.16);
+
+  filter: blur(55px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DISCOUNT BADGE
+========================================================= */
+
+.discount-badge {
+  position: absolute;
+
+  top: 32px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: min(440px, calc(100% - 120px));
+
+  min-height: 52px;
+
+  padding: 8px 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #285c9d;
+  font-family: Poppins, sans-serif;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(140, 173, 180, 0.35);
+
+  border-radius: 5px;
+
+  font-size: clamp(22px, 2vw, 30px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   BEE
+========================================================= */
+
+.discount-badge img {
+  flex: 0 0 auto;
+
+  width: 65px;
+  height: auto;
+
+  object-fit: contain;
+
+  margin-top: -40px;
+  margin-left: -45px;
+}
+
+
+/* =========================================================
+   CONTACT GRID
+========================================================= */
+
+.contact-grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 1fr);
+
+  gap: 90px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contact-info {
+  min-width: 0;
+
+  color: #1d2228;
+}
+
+
+/* =========================================================
+   GET IN TOUCH TITLE
+========================================================= */
+
+.info-block h2 {
+  margin: 0 0 34px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(40px, 3.5vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   EMAIL / PHONE
+========================================================= */
+
+.info-block p {
+  margin: 0 0 25px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(18px, 1.8vw, 25px);
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 6px;
+}
+
+
+.info-block strong {
+  font-weight: 400;
+}
+
+
+.info-block a {
+  color: #1d2228;
+
+  text-decoration: none;
+
+  letter-spacing: 4px;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.address-block {
+  margin-top: 55px;
+}
+
+
+.address-block h3 {
+  margin: 0 0 8px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(24px, 2.2vw, 31px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  letter-spacing: 8px;
+}
+
+
+.address-block p {
+  margin: 0;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(16px, 1.5vw, 22px);
+
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  letter-spacing: 5px;
+}
+
+
+/* =========================================================
+   WORKING HOURS
+========================================================= */
+
+.working-hours {
+  margin-top: 135px;
+
+  padding-left: 35px;
+}
+
+
+.working-hours h3 {
+  width: fit-content;
+
+  margin: 0 0 8px;
+
+  color: #c41717;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: clamp(21px, 2vw, 28px);
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+.working-hours ul {
+  margin: 0;
+
+  padding-left: 25px;
+}
+
+
+.working-hours li {
+  color: #1e252b;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: clamp(19px, 1.7vw, 27px);
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #25292f;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(20px, 1.9vw, 29px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   INPUT + TEXTAREA
+========================================================= */
+
+.form-group input,
+.form-group textarea {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  border: 1.5px solid #5f9a9b;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  outline: none;
+
+  color: #222222;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 20px;
+
+  border-radius: 20px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-group input {
+  height: 66px;
+
+  padding: 0 20px;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+  height: 235px;
+
+  padding: 20px;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #27827c;
+
+  box-shadow:
+    0 0 0 3px rgba(39, 130, 124, 0.1);
+}
+
+
+/* =========================================================
+   SEND BUTTON
+   Hidden to match your current design
+========================================================= */
+
+/* .send-button {
+  display: none;
+} */
+
+.send-button {
+  display: block;
+
+  width: 260px;
+  height: 65px;
+
+  margin: 30px auto 0;
+
+  border: none;
+  border-radius: 35px;
+
+  background: #279c04;
+  color: #ffffff;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.send-button:hover {
+  background: #208003;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(39, 156, 4, 0.25);
+}
+
+/* =========================================================
+   FLOATING CONTACT BUTTONS
+   DESKTOP
+========================================================= */
+
+.call-button,
+.whatsapp-button {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #279c04;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  text-decoration: none;
+
+  z-index: 20;
+
+  box-shadow: 0 5px 15px rgba(39, 156, 4, 0.20);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.call-button {
+  right: 175px;
+  bottom: 25px;
+
+  width: 68px;
+  height: 68px;
+}
+
+.call-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #279c04;
+
+  font-size: 32px;
+  line-height: 1;
+}
+
+.call-button img {
+  display: block;
+
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.whatsapp-button {
+  right: 80px;
+  bottom: 25px;
+
+  width: 68px;
+  height: 68px;
+}
+
+.whatsapp-button img {
+  display: block;
+
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.call-button:hover,
+.whatsapp-button:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 6px 18px rgba(39, 156, 4, 0.30);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .contact-hero {
+    min-height: 610px;
+
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+
+  .contact-card {
+    max-width: 1450px;
+
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .contact-grid {
+    gap: 100px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 72px;
+    height: 72px;
+
+    bottom: 30px;
+  }
+
+  .call-button {
+    right: 185px;
+  }
+
+  .whatsapp-button {
+    right: 85px;
+  }
+
+  .call-button span {
+    font-size: 34px;
+  }
+
+  .call-button img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-button img {
+    width: 56px;
+    height: 56px;
+  }
+
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   1201px - 1599px
+========================================================= */
+
+@media (min-width: 1201px) and (max-width: 1599px) {
+
+  .contact-hero {
+    min-height: 590px;
+
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .contact-card {
+    max-width: 1400px;
+
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .contact-grid {
+    gap: 70px;
+  }
+
+  .working-hours {
+    margin-top: 110px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 68px;
+    height: 68px;
+
+    bottom: 25px;
+  }
+
+  .call-button {
+    right: 175px;
+  }
+
+  .whatsapp-button {
+    right: 80px;
+  }
+
+  .call-button span {
+    font-size: 32px;
+  }
+
+  .call-button img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-button img {
+    width: 52px;
+    height: 52px;
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+   901px - 1200px
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+  .contact-hero {
+    min-height: 520px;
+
+    padding: 110px 6% 50px;
+  }
+
+  .contact-hero h1 {
+    margin-top: -230px;
+
+    font-size: clamp(50px, 6vw, 70px);
+  }
+
+  .contact-hero p {
+    font-size: clamp(20px, 2.2vw, 27px);
+  }
+
+  .contact-section {
+    padding: 0 28px 60px;
+
+    margin-top: -230px;
+  }
+
+  .contact-card {
+    min-height: 720px;
+
+    padding: 120px 42px 85px;
+
+    border-radius: 34px;
+  }
+
+  .contact-grid {
+    gap: 50px;
+  }
+
+  .discount-badge {
+    top: 28px;
+
+    width: min(430px, calc(100% - 80px));
+
+    font-size: 23px;
+  }
+
+  .discount-badge img {
+    width: 58px;
+
+    margin-top: -35px;
+    margin-left: -35px;
+  }
+
+  .info-block h2 {
+    font-size: 44px;
+  }
+
+  .info-block p {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+  }
+
+  .info-block a {
+    letter-spacing: 2px;
+  }
+
+  .address-block {
+    margin-top: 45px;
+  }
+
+  .address-block h3 {
+    font-size: 26px;
+
+    letter-spacing: 6px;
+  }
+
+  .address-block p {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+  }
+
+  .working-hours {
+    margin-top: 80px;
+
+    padding-left: 15px;
+  }
+
+  .working-hours li {
+    font-size: 21px;
+  }
+
+  .form-group label {
+    font-size: 21px;
+  }
+
+  .form-group input {
+    height: 60px;
+  }
+
+  .form-group textarea {
+    height: 210px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 62px;
+    height: 62px;
+
+    bottom: 22px;
+  }
+
+  .call-button {
+    right: 120px;
+  }
+
+  .whatsapp-button {
+    right: 35px;
+  }
+
+  .call-button span {
+    font-size: 29px;
+  }
+
+  .call-button img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .whatsapp-button img {
+    width: 48px;
+    height: 48px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 900px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+  .contact-hero {
+    min-height: 440px;
+
+    padding: 80px 6% 70px;
+  }
+
+  .contact-hero h1 {
+    margin: -130px 0 30px;
+
+    font-size: clamp(48px, 7vw, 64px);
+  }
+
+  .contact-hero p {
+    max-width: 700px;
+
+    font-size: 21px;
+
+    line-height: 1.5;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+
+  /* CONTACT SECTION */
+
+  .contact-section {
+    padding: 0 22px 55px;
+
+    margin-top: -120px;
+  }
+
+
+  /* CARD */
+
+  .contact-card {
+    min-height: auto;
+
+    padding: 120px 40px 105px;
+
+    border-radius: 30px;
+  }
+
+
+  /* BADGE */
+
+  .discount-badge {
+    top: 25px;
+
+    width: min(430px, calc(100% - 70px));
+
+    min-height: 50px;
+
+    font-size: 21px;
+  }
+
+  .discount-badge img {
+    width: 54px;
+
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
+
+  /* ONE COLUMN */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  /* INFO */
+
+  .info-block h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+  }
+
+  .info-block p {
+    font-size: 19px;
+
+    letter-spacing: 3px;
+  }
+
+  .info-block a {
+    letter-spacing: 2px;
+  }
+
+
+  /* ADDRESS */
+
+  .address-block {
+    margin-top: 40px;
+  }
+
+  .address-block h3 {
+    font-size: 25px;
+
+    letter-spacing: 6px;
+  }
+
+  .address-block p {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+  }
+
+
+  /* HOURS */
+
+  .working-hours {
+    margin-top: 60px;
+
+    padding-left: 10px;
+  }
+
+  .working-hours h3 {
+    font-size: 24px;
+  }
+
+  .working-hours li {
+    font-size: 20px;
+  }
+
+
+  /* FORM */
+
+  .form-group {
+    margin-bottom: 22px;
+  }
+
+  .form-group label {
+    font-size: 21px;
+  }
+
+  .form-group input {
+    height: 62px;
+  }
+
+  .form-group textarea {
+    height: 220px;
+  }
+
+
+  .call-button,
+  .whatsapp-button {
+    width: 62px;
+    height: 62px;
+
+    bottom: 22px;
+  }
+
+  .call-button {
+    right: 120px;
+  }
+
+  .whatsapp-button {
+    right: 28px;
+  }
+
+  .call-button span {
+    font-size: 29px;
+  }
+
+  .call-button img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .whatsapp-button img {
+    width: 48px;
+    height: 48px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .get-touch-page {
+    width: 100%;
+
+    overflow-x: hidden;
+  }
+
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .contact-hero {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 55px 20px 45px;
+
+    display: block;
+  }
+
+  .contact-hero-content {
+    width: 100%;
+
+    max-width: none;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 22px;
+
+    font-size: clamp(40px, 11vw, 52px);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.5px;
+  }
+
+  .contact-hero p {
+    width: 100%;
+
+    font-size: clamp(18px, 5vw, 22px);
+
+    line-height: 1.5;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+
+  /* =======================================================
+     CONTACT SECTION
+  ======================================================= */
+
+  .contact-section {
+    width: 100%;
+
+    padding: 0 12px 45px;
+
+    margin-top: 0;
+  }
+
+
+  /* =======================================================
+     CARD
+  ======================================================= */
+
+  .contact-card {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 100px 20px 100px;
+
+    border-radius: 24px;
+  }
+
+
+  /* =======================================================
+     BADGE
+  ======================================================= */
+
+  .discount-badge {
+    top: 22px;
+
+    width: calc(50% - 30px);
+
+    min-height: 48px;
+
+    padding: 8px 10px;
+
+    gap: 4px;
+
+    font-size: clamp(15px, 4.5vw, 18px);
+
+    line-height: 1.2;
+
+    white-space: normal;
+  }
+
+  .discount-badge img {
+    width: 45px;
+
+    margin-top: -18px;
+    margin-left: -18px;
+  }
+
+
+  /* =======================================================
+     GRID
+  ======================================================= */
+
+  .contact-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+
+  /* =======================================================
+     INFO
+  ======================================================= */
+
+  .info-block h2 {
+    margin-bottom: 24px;
+
+    font-size: clamp(32px, 9vw, 40px);
+
+    letter-spacing: 0.5px;
+  }
+
+
+  .info-block p {
+    margin-bottom: 20px;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .info-block a {
+    letter-spacing: 0.5px;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =======================================================
+     ADDRESS
+  ======================================================= */
+
+  .address-block {
+    margin-top: 35px;
+  }
+
+  .address-block h3 {
+    margin-bottom: 8px;
+
+    font-size: 21px;
+
+    letter-spacing: 4px;
+  }
+
+  .address-block p {
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* =======================================================
+     WORKING HOURS
+  ======================================================= */
+
+  .working-hours {
+    margin-top: 48px;
+
+    padding-left: 5px;
+  }
+
+  .working-hours h3 {
+    margin-bottom: 8px;
+
+    font-size: 21px;
+
+    border-bottom-width: 2px;
+  }
+
+  .working-hours ul {
+    padding-left: 20px;
+  }
+
+  .working-hours li {
+    font-size: 17px;
+
+    line-height: 1.4;
+  }
+
+
+  /* =======================================================
+     FORM
+  ======================================================= */
+
+  .form-group {
+    width: 100%;
+
+    margin-bottom: 19px;
+  }
+
+  .form-group label {
+    margin-bottom: 8px;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: 17px;
+
+    border-radius: 14px;
+  }
+
+  .form-group input {
+    height: 55px;
+
+    padding: 0 15px;
+  }
+
+  .form-group textarea {
+    height: 170px;
+
+    padding: 15px;
+
+    resize: vertical;
+  }
+
+
+  .call-button,
+  .whatsapp-button {
+    width: 56px;
+    height: 56px;
+
+    bottom: 20px;
+  }
+
+  .call-button {
+    right: 90px;
+  }
+
+  .whatsapp-button {
+    right: 18px;
+  }
+
+  .call-button span {
+    font-size: 27px;
+  }
+
+  .call-button img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .whatsapp-button img {
+    width: 46px;
+    height: 46px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   481px - 600px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+  .contact-hero {
+    padding: 60px 25px 50px;
+  }
+
+  .contact-hero h1 {
+    font-size: 48px;
+  }
+
+  .contact-hero p {
+    font-size: 20px;
+  }
+
+  .contact-section {
+    padding: 0 15px 50px;
+  }
+
+  .contact-card {
+    padding: 105px 25px 105px;
+
+    border-radius: 26px;
+  }
+
+  .discount-badge {
+    width: calc(100% - 45px);
+
+    font-size: 17px;
+  }
+
+  .discount-badge img {
+    width: 48px;
+  }
+
+  .info-block h2 {
+    font-size: 36px;
+  }
+
+  .info-block p {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+  }
+
+  .address-block h3 {
+    font-size: 22px;
+  }
+
+  .address-block p {
+    font-size: 15px;
+  }
+
+  .working-hours li {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 54px;
+    height: 54px;
+
+    bottom: 18px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 82px;
+  }
+
+  .whatsapp-button {
+    right: 15px;
+  }
+
+  .call-button span {
+    font-size: 25px;
+  }
+
+  .call-button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-button img {
+    width: 44px;
+    height: 44px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   381px - 480px
+========================================================= */
+
+@media (min-width: 381px) and (max-width: 480px) {
+
+  .contact-hero {
+    padding: 48px 18px 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 43px;
+
+    margin-bottom: 20px;
+  }
+
+  .contact-hero p {
+    font-size: 19px;
+  }
+
+  .contact-section {
+    padding: 0 10px 40px;
+  }
+
+  .contact-card {
+    padding: 95px 18px 95px;
+
+    border-radius: 22px;
+  }
+
+  .discount-badge {
+    top: 20px;
+
+    width: calc(100% - 25px);
+
+    padding: 7px 8px;
+
+    font-size: 15px;
+  }
+
+  .discount-badge img {
+    width: 40px;
+
+    margin-top: -15px;
+    margin-left: -12px;
+  }
+
+  .contact-grid {
+    gap: 42px;
+  }
+
+  .info-block h2 {
+    font-size: 33px;
+
+    margin-bottom: 22px;
+  }
+
+  .info-block p {
+    font-size: 14px;
+
+    letter-spacing: 1px;
+  }
+
+  .info-block a {
+    letter-spacing: 0;
+  }
+
+  .address-block {
+    margin-top: 32px;
+  }
+
+  .address-block h3 {
+    font-size: 20px;
+
+    letter-spacing: 3px;
+  }
+
+  .address-block p {
+    font-size: 13px;
+
+    letter-spacing: 1px;
+  }
+
+  .working-hours {
+    margin-top: 42px;
+  }
+
+  .working-hours h3 {
+    font-size: 19px;
+  }
+
+  .working-hours li {
+    font-size: 16px;
+  }
+
+  .form-group label {
+    font-size: 16px;
+  }
+
+  .form-group input {
+    height: 52px;
+
+    border-radius: 13px;
+  }
+
+  .form-group textarea {
+    height: 155px;
+
+    border-radius: 13px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 52px;
+    height: 52px;
+
+    bottom: 18px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 80px;
+  }
+
+  .whatsapp-button {
+    right: 15px;
+  }
+
+  .call-button span {
+    font-size: 24px;
+  }
+
+  .call-button img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .whatsapp-button img {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .contact-hero {
+    padding: 42px 16px 35px;
+  }
+
+  .contact-hero h1 {
+    font-size: 38px;
+
+    margin-bottom: 18px;
+  }
+
+  .contact-hero p {
+    font-size: 17px;
+
+    line-height: 1.5;
+  }
+
+
+  /* CONTACT */
+
+  .contact-section {
+    padding: 0 8px 35px;
+  }
+
+
+  /* CARD */
+
+  .contact-card {
+    padding: 90px 15px 90px;
+
+    border-radius: 20px;
+  }
+
+
+  /* BADGE */
+
+  .discount-badge {
+    top: 18px;
+
+    width: calc(100% - 20px);
+
+    min-height: 43px;
+
+    padding: 6px 6px;
+
+    gap: 2px;
+
+    font-size: 14px;
+  }
+
+  .discount-badge img {
+    width: 36px;
+
+    margin-top: -12px;
+    margin-left: -8px;
+  }
+
+
+  /* GRID */
+
+  .contact-grid {
+    gap: 38px;
+  }
+
+
+  /* INFO */
+
+  .info-block h2 {
+    font-size: 29px;
+
+    margin-bottom: 20px;
+  }
+
+  .info-block p {
+    font-size: 13px;
+
+    letter-spacing: 0.7px;
+
+    line-height: 1.5;
+  }
+
+  .info-block a {
+    letter-spacing: 0;
+  }
+
+
+  /* ADDRESS */
+
+  .address-block {
+    margin-top: 28px;
+  }
+
+  .address-block h3 {
+    font-size: 18px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .address-block p {
+    font-size: 12px;
+
+    letter-spacing: 0.7px;
+
+    line-height: 1.5;
+  }
+
+
+  /* HOURS */
+
+  .working-hours {
+    margin-top: 38px;
+
+    padding-left: 2px;
+  }
+
+  .working-hours h3 {
+    font-size: 18px;
+  }
+
+  .working-hours ul {
+    padding-left: 18px;
+  }
+
+  .working-hours li {
+    font-size: 14px;
+  }
+
+
+  /* FORM */
+
+  .form-group {
+    margin-bottom: 17px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input {
+    height: 49px;
+
+    padding: 0 12px;
+
+    font-size: 15px;
+
+    border-radius: 12px;
+  }
+
+  .form-group textarea {
+    height: 140px;
+
+    padding: 12px;
+
+    font-size: 15px;
+
+    border-radius: 12px;
+  }
+
+
+  .call-button,
+  .whatsapp-button {
+    width: 48px;
+    height: 48px;
+
+    bottom: 15px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 60px;
+  }
+
+  .whatsapp-button {
+    right: 12px;
+  }
+
+  .call-button span {
+    font-size: 22px;
+  }
+
+  .call-button img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .whatsapp-button img {
+    width: 38px;
+    height: 38px;
+  }
+
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   <= 320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .contact-hero {
+    padding: 35px 12px 30px;
+  }
+
+  .contact-hero h1 {
+    font-size: 33px;
+
+    margin-bottom: 15px;
+  }
+
+  .contact-hero p {
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+
+  /* CONTACT */
+
+  .contact-section {
+    padding: 0 6px 30px;
+  }
+
+
+  /* CARD */
+
+  .contact-card {
+    padding: 82px 12px 82px;
+
+    border-radius: 18px;
+  }
+
+
+  /* BADGE */
+
+  .discount-badge {
+    top: 16px;
+
+    width: calc(100% - 14px);
+
+    min-height: 40px;
+
+    padding: 5px;
+
+    font-size: 12px;
+  }
+
+  .discount-badge img {
+    width: 31px;
+
+    margin-top: -10px;
+    margin-left: -5px;
+  }
+
+
+  /* GRID */
+
+  .contact-grid {
+    gap: 32px;
+  }
+
+
+  /* INFO */
+
+  .info-block h2 {
+    font-size: 25px;
+
+    margin-bottom: 17px;
+  }
+
+  .info-block p {
+    font-size: 12px;
+
+    letter-spacing: 0.3px;
+  }
+
+
+  /* ADDRESS */
+
+  .address-block h3 {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+  }
+
+  .address-block p {
+    font-size: 11px;
+
+    letter-spacing: 0.3px;
+  }
+
+
+  /* HOURS */
+
+  .working-hours {
+    margin-top: 32px;
+  }
+
+  .working-hours h3 {
+    font-size: 16px;
+  }
+
+  .working-hours li {
+    font-size: 13px;
+  }
+
+
+  /* FORM */
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input {
+    height: 46px;
+
+    font-size: 14px;
+
+    border-radius: 10px;
+  }
+
+  .form-group textarea {
+    height: 125px;
+
+    font-size: 14px;
+
+    border-radius: 10px;
+  }
+
+
+  .call-button,
+  .whatsapp-button {
+    width: 44px;
+    height: 44px;
+
+    bottom: 12px;
+
+    border-width: 2px;
+  }
+
+  .call-button {
+    right: 55px;
+  }
+
+  .whatsapp-button {
+    right: 10px;
+  }
+
+  .call-button span {
+    font-size: 20px;
+  }
+
+  .call-button img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .whatsapp-button img {
+    width: 34px;
+    height: 34px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.contact-hero a:focus-visible,
+.contact-card a:focus-visible,
+.contact-card input:focus-visible,
+.contact-card textarea:focus-visible,
+.contact-card button:focus-visible {
+  outline: 2px solid #27827c;
+
+  outline-offset: 3px;
+}
+.call-button:focus-visible,
+.whatsapp-button:focus-visible {
+  outline: 2px solid #279c04;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .form-group input,
+  .form-group textarea,
+  .call-button,
+  .whatsapp-button {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   CONTACT PAGE - FINAL CLEAN LAYOUT
+   Add at the VERY BOTTOM of Contact.css
+========================================================= */
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  /* ---------- HERO ---------- */
+
+  .contact-hero {
+    min-height: 430px !important;
+    height: 430px !important;
+
+    padding: 0 7.5% !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+
+    overflow: visible !important;
+  }
+
+  .contact-hero-content {
+    max-width: 850px !important;
+
+    margin-top: 245px !important;
+
+    transform: none !important;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 22px !important;
+
+    color: #279c04 !important;
+
+    font-size: clamp(42px, 4vw, 58px) !important;
+
+    line-height: 1.05 !important;
+
+    letter-spacing: 0 !important;
+  }
+
+  .contact-hero p {
+    margin: 0 !important;
+
+    max-width: 760px !important;
+
+    font-size: clamp(16px, 1.4vw, 20px) !important;
+
+    line-height: 1.55 !important;
+
+    color: #292d33 !important;
+  }
+
+
+  /* ---------- CONTACT SECTION ---------- */
+
+  .contact-section {
+    padding: 0 40px 60px !important;
+
+    margin-top: 0 !important;
+  }
+
+
+  /* ---------- CONTACT CARD ---------- */
+
+  .contact-card {
+    max-width: 1180px !important;
+
+    min-height: auto !important;
+
+    padding: 95px 55px 65px !important;
+
+    margin: 0 auto !important;
+
+    border-radius: 30px !important;
+  }
+
+
+  /* ---------- DISCOUNT ---------- */
+
+  .discount-badge {
+    top: 25px !important;
+
+    width: min(390px, calc(100% - 100px)) !important;
+
+    min-height: 46px !important;
+
+    font-size: 18px !important;
+
+    white-space: nowrap !important;
+  }
+
+  .discount-badge img {
+    width: 52px !important;
+
+    margin-top: -28px !important;
+    margin-left: -30px !important;
+  }
+
+
+  /* ---------- GRID ---------- */
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 65px !important;
+  }
+
+
+  /* ---------- LEFT SIDE ---------- */
+
+  .info-block h2 {
+    margin: 0 0 22px !important;
+
+    font-size: 34px !important;
+
+    line-height: 1.1 !important;
+
+    letter-spacing: 1px !important;
+  }
+
+  .info-block p {
+    margin-bottom: 16px !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.5 !important;
+
+    letter-spacing: 1px !important;
+  }
+
+  .info-block a {
+    letter-spacing: 0.5px !important;
+  }
+
+
+  /* ---------- ADDRESS ---------- */
+
+  .address-block {
+    margin-top: 38px !important;
+  }
+
+  .address-block h3 {
+    margin-bottom: 8px !important;
+
+    font-size: 22px !important;
+
+    line-height: 1.2 !important;
+
+    letter-spacing: 3px !important;
+  }
+
+  .address-block p {
+    font-size: 15px !important;
+
+    line-height: 1.55 !important;
+
+    letter-spacing: 1px !important;
+  }
+
+
+  /* ---------- WORKING HOURS ---------- */
+
+  .working-hours {
+    margin-top: 45px !important;
+
+    padding-left: 5px !important;
+  }
+
+  .working-hours h3 {
+    font-size: 20px !important;
+
+    margin-bottom: 8px !important;
+  }
+
+  .working-hours li {
+    font-size: 16px !important;
+
+    line-height: 1.45 !important;
+  }
+
+
+  /* ---------- FORM ---------- */
+
+  .form-group {
+    margin-bottom: 18px !important;
+  }
+
+  .form-group label {
+    margin-bottom: 7px !important;
+
+    font-size: 16px !important;
+
+    letter-spacing: 1px !important;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px !important;
+
+    border-radius: 14px !important;
+  }
+
+  .form-group input {
+    height: 52px !important;
+
+    padding: 0 16px !important;
+  }
+
+  .form-group textarea {
+    height: 145px !important;
+
+    padding: 14px 16px !important;
+  }
+
+
+  /* ---------- SEND BUTTON ---------- */
+
+  .send-button {
+    width: 210px !important;
+
+    height: 52px !important;
+
+    margin: 22px auto 0 !important;
+
+    border: 1px solid #111 !important;
+
+    border-radius: 28px !important;
+
+    background: #c0f0d2 !important;
+
+    color: #111 !important;
+
+    font-size: 16px !important;
+
+    font-weight: 800 !important;
+  }
+
+  .send-button:hover {
+    background: #c0f0d2 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* ---------- FLOATING BUTTONS ---------- */
+
+  .call-button,
+  .whatsapp-button {
+    width: 62px !important;
+
+    height: 62px !important;
+
+    bottom: 22px !important;
+
+    border-width: 3px !important;
+  }
+
+  .call-button {
+    right: 105px !important;
+  }
+
+  .whatsapp-button {
+    right: 30px !important;
+  }
+
+  .call-button img {
+    width: 43px !important;
+    height: 43px !important;
+  }
+
+  .whatsapp-button img {
+    width: 47px !important;
+    height: 47px !important;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1024px) {
+
+  .contact-hero {
+    min-height: 390px !important;
+    height: 390px !important;
+
+    padding: 0 6% !important;
+
+    align-items: flex-start !important;
+  }
+
+  .contact-hero-content {
+    margin-top: 205px !important;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 18px !important;
+
+    font-size: 45px !important;
+  }
+
+  .contact-hero p {
+    font-size: 17px !important;
+
+    line-height: 1.5 !important;
+  }
+
+  .contact-section {
+    margin-top: 0 !important;
+
+    padding: 0 25px 50px !important;
+  }
+
+  .contact-card {
+    min-height: auto !important;
+
+    padding: 85px 40px 55px !important;
+
+    border-radius: 28px !important;
+  }
+
+  .contact-grid {
+    gap: 45px !important;
+  }
+
+  .info-block h2 {
+    font-size: 31px !important;
+  }
+
+  .info-block p {
+    font-size: 15px !important;
+
+    letter-spacing: 1px !important;
+  }
+
+  .address-block h3 {
+    font-size: 21px !important;
+
+    letter-spacing: 3px !important;
+  }
+
+  .address-block p {
+    font-size: 14px !important;
+
+    letter-spacing: 1px !important;
+  }
+
+  .working-hours {
+    margin-top: 38px !important;
+
+    padding-left: 5px !important;
+  }
+
+  .working-hours li {
+    font-size: 15px !important;
+  }
+
+  .form-group label {
+    font-size: 15px !important;
+  }
+
+  .form-group input {
+    height: 50px !important;
+  }
+
+  .form-group textarea {
+    height: 135px !important;
+  }
+
+  .send-button {
+    width: 200px !important;
+
+    height: 50px !important;
+
+    background: #c0f0d2 !important;
+
+    color: #111 !important;
+
+    border: 1px solid #111 !important;
+
+    font-size: 15px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+  .contact-hero {
+    min-height: 350px !important;
+
+    height: 350px !important;
+
+    padding: 0 6% !important;
+
+    align-items: flex-start !important;
+  }
+
+  .contact-hero-content {
+    margin-top: 190px !important;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 18px !important;
+
+    font-size: 43px !important;
+  }
+
+  .contact-hero p {
+    font-size: 18px !important;
+  }
+
+  .contact-section {
+    margin-top: 0 !important;
+
+    padding: 0 20px 45px !important;
+  }
+
+  .contact-card {
+    padding: 85px 35px 55px !important;
+
+    min-height: auto !important;
+  }
+
+  .contact-grid {
+    gap: 45px !important;
+  }
+
+  .send-button {
+    width: 200px !important;
+
+    height: 50px !important;
+
+    background: #c0f0d2 !important;
+
+    color: #111 !important;
+
+    border: 1px solid #111 !important;
+
+    font-size: 15px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .contact-hero {
+    min-height: auto !important;
+
+    height: auto !important;
+
+    padding: 55px 20px 35px !important;
+
+    display: block !important;
+  }
+
+  .contact-hero-content {
+    margin-top: 0 !important;
+
+    transform: none !important;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 18px !important;
+
+    font-size: 42px !important;
+
+    line-height: 1.05 !important;
+  }
+
+  .contact-hero p {
+    margin: 0 !important;
+
+    font-size: 18px !important;
+
+    line-height: 1.5 !important;
+  }
+
+  .contact-section {
+    margin-top: 0 !important;
+
+    padding: 0 12px 40px !important;
+  }
+
+  .contact-card {
+    min-height: auto !important;
+
+    padding: 90px 20px 75px !important;
+
+    border-radius: 24px !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+
+    gap: 40px !important;
+  }
+
+  .info-block h2 {
+    font-size: 32px !important;
+
+    margin-bottom: 20px !important;
+  }
+
+  .info-block p {
+    font-size: 15px !important;
+
+    letter-spacing: 0.5px !important;
+  }
+
+  .address-block {
+    margin-top: 30px !important;
+  }
+
+  .address-block h3 {
+    font-size: 20px !important;
+
+    letter-spacing: 2px !important;
+  }
+
+  .address-block p {
+    font-size: 14px !important;
+
+    letter-spacing: 0.5px !important;
+  }
+
+  .working-hours {
+    margin-top: 38px !important;
+
+    padding-left: 0 !important;
+  }
+
+  .working-hours h3 {
+    font-size: 20px !important;
+  }
+
+  .working-hours li {
+    font-size: 16px !important;
+  }
+
+  .form-group label {
+    font-size: 16px !important;
+  }
+
+  .form-group input {
+    height: 52px !important;
+  }
+
+  .form-group textarea {
+    height: 155px !important;
+  }
+
+  .send-button {
+    width: 200px !important;
+
+    height: 50px !important;
+
+    margin-top: 20px !important;
+
+    background: #c0f0d2 !important;
+
+    color: #111 !important;
+
+    border: 1px solid #111 !important;
+
+    font-size: 15px !important;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 54px !important;
+
+    height: 54px !important;
+
+    bottom: 18px !important;
+  }
+
+  .call-button {
+    right: 75px !important;
+  }
+
+  .whatsapp-button {
+    right: 15px !important;
+  }
+
+  .call-button img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .whatsapp-button img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+/* =========================================================
+   CONTACT HERO - REMOVE TOP GAP
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  .contact-hero {
+    min-height: 430px !important;
+    height: 430px !important;
+    padding: 0 7.5% !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+  .contact-hero-content {
+    margin-top: 105px !important;
+    transform: none !important;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 18px !important;
+    font-size: clamp(42px, 4vw, 58px) !important;
+    line-height: 1.05 !important;
+  }
+
+  .contact-hero p {
+    margin: 0 !important;
+    font-size: clamp(16px, 1.4vw, 20px) !important;
+    line-height: 1.5 !important;
+  }
+
+  .contact-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+/* =========================================================
+   CONTACT PAGE - REMOVE GAP BETWEEN HERO AND CARD
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  /* Make hero shorter */
+  .contact-hero {
+    height: 330px !important;
+    min-height: 330px !important;
+    padding: 0 7.5% !important;
+  }
+
+  /* Keep heading at the same visual position */
+  .contact-hero-content {
+    margin-top: 105px !important;
+    transform: none !important;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 18px !important;
+  }
+
+  .contact-hero p {
+    margin: 0 !important;
+  }
+
+  /* Remove any extra space before card */
+  .contact-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .contact-card {
+    margin-top: 0 !important;
+  }
+}
+/* =========================================================
+   GET IN TOUCH - TIGHTER SPACING
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  /* Hero */
+  .contact-hero {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  .contact-hero-content {
+    margin-top: 95px !important;
+  }
+
+  .contact-hero h1 {
+    margin-bottom: 14px !important;
+  }
+
+  .contact-hero p {
+    line-height: 1.4 !important;
+  }
+
+  /* Contact card */
+  .contact-section {
+    padding-top: 0 !important;
+    padding-bottom: 45px !important;
+    margin-top: 0 !important;
+  }
+
+  .contact-card {
+    padding-top: 75px !important;
+    padding-bottom: 50px !important;
+  }
+
+  /* Badge */
+  .discount-badge {
+    top: 20px !important;
+  }
+
+  /* Left/right columns */
+  .contact-grid {
+    gap: 50px !important;
+  }
+
+  /* Contact information */
+  .address-block {
+    margin-top: 28px !important;
+  }
+
+  .working-hours {
+    margin-top: 32px !important;
+  }
+
+  /* Form */
+  .form-group {
+    margin-bottom: 14px !important;
+  }
+
+  .send-button {
+    margin-top: 16px !important;
+  }
+}

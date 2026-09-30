@@ -1,0 +1,1559 @@
+/* =========================================================
+   WHY PARENTS CHOOSE US
+========================================================= */
+
+.why-parents-section {
+  width: 100%;
+  min-height: 766px;
+  padding: 24px 34px 60px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  /* background-color: #ffffff; */
+  background-image: url(../../assets/images/background.jpeg);
+
+  font-family: "Nunito", "Arial", sans-serif;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.why-parents-section .why-parents-container {
+  width: 100%;
+  max-width: 1881px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.why-parents-section .why-parents-title {
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+
+  color: #0e047c;
+
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.why-parents-section .why-parents-grid {
+  width: 100%;
+  margin-top: 92px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 34px;
+  row-gap: 54px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.why-parents-section .why-parent-card {
+  width: 100%;
+  height: 207px;
+
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  background: #ebfdfd;
+
+  border-radius: 7px;
+}
+
+/* =========================================================
+   CIRCULAR IMAGE AREA
+========================================================= */
+
+.why-parents-section .why-parent-icon {
+  width: 138px;
+  height: 138px;
+
+  flex: 0 0 138px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: #ebd3d3;
+  border-radius: 50%;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.why-parents-section .why-parent-image {
+  display: block;
+
+  width: 88px;
+  height: 88px;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.why-parents-section .why-parent-content {
+  min-width: 0;
+  flex: 1;
+
+  margin-left: 29px;
+
+  display: flex;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BULLET
+========================================================= */
+
+.why-parents-section .why-parent-bullet {
+  flex: 0 0 auto;
+
+  margin-top: -2px;
+  margin-right: 15px;
+
+  color: #62686a;
+
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.why-parents-section .why-parent-content p {
+  width: 100%;
+  max-width: 300px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #62686a;
+
+  font-family: "Nunito", "Arial", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1439px) {
+  .why-parents-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .why-parents-section .why-parents-title {
+    font-size: 68px;
+    letter-spacing: -2px;
+  }
+
+  .why-parents-section .why-parents-grid {
+    margin-top: 78px;
+    column-gap: 30px;
+    row-gap: 48px;
+  }
+
+  .why-parents-section .why-parent-card {
+    height: 245px;
+    padding: 13px;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 150px;
+    height: 150px;
+    flex-basis: 150px;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 124px;
+    height: 124px;
+  }
+
+  .why-parents-section .why-parent-content {
+    margin-left: 24px;
+  }
+
+  .why-parents-section .why-parent-content p {
+    font-size: 23px;
+    line-height: 1.5;
+  }
+
+  .why-parents-section .why-parent-bullet {
+    margin-right: 12px;
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   IPAD PRO 12.9 / 13-INCH
+   LANDSCAPE + PORTRAIT
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+  .why-parents-section {
+    width: 100%;
+    min-height: auto;
+    padding: 38px 32px 65px;
+  }
+
+  .why-parents-section .why-parents-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  /* -------------------------
+     TITLE
+  ------------------------- */
+
+  .why-parents-section .why-parents-title {
+    font-size: 58px;
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+  }
+
+  /* -------------------------
+     GRID
+  ------------------------- */
+
+  .why-parents-section .why-parents-grid {
+    width: 100%;
+    margin-top: 65px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 26px;
+    row-gap: 30px;
+  }
+
+  /* -------------------------
+     CARD
+  ------------------------- */
+
+  .why-parents-section .why-parent-card {
+    width: 100%;
+    min-width: 0;
+    height: 215px;
+
+    padding: 13px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 8px;
+  }
+
+  /* -------------------------
+     ICON CIRCLE
+  ------------------------- */
+
+  .why-parents-section .why-parent-icon {
+    width: 128px;
+    height: 128px;
+
+    flex: 0 0 128px;
+  }
+
+  /* -------------------------
+     IMAGE
+  ------------------------- */
+
+  .why-parents-section .why-parent-image {
+    width: 106px;
+    height: 106px;
+  }
+
+  /* -------------------------
+     CONTENT
+  ------------------------- */
+
+  .why-parents-section .why-parent-content {
+    min-width: 0;
+    margin-left: 19px;
+  }
+
+  /* -------------------------
+     BULLET
+  ------------------------- */
+
+  .why-parents-section .why-parent-bullet {
+    margin-top: -1px;
+    margin-right: 8px;
+
+    font-size: 21px;
+    line-height: 1.45;
+  }
+
+  /* -------------------------
+     TEXT
+  ------------------------- */
+
+  .why-parents-section .why-parent-content p {
+    width: 100%;
+    max-width: 250px;
+
+    font-size: 19px;
+    line-height: 1.45;
+  }
+}
+
+
+/* =========================================================
+   IPAD PRO PORTRAIT
+   1024px × 1366px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+
+  .why-parents-section {
+    padding: 35px 26px 60px;
+  }
+
+  .why-parents-section .why-parents-title {
+    font-size: 52px;
+    letter-spacing: -1.4px;
+  }
+
+  .why-parents-section .why-parents-grid {
+    margin-top: 58px;
+
+    column-gap: 22px;
+    row-gap: 26px;
+  }
+
+  .why-parents-section .why-parent-card {
+    height: 205px;
+    padding: 12px;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 116px;
+    height: 116px;
+    flex-basis: 116px;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 96px;
+    height: 96px;
+  }
+
+  .why-parents-section .why-parent-content {
+    margin-left: 15px;
+  }
+
+  .why-parents-section .why-parent-bullet {
+    margin-right: 7px;
+    font-size: 19px;
+  }
+
+  .why-parents-section .why-parent-content p {
+    max-width: 220px;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1023px) {
+  .why-parents-section {
+    min-height: auto;
+    padding: 30px 24px 55px;
+  }
+
+  .why-parents-section .why-parents-title {
+    font-size: 54px;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+  }
+
+  .why-parents-section .why-parents-grid {
+    margin-top: 65px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 25px;
+    row-gap: 30px;
+  }
+
+  .why-parents-section .why-parent-card {
+    height: 220px;
+    padding: 12px;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 130px;
+    height: 130px;
+    flex-basis: 130px;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 108px;
+    height: 108px;
+  }
+
+  .why-parents-section .why-parent-content {
+    margin-left: 18px;
+  }
+
+  .why-parents-section .why-parent-bullet {
+    margin-right: 9px;
+    font-size: 21px;
+  }
+
+  .why-parents-section .why-parent-content p {
+    max-width: 230px;
+    font-size: 20px;
+    line-height: 1.45;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .why-parents-section {
+    padding: 25px 16px 45px;
+  }
+
+  .why-parents-section .why-parents-title {
+    font-size: clamp(36px, 8.8vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+
+  .why-parents-section .why-parents-grid {
+    margin-top: 45px;
+
+    grid-template-columns: 1fr;
+
+    row-gap: 22px;
+  }
+
+  .why-parents-section .why-parent-card {
+    height: 190px;
+    padding: 11px;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 118px;
+    height: 118px;
+    flex-basis: 118px;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 98px;
+    height: 98px;
+  }
+
+  .why-parents-section .why-parent-content {
+    margin-left: 17px;
+  }
+
+  .why-parents-section .why-parent-bullet {
+    margin-right: 8px;
+    font-size: 19px;
+  }
+
+  .why-parents-section .why-parent-content p {
+    max-width: none;
+    font-size: 19px;
+    line-height: 1.45;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 479px) {
+  .why-parents-section {
+    padding: 22px 12px 40px;
+  }
+
+  .why-parents-section .why-parents-title {
+    font-size: 35px;
+    letter-spacing: -0.8px;
+  }
+
+  .why-parents-section .why-parents-grid {
+    margin-top: 38px;
+    row-gap: 18px;
+  }
+
+  .why-parents-section .why-parent-card {
+    min-height: 165px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 100px;
+    height: 100px;
+    flex-basis: 100px;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 84px;
+    height: 84px;
+  }
+
+  .why-parents-section .why-parent-content {
+    margin-left: 13px;
+  }
+
+  .why-parents-section .why-parent-bullet {
+    margin-right: 6px;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .why-parents-section .why-parent-content p {
+    font-size: 17px;
+    line-height: 1.45;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .why-parents-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .why-parents-section .why-parents-title {
+    font-size: 31px;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 88px;
+    height: 88px;
+    flex-basis: 88px;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 74px;
+    height: 74px;
+  }
+
+  .why-parents-section .why-parent-content {
+    margin-left: 10px;
+  }
+
+  .why-parents-section .why-parent-bullet {
+    margin-right: 5px;
+    font-size: 16px;
+  }
+
+  .why-parents-section .why-parent-content p {
+    font-size: 15.5px;
+  }
+}
+
+
+
+/* =========================================================
+   FULL ANIMATION
+   Add this at the END of WhyParentsChoose.css
+========================================================= */
+
+/* =========================================================
+   SECTION REVEAL
+========================================================= */
+
+.why-parents-section {
+  position: relative;
+}
+
+
+/* =========================================================
+   TITLE ANIMATION
+========================================================= */
+
+.why-parents-title {
+  animation: whyTitleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.1s;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.why-parents-grid {
+  perspective: 1000px;
+}
+
+
+/* =========================================================
+   CARD INITIAL ANIMATION
+========================================================= */
+
+.why-parent-card {
+  position: relative;
+
+  opacity: 0;
+
+  transform:
+    translateY(55px)
+    scale(0.94);
+
+  animation:
+    whyCardReveal
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    background-color 0.3s ease;
+}
+
+
+/* =========================================================
+   STAGGERED CARD DELAYS
+========================================================= */
+
+.why-parent-card:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+.why-parent-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.why-parent-card:nth-child(3) {
+  animation-delay: 0.55s;
+}
+
+.why-parent-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.why-parent-card:nth-child(5) {
+  animation-delay: 0.85s;
+}
+
+.why-parent-card:nth-child(6) {
+  animation-delay: 1s;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.why-parent-card:hover {
+  transform:
+    translateY(-9px)
+    scale(1.015);
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.why-parent-icon {
+  position: relative;
+
+  overflow: hidden;
+
+  transform: scale(0.7);
+
+  animation:
+    whyIconPop
+    0.7s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   ICON STAGGER
+========================================================= */
+
+.why-parent-card:nth-child(1) .why-parent-icon {
+  animation-delay: 0.45s;
+}
+
+.why-parent-card:nth-child(2) .why-parent-icon {
+  animation-delay: 0.6s;
+}
+
+.why-parent-card:nth-child(3) .why-parent-icon {
+  animation-delay: 0.75s;
+}
+
+.why-parent-card:nth-child(4) .why-parent-icon {
+  animation-delay: 0.9s;
+}
+
+.why-parent-card:nth-child(5) .why-parent-icon {
+  animation-delay: 1.05s;
+}
+
+.why-parent-card:nth-child(6) .why-parent-icon {
+  animation-delay: 1.2s;
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.why-parent-card:hover .why-parent-icon {
+  transform: scale(1.08) rotate(3deg);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.why-parent-image {
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.why-parent-card:hover .why-parent-image {
+  transform:
+    scale(1.1)
+    rotate(-3deg);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.why-parent-content {
+  opacity: 0;
+
+  transform: translateX(25px);
+
+  animation:
+    whyContentReveal
+    0.65s
+    ease-out
+    forwards;
+}
+
+
+/* =========================================================
+   CONTENT STAGGER
+========================================================= */
+
+.why-parent-card:nth-child(1) .why-parent-content {
+  animation-delay: 0.55s;
+}
+
+.why-parent-card:nth-child(2) .why-parent-content {
+  animation-delay: 0.7s;
+}
+
+.why-parent-card:nth-child(3) .why-parent-content {
+  animation-delay: 0.85s;
+}
+
+.why-parent-card:nth-child(4) .why-parent-content {
+  animation-delay: 1s;
+}
+
+.why-parent-card:nth-child(5) .why-parent-content {
+  animation-delay: 1.15s;
+}
+
+.why-parent-card:nth-child(6) .why-parent-content {
+  animation-delay: 1.3s;
+}
+
+
+/* =========================================================
+   BULLET
+========================================================= */
+
+.why-parent-bullet {
+  display: inline-block;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   BULLET HOVER
+========================================================= */
+
+.why-parent-card:hover .why-parent-bullet {
+  transform:
+    translateX(4px)
+    scale(1.3);
+
+  color: #df2080;
+}
+
+
+/* =========================================================
+   TEXT HOVER
+========================================================= */
+
+.why-parent-content p {
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+.why-parent-card:hover .why-parent-content p {
+  transform: translateX(4px);
+
+  color: #4e5557;
+}
+
+
+/* =========================================================
+   SHINE EFFECT
+========================================================= */
+
+.why-parent-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SHINE ON HOVER
+========================================================= */
+
+.why-parent-card:hover::after {
+  animation: whyCardShine 0.8s ease;
+}
+
+
+/* =========================================================
+   FLOATING ICON
+========================================================= */
+
+.why-parent-card:nth-child(1) .why-parent-icon {
+  animation-name: whyIconPop, whyIconFloat;
+  animation-duration: 0.7s, 3.5s;
+  animation-delay: 0.45s, 1.3s;
+  animation-timing-function:
+    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+}
+
+.why-parent-card:nth-child(2) .why-parent-icon {
+  animation-name: whyIconPop, whyIconFloat;
+  animation-duration: 0.7s, 3.8s;
+  animation-delay: 0.6s, 1.45s;
+  animation-timing-function:
+    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+}
+
+.why-parent-card:nth-child(3) .why-parent-icon {
+  animation-name: whyIconPop, whyIconFloat;
+  animation-duration: 0.7s, 3.6s;
+  animation-delay: 0.75s, 1.6s;
+  animation-timing-function:
+    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+}
+
+.why-parent-card:nth-child(4) .why-parent-icon {
+  animation-name: whyIconPop, whyIconFloat;
+  animation-duration: 0.7s, 4s;
+  animation-delay: 0.9s, 1.75s;
+  animation-timing-function:
+    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+}
+
+.why-parent-card:nth-child(5) .why-parent-icon {
+  animation-name: whyIconPop, whyIconFloat;
+  animation-duration: 0.7s, 3.7s;
+  animation-delay: 1.05s, 1.9s;
+  animation-timing-function:
+    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+}
+
+.why-parent-card:nth-child(6) .why-parent-icon {
+  animation-name: whyIconPop, whyIconFloat;
+  animation-duration: 0.7s, 3.9s;
+  animation-delay: 1.2s, 2.05s;
+  animation-timing-function:
+    cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+}
+
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+@keyframes whyTitleReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(-35px)
+      scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes whyCardReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(55px)
+      scale(0.94);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes whyIconPop {
+
+  0% {
+    transform:
+      scale(0.65)
+      rotate(-12deg);
+  }
+
+  70% {
+    transform:
+      scale(1.08)
+      rotate(4deg);
+  }
+
+  100% {
+    transform:
+      scale(1)
+      rotate(0deg);
+  }
+}
+
+
+@keyframes whyIconFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-7px)
+      rotate(1.5deg);
+  }
+}
+
+
+@keyframes whyContentReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateX(25px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+
+@keyframes whyCardShine {
+
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE ANIMATION TUNING
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .why-parent-card {
+    transform:
+      translateY(35px)
+      scale(0.97);
+  }
+
+  .why-parent-card:hover {
+    transform:
+      translateY(-5px)
+      scale(1.01);
+  }
+
+  .why-parent-card:hover .why-parent-icon {
+    transform:
+      scale(1.05)
+      rotate(2deg);
+  }
+
+  .why-parent-card:hover .why-parent-image {
+    transform:
+      scale(1.06)
+      rotate(-2deg);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 479px) {
+
+  .why-parent-card {
+    transform:
+      translateY(28px)
+      scale(0.98);
+  }
+
+  .why-parent-card:hover {
+    transform:
+      translateY(-3px)
+      scale(1.005);
+  }
+
+  .why-parent-card::after {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .why-parents-title,
+  .why-parent-card,
+  .why-parent-icon,
+  .why-parent-content {
+    animation: none !important;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+  }
+
+  .why-parent-card,
+  .why-parent-icon,
+  .why-parent-image,
+  .why-parent-content p,
+  .why-parent-bullet {
+    transition: none !important;
+  }
+
+  .why-parent-card::after {
+    display: none;
+  }
+}
+
+/* =========================================================
+   WHY PARENTS ANIMATION
+========================================================= */
+
+.why-parents-section {
+  overflow: hidden;
+}
+
+.why-parents-title {
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.why-parents-section.show
+.why-parents-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-parents-grid .why-parent-card {
+  opacity: 0;
+  transform:
+    translateY(45px)
+    scale(0.95);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.why-parents-section.show
+.why-parents-grid
+.why-parent-card {
+  opacity: 1;
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+.why-parents-section.show
+.why-parent-card:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.why-parents-section.show
+.why-parent-card:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.why-parents-section.show
+.why-parent-card:nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.why-parents-section.show
+.why-parent-card:nth-child(4) {
+  transition-delay: 0.35s;
+}
+
+.why-parents-section.show
+.why-parent-card:nth-child(5) {
+  transition-delay: 0.45s;
+}
+
+.why-parents-section.show
+.why-parent-card:nth-child(6) {
+  transition-delay: 0.55s;
+}
+
+.why-parent-card:hover {
+  transform:
+    translateY(-10px)
+    scale(1.02) !important;
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.why-parent-image {
+  transition:
+    transform 0.5s ease;
+}
+
+.why-parent-card:hover
+.why-parent-image {
+  transform:
+    scale(1.12)
+    rotate(3deg);
+}
+
+/* =========================================================
+   FINAL DESKTOP DESIGN
+   WHY PARENTS CHOOSE US
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  .why-parents-section {
+    width: 100%;
+    min-height: 0 !important;
+    padding: 50px 30px 55px !important;
+    box-sizing: border-box;
+  }
+
+  .why-parents-section .why-parents-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+
+  /* =======================================================
+     HEADING
+  ======================================================= */
+
+  .why-parents-section .why-parents-title {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: clamp(42px, 3.5vw, 48px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1.5px !important;
+  }
+
+
+  /* =======================================================
+     GRID
+  ======================================================= */
+
+  .why-parents-section .why-parents-grid {
+
+    width: 100%;
+
+    margin-top: 48px !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) !important;
+
+    column-gap: 18px !important;
+    row-gap: 30px !important;
+  }
+
+
+  /* =======================================================
+     CARD
+  ======================================================= */
+
+  .why-parents-section .why-parent-card {
+
+    width: 100% !important;
+    height: 145px !important;
+
+    min-height: 145px !important;
+
+    padding: 9px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    background: #ebfdfd !important;
+
+    border-radius: 5px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     ICON CIRCLE
+  ======================================================= */
+
+  .why-parents-section .why-parent-icon {
+
+    width: 90px !important;
+    height: 90px !important;
+
+    flex: 0 0 90px !important;
+
+    margin: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ebd3d3 !important;
+
+    border-radius: 50%;
+  }
+
+
+  /* =======================================================
+     ICON IMAGE
+  ======================================================= */
+
+  .why-parents-section .why-parent-image {
+
+    width: 70px !important;
+    height: 70px !important;
+
+    max-width: 70px !important;
+    max-height: 70px !important;
+
+    object-fit: contain;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .why-parents-section .why-parent-content {
+
+    min-width: 0;
+
+    flex: 1;
+
+    margin-left: 13px !important;
+
+    display: flex;
+    align-items: flex-start;
+  }
+
+
+  /* =======================================================
+     BULLET
+  ======================================================= */
+
+  .why-parents-section .why-parent-bullet {
+
+    flex: 0 0 auto;
+
+    margin-top: -2px !important;
+    margin-right: 7px !important;
+
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+
+    color: #62686a;
+  }
+
+
+  /* =======================================================
+     TEXT
+  ======================================================= */
+
+  .why-parents-section .why-parent-content p {
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 15px !important;
+    font-weight: 500 !important;
+
+    line-height: 1.4 !important;
+
+    color: #62686a;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .why-parents-section {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .why-parents-section .why-parents-container {
+    max-width: 1100px;
+  }
+
+  .why-parents-section .why-parents-grid {
+    column-gap: 20px !important;
+    row-gap: 30px !important;
+  }
+
+  .why-parents-section .why-parent-card {
+    height: 150px !important;
+    min-height: 150px !important;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 92px !important;
+    height: 92px !important;
+    flex-basis: 92px !important;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .why-parents-section .why-parent-content p {
+    font-size: 15.5px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   1024px – 1199px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  .why-parents-section .why-parents-container {
+    max-width: 950px;
+  }
+
+  .why-parents-section .why-parents-title {
+    font-size: 42px !important;
+  }
+
+  .why-parents-section .why-parents-grid {
+    margin-top: 45px !important;
+    column-gap: 18px !important;
+    row-gap: 28px !important;
+  }
+
+  .why-parents-section .why-parent-card {
+    height: 140px !important;
+    min-height: 140px !important;
+    padding: 8px !important;
+  }
+
+  .why-parents-section .why-parent-icon {
+    width: 86px !important;
+    height: 86px !important;
+    flex-basis: 86px !important;
+  }
+
+  .why-parents-section .why-parent-image {
+    width: 67px !important;
+    height: 67px !important;
+  }
+
+  .why-parents-section .why-parent-content {
+    margin-left: 11px !important;
+  }
+
+  .why-parents-section .why-parent-bullet {
+    margin-right: 6px !important;
+    font-size: 17px !important;
+  }
+
+  .why-parents-section .why-parent-content p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+}

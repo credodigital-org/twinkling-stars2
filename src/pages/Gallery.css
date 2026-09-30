@@ -1,0 +1,2697 @@
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+);
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+.gallery-page,
+.gallery-page * {
+  box-sizing: border-box;
+}
+
+.gallery-page {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+  margin-top: -150px;
+
+  font-family: "Poppins", sans-serif;
+
+  background-color: #ffffff;
+  background-image: url("../assets/images/background.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   GALLERY HERO
+========================================================= */
+
+.gallery-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 650px;
+
+  margin: 0;
+  padding: 110px 7.5% 80px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.gallery-hero-content {
+  width: 100%;
+  max-width: 760px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.gallery-hero h1 {
+  margin: 0 0 45px;
+  padding: 0;
+
+  color: #bd0808;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    55px,
+    6vw,
+    82px
+  );
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.gallery-hero p {
+  margin: 0;
+
+  color: #282d35;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    20px,
+    2vw,
+    31px
+  );
+
+  font-weight: 500;
+
+  line-height: 1.55;
+
+  letter-spacing: 0.1px;
+}
+
+
+/* =========================================================
+   BOOK VISIT BUTTON
+========================================================= */
+
+.visit-button {
+  position: relative;
+  z-index: 5;
+
+  flex: 0 0 auto;
+
+  min-width: 230px;
+
+  padding: 19px 32px;
+
+  margin-top: 150px;
+  margin-right: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: #173252;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd632,
+      #ffbd27
+    );
+
+  border-radius: 15px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 8px 20px
+    rgba(255, 188, 39, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.visit-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(255, 188, 39, 0.35);
+}
+
+.visit-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
+
+.gallery-section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 35px 24px 80px;
+
+  background: #ffffff;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.gallery-grid {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 38px 28px;
+}
+
+
+/* =========================================================
+   GALLERY CARD
+========================================================= */
+
+.gallery-card {
+  position: relative;
+
+  width: 100%;
+  height: 560px;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  background: #eeeeee;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   GALLERY IMAGE
+========================================================= */
+
+.gallery-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   GALLERY LABEL
+========================================================= */
+
+.gallery-label {
+  position: absolute;
+
+  bottom: 0;
+
+  min-height: 78px;
+
+  padding: 18px 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(
+    26px,
+    2.4vw,
+    42px
+  );
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+
+  border-radius: 24px 24px 0 0;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   LABEL POSITIONS / COLORS
+========================================================= */
+
+.reading-label {
+  left: 0;
+
+  min-width: 52%;
+
+  background: #24636c;
+}
+
+
+.arts-label {
+  right: 0;
+
+  min-width: 54%;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f79048,
+      #ffb15c
+    );
+}
+
+
+.gardening-label {
+  right: 0;
+
+  min-width: 52%;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #4d7d4d;
+}
+
+
+.music-label {
+  left: 0;
+
+  min-width: 54%;
+
+  background: #5c4d79;
+}
+
+
+.playground-label {
+  left: 0;
+
+  min-width: 52%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f79b10,
+      #ffb527
+    );
+}
+
+
+.sports-label {
+  right: 0;
+
+  min-width: 50%;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #cf62b0;
+}
+
+
+.science-label {
+  right: 0;
+
+  min-width: 55%;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #3d78c5;
+}
+
+
+.graduation-label {
+  left: 0;
+
+  min-width: 54%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff6827,
+      #713b9e
+    );
+}
+
+
+/* =========================================================
+   CTA SECTION
+   SCOPED TO GALLERY
+========================================================= */
+
+.gallery-admission-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 716px;
+
+  margin: 0;
+  padding: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #fff0c5 0,
+      #fff0c5 630px,
+      #ffffff 630px,
+      #ffffff 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CTA IMAGE WRAPPER
+========================================================= */
+
+.gallery-admission-section .admission-image-wrapper {
+  position: absolute;
+
+  left: 4.5%;
+  top: 15px;
+
+  width: 43%;
+  max-width: 700px;
+
+  height: 480px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   CTA IMAGE
+========================================================= */
+
+.gallery-admission-section .admission-image {
+  display: block;
+
+  width: 100%;
+  max-width: 670px;
+
+  height: auto;
+
+  max-height: 470px;
+
+  object-fit: contain;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.gallery-admission-section .admission-content {
+  position: absolute;
+
+  top: 65px;
+  left: 47%;
+
+  width: 49%;
+
+  padding: 0 25px 0 0;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   CTA TITLE
+========================================================= */
+
+.gallery-admission-section .admission-title {
+  margin: 0;
+
+  color: #71370e;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(
+    42px,
+    4.2vw,
+    64px
+  );
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
+.gallery-admission-section .admission-description {
+  margin: 45px 0 0;
+
+  color: #050505;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(
+    27px,
+    2.8vw,
+    44px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.8;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.gallery-admission-button {
+  position: absolute;
+
+  left: 50%;
+  top: 575px;
+
+  transform: translateX(-50%);
+
+  width: 480px;
+  height: 120px;
+
+  padding: 0 25px;
+
+  border: none;
+
+  border-radius: 24px;
+
+  background: #e5960a;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 58px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.gallery-admission-button:hover {
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+
+  box-shadow:
+    0 8px 18px
+    rgba(120, 75, 0, 0.2);
+}
+
+
+.gallery-admission-button:active {
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+
+.gallery-admission-button:focus-visible {
+  outline:
+    4px solid
+    rgba(229, 150, 10, 0.35);
+
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .gallery-hero {
+    min-height: 670px;
+
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+
+  .gallery-hero h1 {
+    font-size: 82px;
+  }
+
+  .gallery-hero p {
+    font-size: 31px;
+  }
+
+  .visit-button {
+    min-width: 240px;
+
+    margin-right: 50px;
+    margin-top: 160px;
+
+    font-size: 25px;
+  }
+
+  .gallery-card {
+    height: 580px;
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    left: 5%;
+
+    width: 43%;
+  }
+
+  .gallery-admission-section .admission-content {
+    left: 47%;
+
+    width: 50%;
+  }
+}
+
+
+/* =========================================================
+   1400px - 1599px
+========================================================= */
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+
+  .gallery-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .gallery-card {
+    height: 530px;
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    left: 3%;
+
+    width: 43%;
+  }
+
+  .gallery-admission-section .admission-content {
+    left: 46%;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size: 56px;
+  }
+
+  .gallery-admission-section .admission-description {
+    font-size: 36px;
+  }
+}
+
+
+/* =========================================================
+   1200px - 1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+  .gallery-hero {
+    min-height: 620px;
+
+    padding:
+      90px
+      5%
+      70px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 68px;
+
+    margin-bottom: 35px;
+  }
+
+  .gallery-hero p {
+    font-size: 25px;
+  }
+
+  .visit-button {
+    min-width: 210px;
+
+    margin-top: 120px;
+    margin-right: 10px;
+
+    font-size: 22px;
+  }
+
+  .gallery-grid {
+    gap: 30px 24px;
+  }
+
+  .gallery-card {
+    height: 480px;
+
+    border-radius: 22px;
+  }
+
+  .gallery-label {
+    min-height: 70px;
+
+    font-size: 34px;
+
+    padding: 16px 22px;
+  }
+
+  .gallery-admission-section {
+    min-height: 680px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 600px,
+        #ffffff 600px,
+        #ffffff 100%
+      );
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    left: 2%;
+
+    width: 43%;
+
+    height: 440px;
+  }
+
+  .gallery-admission-section .admission-image {
+    max-height: 430px;
+  }
+
+  .gallery-admission-section .admission-content {
+    top: 55px;
+
+    left: 45%;
+
+    width: 52%;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size: 49px;
+  }
+
+  .gallery-admission-section .admission-description {
+    margin-top: 35px;
+
+    font-size: 32px;
+
+    line-height: 1.7;
+  }
+
+  .gallery-admission-button {
+    top: 540px;
+
+    width: 420px;
+    height: 100px;
+
+    font-size: 48px;
+  }
+}
+
+
+/* =========================================================
+   1025px - 1199px
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+
+  .gallery-hero {
+    min-height: 570px;
+
+    padding:
+      80px
+      4%
+      60px;
+
+    gap: 30px;
+  }
+
+  .gallery-hero-content {
+    max-width: 600px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 58px;
+
+    margin-bottom: 30px;
+  }
+
+  .gallery-hero p {
+    font-size: 21px;
+
+    line-height: 1.5;
+  }
+
+  .visit-button {
+    min-width: 185px;
+
+    padding: 17px 20px;
+
+    margin-top: 90px;
+    margin-right: 0;
+
+    font-size: 19px;
+  }
+
+  .gallery-section {
+    padding:
+      30px
+      18px
+      60px;
+  }
+
+  .gallery-grid {
+    gap: 24px 18px;
+  }
+
+  .gallery-card {
+    height: 390px;
+
+    border-radius: 20px;
+  }
+
+  .gallery-label {
+    min-height: 62px;
+
+    padding: 14px 18px;
+
+    font-size: 28px;
+
+    border-radius:
+      19px
+      19px
+      0
+      0;
+  }
+
+  .gallery-admission-section {
+    min-height: 620px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 550px,
+        #ffffff 550px,
+        #ffffff 100%
+      );
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    left: 1%;
+
+    top: 30px;
+
+    width: 42%;
+
+    height: 390px;
+  }
+
+  .gallery-admission-section .admission-image {
+    max-height: 380px;
+  }
+
+  .gallery-admission-section .admission-content {
+    top: 50px;
+
+    left: 44%;
+
+    width: 54%;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size: 43px;
+
+    white-space: normal;
+    margin-top: 80px;
+  }
+
+  .gallery-admission-section .admission-description {
+    margin-top: 25px;
+
+    font-size: 27px;
+
+    line-height: 1.6;
+  }
+
+  .gallery-admission-button {
+    top: 500px;
+
+    width: 350px;
+    height: 82px;
+
+    font-size: 40px;
+
+    border-radius: 18px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery-page{
+    margin-top: 0px;
+  }
+
+  .gallery-hero {
+    min-height: auto;
+
+    padding:
+      75px
+      5%
+      65px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 35px;
+  }
+
+  .gallery-hero-content {
+    max-width: 100%;
+  }
+
+  .gallery-hero h1 {
+    font-size:
+      clamp(
+        50px,
+        7vw,
+        68px
+      );
+
+    margin-bottom: 28px;
+  }
+
+  .gallery-hero p {
+    font-size:
+      clamp(
+        20px,
+        3vw,
+        27px
+      );
+  }
+
+  .visit-button {
+    min-width: 180px;
+
+    margin-top: 100px;
+    margin-right: 0;
+
+    padding: 16px 20px;
+
+    font-size: 18px;
+  }
+
+
+  /* GALLERY */
+
+  .gallery-section {
+    padding:
+      30px
+      20px
+      60px;
+  }
+
+  .gallery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px 18px;
+  }
+
+  .gallery-card {
+    height: 330px;
+
+    border-radius: 19px;
+  }
+
+  .gallery-label {
+    min-height: 58px;
+
+    padding: 13px 16px;
+
+    font-size: 24px;
+
+    border-radius:
+      18px
+      18px
+      0
+      0;
+  }
+
+
+  /* CTA */
+
+  .gallery-admission-section {
+    min-height: 520px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 440px,
+        #ffffff 440px,
+        #ffffff 100%
+      );
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    left: 1%;
+
+    top: 35px;
+
+    width: 43%;
+
+    height: 350px;
+  }
+
+  .gallery-admission-section .admission-image {
+    width: 100%;
+
+    max-height: 340px;
+  }
+
+  .gallery-admission-section .admission-content {
+    top: 50px;
+
+    left: 44%;
+
+    width: 54%;
+
+    padding-right: 15px;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size:
+      clamp(
+        36px,
+        5vw,
+        48px
+      );
+
+    white-space: normal;
+    margin-top: 70px;
+  }
+
+  .gallery-admission-section .admission-description {
+    margin-top: 24px;
+
+    font-size:
+      clamp(
+        23px,
+        3vw,
+        31px
+      );
+
+    line-height: 1.55;
+  }
+
+  .gallery-admission-button {
+    top: 400px;
+
+    width: 330px;
+    height: 78px;
+
+    font-size: 38px;
+
+    border-radius: 17px;
+  }
+}
+
+
+/* =========================================================
+   767px AND BELOW
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .gallery-page {
+    overflow-x: hidden;
+
+    background-size: cover;
+    background-position: center top;
+    margin-top: 10px;
+  }
+
+
+  /* =======================================================
+     MOBILE HERO
+  ======================================================= */
+
+  .gallery-hero {
+    min-height: auto;
+
+    margin: 0;
+
+    padding:
+      60px
+      20px
+      55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    text-align: center;
+  }
+
+  .gallery-hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery-hero h1 {
+    margin: 0 0 22px;
+
+    font-size:
+      clamp(
+        42px,
+        12vw,
+        58px
+      );
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+  }
+
+  .gallery-hero p {
+    margin: 0 auto;
+
+    max-width: 650px;
+
+    font-size:
+      clamp(
+        18px,
+        5vw,
+        24px
+      );
+
+    line-height: 1.55;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+
+  /* =======================================================
+     MOBILE BOOK BUTTON
+  ======================================================= */
+
+  .visit-button {
+    width: min(300px, 90vw);
+
+    min-width: 0;
+
+    margin: 8px auto 0;
+
+    padding: 16px 22px;
+
+    font-size: 19px;
+
+    border-radius: 13px;
+  }
+
+
+  /* =======================================================
+     MOBILE GALLERY
+  ======================================================= */
+
+  .gallery-section {
+    padding:
+      25px
+      14px
+      55px;
+
+    background: #ffffff;
+  }
+
+  .gallery-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .gallery-card {
+    width: 100%;
+
+    height:
+      clamp(
+        300px,
+        78vw,
+        390px
+      );
+
+    border-radius: 19px;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /* =======================================================
+     MOBILE LABEL
+  ======================================================= */
+
+  .gallery-label {
+    min-width: 0 !important;
+
+    max-width: 88%;
+
+    min-height: 58px;
+
+    padding:
+      13px
+      18px;
+
+    font-size:
+      clamp(
+        22px,
+        7vw,
+        30px
+      );
+
+    border-radius:
+      17px
+      17px
+      0
+      0;
+
+    white-space: nowrap;
+  }
+
+  .arts-label,
+  .gardening-label,
+  .sports-label,
+  .science-label {
+    justify-content: center;
+
+    text-align: center;
+  }
+
+
+  /* =======================================================
+     MOBILE CTA
+  ======================================================= */
+
+  .gallery-admission-section {
+    width: 100%;
+
+    min-height: auto;
+
+    padding:
+      0
+      18px
+      45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background: #fff0c5;
+
+    overflow: hidden;
+  }
+
+
+  /* CTA IMAGE */
+
+  .gallery-admission-section .admission-image-wrapper {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 500px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-admission-section .admission-image {
+    width: 100%;
+
+    max-width: 470px;
+
+    height: auto;
+
+    max-height: none;
+
+    object-fit: contain;
+  }
+
+
+  /* CTA CONTENT */
+
+  .gallery-admission-section .admission-content {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+
+    padding:
+      25px
+      0
+      0;
+
+    text-align: center;
+  }
+
+
+  /* CTA TITLE */
+
+  .gallery-admission-section .admission-title {
+    margin: 0;
+
+    font-size:
+      clamp(
+        31px,
+        8vw,
+        45px
+      );
+
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+
+    white-space: normal;
+  }
+
+
+  /* CTA DESCRIPTION */
+
+  .gallery-admission-section .admission-description {
+    margin: 20px auto 0;
+
+    max-width: 600px;
+
+    font-size:
+      clamp(
+        18px,
+        5vw,
+        26px
+      );
+
+    line-height: 1.55;
+
+    letter-spacing: 0;
+  }
+
+
+  /* CTA BUTTON */
+
+  .gallery-admission-button {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width:
+      min(
+        350px,
+        94vw
+      );
+
+    height:
+      clamp(
+        68px,
+        18vw,
+        88px
+      );
+
+    margin:
+      30px
+      auto
+      0;
+
+    padding:
+      0
+      15px;
+
+    border-radius: 17px;
+
+    font-size:
+      clamp(
+        28px,
+        8vw,
+        42px
+      );
+
+    white-space: nowrap;
+  }
+
+  .gallery-admission-button:hover {
+    transform: translateY(-3px);
+  }
+
+  .gallery-admission-button:active {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .gallery-hero {
+    padding:
+      50px
+      18px
+      45px;
+  }
+
+  .gallery-hero h1 {
+    font-size:
+      clamp(
+        40px,
+        12vw,
+        52px
+      );
+  }
+
+  .gallery-hero p {
+    font-size:
+      clamp(
+        17px,
+        5.2vw,
+        22px
+      );
+  }
+
+  .gallery-section {
+    padding:
+      20px
+      10px
+      45px;
+  }
+
+  .gallery-grid {
+    gap: 20px;
+  }
+
+  .gallery-card {
+    height:
+      clamp(
+        280px,
+        78vw,
+        360px
+      );
+
+    border-radius: 17px;
+  }
+
+  .gallery-label {
+    min-height: 54px;
+
+    padding:
+      12px
+      15px;
+
+    font-size:
+      clamp(
+        20px,
+        6.8vw,
+        28px
+      );
+  }
+
+  .gallery-admission-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    padding-top: 12px;
+  }
+
+  .gallery-admission-section .admission-content {
+    padding-top: 20px;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size:
+      clamp(
+        29px,
+        8.5vw,
+        40px
+      );
+  }
+
+  .gallery-admission-section .admission-description {
+    margin-top: 17px;
+
+    font-size:
+      clamp(
+        17px,
+        5.3vw,
+        23px
+      );
+
+    line-height: 1.5;
+  }
+
+  .gallery-admission-button {
+    width:
+      min(
+        320px,
+        94vw
+      );
+
+    height: 76px;
+
+    margin-top: 25px;
+
+    font-size:
+      clamp(
+        27px,
+        8vw,
+        36px
+      );
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .gallery-hero {
+    padding:
+      45px
+      15px
+      40px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 40px;
+
+    margin-bottom: 18px;
+  }
+
+  .gallery-hero p {
+    font-size: 17px;
+
+    line-height: 1.5;
+  }
+
+  .visit-button {
+    width: 90%;
+
+    padding:
+      15px
+      18px;
+
+    font-size: 18px;
+  }
+
+  .gallery-section {
+    padding:
+      18px
+      9px
+      40px;
+  }
+
+  .gallery-card {
+    height: 300px;
+
+    border-radius: 16px;
+  }
+
+  .gallery-label {
+    max-width: 90%;
+
+    min-height: 50px;
+
+    padding:
+      11px
+      13px;
+
+    font-size: 21px;
+
+    border-radius:
+      15px
+      15px
+      0
+      0;
+  }
+
+  .gallery-admission-section {
+    padding:
+      0
+      12px
+      38px;
+
+    min-height: 550px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 550px,
+        #ffffff 550px,
+        #ffffff 100%
+      );
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    width: 100%;
+
+    padding-top: 5px;
+  }
+
+  .gallery-admission-section .admission-image {
+    width: 100%;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size: 30px;
+
+    line-height: 1.15;
+  }
+
+  .gallery-admission-section .admission-description {
+    font-size: 18px;
+
+    line-height: 1.5;
+  }
+
+  .gallery-admission-button {
+    width: 290px;
+
+    height: 70px;
+
+    font-size: 29px;
+
+    border-radius: 15px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .gallery-hero {
+    padding:
+      38px
+      12px
+      35px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 36px;
+  }
+
+  .gallery-hero p {
+    font-size: 16px;
+  }
+
+  .visit-button {
+    width: 95%;
+
+    font-size: 16px;
+
+    padding:
+      14px
+      15px;
+  }
+
+  .gallery-card {
+    height: 270px;
+
+    border-radius: 14px;
+  }
+
+  .gallery-label {
+    min-height: 46px;
+
+    padding:
+      10px
+      12px;
+
+    font-size: 19px;
+
+    border-radius:
+      13px
+      13px
+      0
+      0;
+  }
+
+  .gallery-admission-section {
+    padding:
+      0
+      10px
+      32px;
+
+    min-height: 500px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 500px,
+        #ffffff 500px,
+        #ffffff 100%
+      );
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size: 27px;
+  }
+
+  .gallery-admission-section .admission-description {
+    font-size: 16px;
+  }
+
+  .gallery-admission-button {
+    width: 270px;
+
+    height: 64px;
+
+    font-size: 26px;
+
+    border-radius: 14px;
+  }
+}
+
+
+/* =========================================================
+   IMAGE VISIBILITY SAFETY
+========================================================= */
+
+.gallery-page img {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-card img,
+  .visit-button,
+  .gallery-admission-button {
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   GALLERY — FINAL SIZE / UNIFORMITY OVERRIDE
+   Matches the compact Programs-page design
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.gallery-hero {
+  min-height: 500px !important;
+  padding: 70px 7% 55px !important;
+  gap: 35px !important;
+}
+
+.gallery-hero h1 {
+  margin-bottom: 22px !important;
+  font-size: clamp(42px, 4vw, 56px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1px !important;
+}
+
+.gallery-hero p {
+  max-width: 560px !important;
+  font-size: clamp(15px, 1.35vw, 19px) !important;
+  line-height: 1.45 !important;
+}
+
+.visit-button {
+  min-width: 190px !important;
+  padding: 14px 24px !important;
+  margin-top: 80px !important;
+  margin-right: 10px !important;
+  border-radius: 12px !important;
+  font-size: 17px !important;
+}
+
+
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
+
+.gallery-section {
+  padding: 30px 30px 55px !important;
+}
+
+.gallery-grid {
+  max-width: 1120px !important;
+  gap: 22px 20px !important;
+}
+
+.gallery-card {
+  height: 390px !important;
+  border-radius: 16px !important;
+}
+
+
+/* =========================================================
+   GALLERY LABELS
+========================================================= */
+
+.gallery-label {
+  min-height: 58px !important;
+  padding: 12px 18px !important;
+
+  font-size: 23px !important;
+  line-height: 1.1 !important;
+
+  border-radius: 16px 16px 0 0 !important;
+}
+
+
+/* =========================================================
+   ADMISSION / ENROLL SECTION
+========================================================= */
+
+.gallery-admission-section {
+  min-height: 430px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #fff0c5 0,
+      #fff0c5 370px,
+      #ffffff 370px,
+      #ffffff 100%
+    ) !important;
+}
+
+
+/* =========================================================
+   TEDDY IMAGE
+========================================================= */
+
+.gallery-admission-section .admission-image-wrapper {
+  left: 4% !important;
+  top: 15px !important;
+
+  width: 38% !important;
+  max-width: 470px !important;
+
+  height: 330px !important;
+}
+
+.gallery-admission-section .admission-image {
+  width: 100% !important;
+  max-width: 430px !important;
+
+  max-height: 320px !important;
+
+  object-fit: contain !important;
+}
+
+
+/* =========================================================
+   ADMISSION CONTENT
+========================================================= */
+
+.gallery-admission-section .admission-content {
+  top: 45px !important;
+  left: 43% !important;
+
+  width: 53% !important;
+
+  padding: 0 25px 0 0 !important;
+}
+
+
+/* =========================================================
+   ADMISSION TITLE
+========================================================= */
+
+.gallery-admission-section .admission-title {
+  margin: 0 !important;
+
+  font-family: "Poppins", sans-serif !important;
+
+  font-size: clamp(32px, 3vw, 42px) !important;
+
+  font-weight: 800 !important;
+
+  line-height: 1.12 !important;
+
+  letter-spacing: -0.5px !important;
+
+  white-space: normal !important;
+}
+
+
+/* =========================================================
+   ADMISSION DESCRIPTION
+========================================================= */
+
+.gallery-admission-section .admission-description {
+  margin: 18px 0 0 !important;
+
+  font-family: "Poppins", sans-serif !important;
+
+  font-size: clamp(15px, 1.4vw, 19px) !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.45 !important;
+
+  letter-spacing: 0 !important;
+}
+
+
+/* =========================================================
+   ENROLL NOW BUTTON
+========================================================= */
+
+.gallery-admission-button {
+  left: 50% !important;
+  top: 335px !important;
+
+  transform: translateX(-50%) !important;
+
+  width: 230px !important;
+  height: 58px !important;
+
+  padding: 0 20px !important;
+
+  border: none !important;
+  border-radius: 12px !important;
+
+  background: #e5960a !important;
+  color: #ffffff !important;
+
+  font-family: "Poppins", sans-serif !important;
+
+  font-size: 22px !important;
+  font-weight: 800 !important;
+
+  line-height: 1 !important;
+
+  white-space: nowrap !important;
+}
+
+.gallery-admission-button:hover {
+  transform:
+    translateX(-50%)
+    translateY(-2px) !important;
+}
+
+
+/* =========================================================
+   1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .gallery-hero {
+    min-height: 520px !important;
+  }
+
+  .gallery-card {
+    height: 410px !important;
+  }
+
+  .gallery-admission-section {
+    min-height: 450px !important;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 390px,
+        #ffffff 390px,
+        #ffffff 100%
+      ) !important;
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    width: 39% !important;
+    height: 350px !important;
+  }
+
+  .gallery-admission-section .admission-image {
+    max-width: 450px !important;
+    max-height: 340px !important;
+  }
+
+  .gallery-admission-section .admission-content {
+    top: 50px !important;
+    left: 44% !important;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size: 44px !important;
+  }
+
+  .gallery-admission-section .admission-description {
+    font-size: 19px !important;
+  }
+
+  .gallery-admission-button {
+    top: 355px !important;
+
+    width: 240px !important;
+    height: 60px !important;
+
+    font-size: 23px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .gallery-hero {
+    min-height: 430px !important;
+
+    padding:
+      55px
+      5%
+      45px !important;
+  }
+
+  .gallery-hero h1 {
+    font-size: 42px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .gallery-hero p {
+    font-size: 15px !important;
+  }
+
+  .visit-button {
+    min-width: 170px !important;
+
+    margin-top: 65px !important;
+
+    padding: 13px 18px !important;
+
+    font-size: 15px !important;
+  }
+
+
+  /* Gallery */
+
+  .gallery-section {
+    padding:
+      25px
+      20px
+      45px !important;
+  }
+
+  .gallery-grid {
+    gap: 18px !important;
+  }
+
+  .gallery-card {
+    height: 300px !important;
+
+    border-radius: 14px !important;
+  }
+
+  .gallery-label {
+    min-height: 48px !important;
+
+    padding: 10px 14px !important;
+
+    font-size: 19px !important;
+  }
+
+
+  /* Admission */
+
+  .gallery-admission-section {
+    min-height: 380px !important;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 325px,
+        #ffffff 325px,
+        #ffffff 100%
+      ) !important;
+  }
+
+  .gallery-admission-section .admission-image-wrapper {
+    left: 2% !important;
+    top: 20px !important;
+
+    width: 40% !important;
+
+    height: 290px !important;
+  }
+
+  .gallery-admission-section .admission-image {
+    max-height: 280px !important;
+  }
+
+  .gallery-admission-section .admission-content {
+    top: 45px !important;
+    left: 43% !important;
+
+    width: 54% !important;
+  }
+
+  .gallery-admission-section .admission-title {
+    font-size: 32px !important;
+  }
+
+  .gallery-admission-section .admission-description {
+    margin-top: 15px !important;
+
+    font-size: 15px !important;
+  }
+
+  .gallery-admission-button {
+    top: 292px !important;
+
+    width: 205px !important;
+    height: 52px !important;
+
+    font-size: 19px !important;
+
+    border-radius: 11px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .gallery-hero {
+    min-height: auto !important;
+
+    padding:
+      45px
+      18px
+      40px !important;
+
+    gap: 22px !important;
+  }
+
+  .gallery-hero h1 {
+    margin-bottom: 18px !important;
+
+    font-size: clamp(32px, 10vw, 44px) !important;
+  }
+
+  .gallery-hero p {
+    font-size: 15px !important;
+
+    line-height: 1.5 !important;
+  }
+
+  .visit-button {
+    width: min(240px, 88vw) !important;
+
+    min-width: 0 !important;
+
+    margin: 5px auto 0 !important;
+
+    padding: 13px 20px !important;
+
+    font-size: 16px !important;
+
+    border-radius: 11px !important;
+  }
+
+
+  /* Gallery */
+
+  .gallery-section {
+    padding:
+      22px
+      12px
+      40px !important;
+  }
+
+  .gallery-grid {
+    gap: 18px !important;
+  }
+
+  .gallery-card {
+    height: 300px !important;
+
+    border-radius: 15px !important;
+  }
+
+  .gallery-label {
+    min-height: 50px !important;
+
+    padding:
+      10px
+      14px !important;
+
+    font-size: 20px !important;
+
+    border-radius:
+      14px
+      14px
+      0
+      0 !important;
+  }
+
+
+  /* =======================================================
+     MOBILE ADMISSION
+  ======================================================= */
+
+  .gallery-admission-section {
+    min-height: auto !important;
+
+    padding:
+      0
+      15px
+      35px !important;
+
+    background: #fff0c5 !important;
+  }
+
+
+  .gallery-admission-section
+  .admission-image-wrapper {
+
+    position: relative !important;
+
+    left: auto !important;
+    top: auto !important;
+
+    width: 100% !important;
+
+    max-width: 330px !important;
+
+    height: auto !important;
+
+    padding-top: 8px !important;
+  }
+
+
+  .gallery-admission-section
+  .admission-image {
+
+    width: 100% !important;
+
+    max-width: 320px !important;
+
+    height: auto !important;
+
+    max-height: none !important;
+  }
+
+
+  .gallery-admission-section
+  .admission-content {
+
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+
+    padding:
+      15px
+      0
+      0 !important;
+
+    text-align: center !important;
+  }
+
+
+  .gallery-admission-section
+  .admission-title {
+
+    margin: 0 !important;
+
+    font-size:
+      clamp(
+        27px,
+        7.5vw,
+        36px
+      ) !important;
+
+    line-height: 1.15 !important;
+  }
+
+
+  .gallery-admission-section
+  .admission-description {
+
+    margin:
+      14px
+      auto
+      0 !important;
+
+    max-width: 430px !important;
+
+    font-size:
+      clamp(
+        14px,
+        4.3vw,
+        18px
+      ) !important;
+
+    line-height: 1.5 !important;
+  }
+
+
+  /* =======================================================
+     MOBILE ENROLL BUTTON
+  ======================================================= */
+
+  .gallery-admission-button {
+
+    position: relative !important;
+
+    left: auto !important;
+    top: auto !important;
+
+    transform: none !important;
+
+    width:
+      min(
+        230px,
+        85vw
+      ) !important;
+
+    height: 55px !important;
+
+    margin:
+      22px
+      auto
+      0 !important;
+
+    padding: 0 15px !important;
+
+    border-radius: 11px !important;
+
+    font-size: 19px !important;
+  }
+
+  .gallery-admission-button:hover {
+    transform: translateY(-2px) !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .gallery-hero {
+    padding:
+      40px
+      14px
+      35px !important;
+  }
+
+  .gallery-hero h1 {
+    font-size: 34px !important;
+  }
+
+  .gallery-hero p {
+    font-size: 14px !important;
+  }
+
+  .visit-button {
+    width: 88% !important;
+
+    font-size: 15px !important;
+  }
+
+
+  .gallery-card {
+    height: 285px !important;
+  }
+
+  .gallery-label {
+    min-height: 47px !important;
+
+    font-size: 18px !important;
+  }
+
+
+  .gallery-admission-section
+  .admission-image-wrapper {
+    max-width: 290px !important;
+  }
+
+  .gallery-admission-section
+  .admission-image {
+    max-width: 280px !important;
+  }
+
+  .gallery-admission-section
+  .admission-title {
+    font-size: 29px !important;
+  }
+
+  .gallery-admission-section
+  .admission-description {
+    font-size: 14px !important;
+  }
+
+  .gallery-admission-button {
+    width: 210px !important;
+
+    height: 52px !important;
+
+    font-size: 18px !important;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .gallery-hero h1 {
+    font-size: 31px !important;
+  }
+
+  .gallery-hero p {
+    font-size: 13px !important;
+  }
+
+  .gallery-card {
+    height: 265px !important;
+  }
+
+  .gallery-label {
+    min-height: 44px !important;
+
+    font-size: 17px !important;
+  }
+
+  .gallery-admission-section
+  .admission-title {
+    font-size: 27px !important;
+  }
+
+  .gallery-admission-section
+  .admission-description {
+    font-size: 13px !important;
+  }
+
+  .gallery-admission-button {
+    width: 195px !important;
+
+    height: 50px !important;
+
+    font-size: 17px !important;
+  }
+}
+
+/* Move Gallery heading + paragraph slightly down */
+@media (min-width: 1025px) {
+  .gallery-hero-content {
+    transform: translateY(35px) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery-hero-content {
+    transform: translateY(25px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery-hero-content {
+    transform: translateY(20px) !important;
+  }
+}
+
+/* =========================================================
+   GALLERY - REMOVE UNWANTED VERTICAL SPACE
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  .gallery-hero {
+    min-height: 420px !important;
+    height: 420px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .gallery-hero-content {
+    transform: none !important;
+    margin-top: 35px !important;
+  }
+
+  .gallery-section {
+    padding-top: 25px !important;
+  }
+}
+
+/* =========================================================
+   GALLERY HERO - FINAL POSITION
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  .gallery-hero {
+    height: 420px !important;
+    min-height: 420px !important;
+    padding: 0 !important;
+  }
+
+  /* Move heading + paragraph down */
+  .gallery-hero-content {
+    transform: translateY(85px) !important;
+    margin-top: 0 !important;
+  }
+
+  /* Keep gallery images close to hero */
+  .gallery-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* =========================================================
+   GALLERY HERO - ALIGN CONTENT
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  .gallery-hero-content {
+    transform: translate(115px, 85px) !important;
+  }
+
+}
+
+
+@media (min-width: 1025px) {
+  .gallery-hero {
+    padding-left: 7.5% !important;
+    padding-right: 7.5% !important;
+  }
+
+  .gallery-hero-content {
+    margin-left: 0 !important;
+    transform: translateY(85px) !important;
+  }
+}

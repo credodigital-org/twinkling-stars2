@@ -1,0 +1,322 @@
+/* =========================================================
+   GLOBAL STYLES  (single source of truth)
+
+   1. Design tokens
+   2. Reset + base elements
+   3. Layout helpers
+   4. Scroll-reveal + interaction utilities
+   5. Reduced motion
+
+   Component / page CSS files must NOT redefine html, body, img,
+   the reveal utilities, or the header-height tokens below.
+========================================================= */
+
+
+/* =========================================================
+   1. DESIGN TOKENS
+========================================================= */
+
+:root {
+  /* ---- Brand colours ---- */
+  --c-pink: #ffc4b7;
+  --c-maroon: #9d2d2d;
+  --c-lime: #eaff68;
+  --c-red: #f0525c;
+  --c-blue: #08ace8;
+  --c-green: #00b848;
+  --c-yellow: #ffb914;
+  --c-navy: #00519b;
+
+  /* ---- Font stacks ---- */
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-display: "Rowdies", "Nunito", Arial, sans-serif;
+  --font-serif: "Crimson Text", Georgia, "Times New Roman", serif;
+
+  /* ---- Page gutter (left/right padding used by every section) ---- */
+  --gutter: clamp(1rem, 4vw, 4.5rem);
+
+  /* ---- Viewport-height unit -----------------------------------
+     1vh on old browsers, 1svh (small viewport height, ignores the
+     mobile URL bar) everywhere else. Use as:  calc(var(--unit-h) * 10) */
+  --unit-h: 1vh;
+
+  /* ---- Fixed header geometry --------------------------------
+     The logo badge is the tallest thing in the header, so the
+     header height is derived from it. It scales with the viewport
+     WIDTH and HEIGHT, never a fixed pixel size, and the same
+     tokens are used by the header itself and by the page content's
+     top offset - so they can never drift apart.                */
+  --logo-d: clamp(5.75rem, min(12vw, calc(var(--unit-h) * 18)), 11rem);
+  --header-pad: clamp(0.4rem, 0.9vw, 0.9rem);
+  --header-h: calc(var(--logo-d) + var(--header-pad) + 0.25rem);
+}
+
+@supports (height: 1svh) {
+  :root {
+    --unit-h: 1svh;
+  }
+}
+
+/* Hamburger layout: smaller badge. Height-aware for landscape phones. */
+@media (max-width: 900px) {
+  :root {
+    --logo-d: clamp(3.5rem, min(17vw, calc(var(--unit-h) * 15.5)), 5.5rem);
+  }
+}
+
+
+/* =========================================================
+   2. RESET + BASE ELEMENTS
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  /* Stops stray decorative elements creating a horizontal scrollbar.
+     Only on <html>, so <body> does not become a second scroll container. */
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Fluid base size: 13px on small phones -> 16px on desktop.
+     (Replaces the old 15px / 14px / 13px media-query steps.)   */
+  font-size: clamp(0.8125rem, 0.747rem + 0.28vw, 1rem);
+
+  overflow-x: clip;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  width: 100%;
+  min-height: calc(var(--unit-h) * 100);
+}
+
+section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+/* Press feedback + smooth hover for every link / button */
+button,
+a {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+button:active,
+a:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   3. LAYOUT HELPERS
+========================================================= */
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-inline: clamp(0.875rem, 2.4vw, 1.875rem);
+}
+
+
+/* =========================================================
+   4. SCROLL-REVEAL + INTERACTION UTILITIES
+   (toggled by src/hooks/useScrollReveal.js)
+========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.show,
+.reveal-left.show,
+.reveal-right.show,
+.reveal-scale.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(55px) scale(0.96);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger.show > * {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.stagger.show > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger.show > *:nth-child(2) { transition-delay: 0.15s; }
+.stagger.show > *:nth-child(3) { transition-delay: 0.25s; }
+.stagger.show > *:nth-child(4) { transition-delay: 0.35s; }
+.stagger.show > *:nth-child(5) { transition-delay: 0.45s; }
+.stagger.show > *:nth-child(6) { transition-delay: 0.55s; }
+.stagger.show > *:nth-child(7) { transition-delay: 0.65s; }
+.stagger.show > *:nth-child(8) { transition-delay: 0.75s; }
+
+/* Cards */
+.animated-card {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.animated-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Images */
+.animated-image {
+  overflow: hidden;
+  transition:
+    transform 0.55s ease,
+    filter 0.55s ease;
+}
+
+.animated-image:hover {
+  transform: scale(1.045);
+}
+
+.animated-image img {
+  transition: transform 0.6s ease;
+}
+
+.animated-image:hover img {
+  transform: scale(1.06);
+}
+
+/* Buttons */
+.animated-button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.animated-button:hover {
+  transform: translateY(-5px) scale(1.025);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+.animated-button:active {
+  transform: translateY(0) scale(0.96);
+}
+
+
+/* =========================================================
+   5. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

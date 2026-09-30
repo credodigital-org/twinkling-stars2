@@ -1,0 +1,2320 @@
+/* =========================================================
+   PROGRAMS PAGE
+   REFERENCE PDF BASED DESIGN
+========================================================= */
+
+.programs-page,
+.programs-page * {
+  box-sizing: border-box;
+}
+
+.programs-page {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  font-family: "Poppins", sans-serif;
+  color: #111111;
+
+  background-image: url("../assets/images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.programs-page .programs-hero {
+  width: min(1200px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 35px 0 30px;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+
+  align-items: center;
+
+  gap: 45px;
+}
+
+.programs-page .hero-text {
+  min-width: 0;
+}
+
+.programs-page .hero-text h1 {
+  margin: 0 0 14px;
+
+  color: #07157b;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(38px, 4vw, 56px);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+}
+
+.programs-page .hero-text p {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(16px, 1.5vw, 20px);
+
+  font-weight: 400;
+
+  line-height: 1.45;
+}
+
+.programs-page .hero-image {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.programs-page .hero-image img {
+  width: 100%;
+  max-width: 570px;
+
+  height: auto;
+
+  aspect-ratio: 747 / 486;
+
+  object-fit: cover;
+
+  border-radius:
+    45% 35% 28% 40% /
+    40% 32% 38% 42%;
+}
+
+
+/* =========================================================
+   REGULAR PROGRAMS
+========================================================= */
+
+.programs-page .regular-programs {
+  width: min(1080px, calc(100% - 80px));
+
+  margin: 25px auto 0;
+}
+
+.programs-page .program-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   PROGRAM CARD
+========================================================= */
+
+.programs-page .program-card {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 175px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 14px 25px;
+
+  gap: 38px;
+
+  border: 1px solid #e7e7e7;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.035);
+
+  overflow: visible;
+}
+
+
+/* LEFT */
+
+.programs-page .program-card.left {
+  flex-direction: row;
+}
+
+.programs-page .program-card.left .program-image-box {
+  order: 1;
+}
+
+.programs-page .program-card.left .program-description {
+  order: 2;
+}
+
+
+/* RIGHT */
+
+.programs-page .program-card.right {
+  flex-direction: row;
+}
+
+.programs-page .program-card.right .program-description {
+  order: 1;
+}
+
+.programs-page .program-card.right .program-image-box {
+  order: 2;
+}
+
+
+/* =========================================================
+   PROGRAM IMAGE BOX
+========================================================= */
+
+.programs-page .program-image-box {
+  position: relative;
+  z-index: 3;
+
+  width: 155px;
+  min-width: 155px;
+
+  height: 145px;
+
+  flex-shrink: 0;
+
+  padding: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: 4px;
+}
+
+
+/* ICON */
+
+.programs-page .program-image-box img {
+  display: block;
+
+  width: 72px;
+  height: 72px;
+
+  object-fit: contain;
+
+  margin-bottom: 2px;
+}
+
+
+/* TITLE */
+
+.programs-page .program-image-box h3 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+
+/* AGE */
+
+.programs-page .program-image-box strong {
+  margin-top: 4px;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7.5px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+}
+
+
+/* SMALL CARD TEXT */
+
+.programs-page .program-image-box p {
+  max-width: 120px;
+
+  margin: 5px 0 0;
+
+  color: #555555;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 6.5px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   REGULAR PROGRAM COLORS
+========================================================= */
+
+.programs-page .regular-card:nth-child(1) .program-image-box {
+  background: #ffc9b9;
+}
+
+.programs-page .regular-card:nth-child(2) .program-image-box {
+  background: #ffe9a9;
+}
+
+.programs-page .regular-card:nth-child(3) .program-image-box {
+  background: #d5ff9c;
+}
+
+.programs-page .regular-card:nth-child(4) .program-image-box {
+  background: #cce5f5;
+}
+
+
+
+
+/* =========================================================
+   SPECIAL PROGRAM COLOR
+========================================================= */
+
+.programs-page .special-card .program-image-box {
+  background: #f7ffad;
+}
+
+
+/* =========================================================
+   PROGRAM DESCRIPTION
+========================================================= */
+
+.programs-page .program-description {
+  flex: 1;
+
+  min-width: 0;
+
+  position: relative;
+  z-index: 2;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.programs-page .program-decoration {
+  position: absolute;
+
+  z-index: 10;
+
+  display: block;
+
+  pointer-events: none;
+
+  object-fit: contain;
+
+  opacity: 1;
+}
+
+
+/* SUN */
+
+.programs-page .decoration-sun {
+  width: 52px;
+  height: 52px;
+
+  right: -25px;
+  top: -27px;
+}
+
+
+/* CLOUD */
+
+.programs-page .decoration-cloud {
+  width: 62px;
+  height: 48px;
+
+  left: -8px;
+  top: -24px;
+}
+
+
+/* FLOWER */
+
+.programs-page .decoration-flower {
+  width: 52px;
+  height: 52px;
+
+  right: -16px;
+  top: -24px;
+}
+
+
+/* BEE */
+
+.programs-page .decoration-bee {
+  width: 65px;
+  height: 50px;
+
+  left: -15px;
+  top: -29px;
+}
+
+
+/* =========================================================
+   SPECIAL PROGRAMS
+========================================================= */
+
+.programs-page .special-programs {
+  width: min(1080px, calc(100% - 80px));
+
+  margin: 55px auto 0;
+}
+
+.programs-page .special-programs h2 {
+  margin: 0 0 25px;
+
+  color: #07157b;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 50px;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.programs-page .benefits-section {
+  width: 100%;
+
+  margin-top: 35px;
+
+  padding: 0 30px 55px;
+
+  text-align: center;
+}
+
+.programs-page .benefits-section h2 {
+  margin: 0 0 35px;
+
+  color: #c90054;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 28px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.programs-page .benefits-grid {
+  width: min(1050px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px;
+}
+
+.programs-page .benefit-item {
+  text-align: center;
+}
+
+.programs-page .benefit-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffd6de;
+
+  color: #c90054;
+
+  font-size: 22px;
+}
+
+.programs-page .benefit-item h3 {
+  margin: 0 0 8px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+.programs-page .benefit-item p {
+  max-width: 210px;
+
+  margin: 0 auto;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12.5px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   ADMISSION / CTA
+========================================================= */
+
+.programs-page .admission-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 400px;
+
+  overflow: hidden;
+
+  background: #fff0c5;
+}
+
+
+/* IMAGE */
+
+.programs-page .admission-image-wrapper {
+  position: absolute;
+
+  left: 4%;
+  top: 15px;
+
+  width: 380px;
+  height: 350px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.programs-page .admission-image {
+  width: 360px;
+
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* CONTENT */
+
+.programs-page .admission-content {
+  position: absolute;
+
+  top: 55px;
+  left: 43%;
+
+  width: 52%;
+
+  padding-right: 30px;
+}
+
+.programs-page .admission-title {
+  margin: 0;
+
+  color: #7a3c18;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: 0;
+}
+
+.programs-page .admission-description {
+  margin: 18px 0 0;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+}
+
+
+/* BUTTON */
+
+.programs-page .admission-button {
+  position: absolute;
+
+  left: 50%;
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  width: 250px;
+  height: 52px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #d68a13;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.programs-page .admission-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.programs-page .admission-button:active {
+  transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .programs-page .programs-hero {
+    width: min(1250px, calc(100% - 100px));
+
+    padding-top: 30px;
+
+    gap: 55px;
+  }
+
+  .programs-page .hero-text h1 {
+    font-size: 54px;
+  }
+
+  .programs-page .hero-text p {
+    font-size: 18px;
+  }
+
+  .programs-page .hero-image img {
+    max-width: 600px;
+  }
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: min(1120px, calc(100% - 100px));
+  }
+
+  .programs-page .program-card {
+    min-height: 180px;
+
+    padding: 15px 28px;
+
+    gap: 42px;
+  }
+
+  .programs-page .program-image-box {
+    width: 160px;
+    min-width: 160px;
+    height: 150px;
+  }
+
+  .programs-page .program-image-box img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .programs-page .program-description {
+    font-size: 15.5px;
+  }
+
+  .programs-page .special-programs h2 {
+    font-size: 50px;
+  }
+
+  .programs-page .admission-section {
+    min-height: 410px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1200px – 1439px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .programs-page .programs-hero {
+    width: calc(100% - 90px);
+
+    gap: 40px;
+  }
+
+  .programs-page .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .programs-page .hero-text p {
+    font-size: 17px;
+  }
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 90px);
+  }
+
+  .programs-page .program-card {
+    min-height: 175px;
+
+    gap: 35px;
+  }
+
+  .programs-page .program-image-box {
+    width: 150px;
+    min-width: 150px;
+    height: 145px;
+  }
+
+  .programs-page .program-description {
+    font-size: 15px;
+  }
+
+  .programs-page .special-programs h2 {
+    font-size: 47px;
+  }
+
+  .programs-page .benefits-grid {
+    gap: 28px;
+  }
+
+  .programs-page .admission-title {
+    font-size: 36px;
+  }
+
+  .programs-page .admission-description {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   1024px – 1199px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  .programs-page .programs-hero {
+    width: calc(100% - 60px);
+
+    padding-top: 25px;
+
+    gap: 30px;
+  }
+
+  .programs-page .hero-text h1 {
+    font-size: 43px;
+  }
+
+  .programs-page .hero-text p {
+    font-size: 16px;
+  }
+
+  .programs-page .hero-image img {
+    max-width: 470px;
+  }
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 60px);
+
+    margin-top: 40px;
+  }
+
+  .programs-page .program-list {
+    gap: 18px;
+  }
+
+  .programs-page .program-card {
+    min-height: 155px;
+
+    padding: 12px 18px;
+
+    gap: 25px;
+  }
+
+  .programs-page .program-image-box {
+    width: 135px;
+    min-width: 135px;
+
+    height: 130px;
+  }
+
+  .programs-page .program-image-box img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .programs-page .program-image-box h3 {
+    font-size: 13px;
+  }
+
+  .programs-page .program-image-box strong {
+    font-size: 6.5px;
+  }
+
+  .programs-page .program-image-box p {
+    font-size: 6px;
+  }
+
+  .programs-page .program-description {
+    font-size: 13.5px;
+    line-height: 1.4;
+  }
+
+  .programs-page .special-programs h2 {
+    font-size: 43px;
+  }
+
+  .programs-page .benefits-section {
+    padding-bottom: 40px;
+  }
+
+  .programs-page .benefits-grid {
+    gap: 18px;
+  }
+
+  .programs-page .benefit-item p {
+    font-size: 11.5px;
+  }
+
+  .programs-page .admission-section {
+    min-height: 350px;
+  }
+
+  .programs-page .admission-image-wrapper {
+    width: 310px;
+    height: 290px;
+  }
+
+  .programs-page .admission-image {
+    width: 300px;
+  }
+
+  .programs-page .admission-content {
+    left: 42%;
+    top: 45px;
+  }
+
+  .programs-page .admission-title {
+    font-size: 32px;
+  }
+
+  .programs-page .admission-description {
+    font-size: 17px;
+  }
+
+  .programs-page .admission-button {
+    width: 220px;
+    height: 48px;
+
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   768px – 1023px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .programs-page .programs-hero {
+    width: calc(100% - 45px);
+
+    grid-template-columns: 1fr 1fr;
+
+    padding-top: 25px;
+
+    gap: 25px;
+  }
+
+  .programs-page .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .programs-page .hero-text p {
+    font-size: 15px;
+  }
+
+  .programs-page .hero-image img {
+    max-width: 390px;
+  }
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 45px);
+
+    margin-top: 35px;
+  }
+
+  .programs-page .program-card {
+    min-height: 145px;
+
+    padding: 10px 15px;
+
+    gap: 20px;
+  }
+
+  .programs-page .program-image-box {
+    width: 120px;
+    min-width: 120px;
+
+    height: 120px;
+  }
+
+  .programs-page .program-image-box img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .programs-page .program-image-box h3 {
+    font-size: 12px;
+  }
+
+  .programs-page .program-image-box strong {
+    font-size: 6px;
+  }
+
+  .programs-page .program-image-box p {
+    font-size: 5.5px;
+  }
+
+  .programs-page .program-description {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .programs-page .special-programs h2 {
+    font-size: 38px;
+  }
+
+  .programs-page .benefits-grid {
+    gap: 15px;
+  }
+
+  .programs-page .benefits-section h2 {
+    font-size: 25px;
+  }
+
+  .programs-page .benefit-item p {
+    font-size: 10.5px;
+  }
+
+  .programs-page .admission-section {
+    min-height: 330px;
+  }
+
+  .programs-page .admission-image-wrapper {
+    width: 270px;
+    height: 260px;
+  }
+
+  .programs-page .admission-image {
+    width: 270px;
+  }
+
+  .programs-page .admission-content {
+    left: 40%;
+    top: 40px;
+  }
+
+  .programs-page .admission-title {
+    font-size: 28px;
+  }
+
+  .programs-page .admission-description {
+    font-size: 15px;
+  }
+
+  .programs-page .admission-button {
+    width: 200px;
+    height: 45px;
+
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   BELOW 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .programs-page {
+    width: 100%;
+  }
+
+
+  /* HERO */
+
+  .programs-page .programs-hero {
+    width: calc(100% - 28px);
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0 20px;
+
+    text-align: center;
+  }
+
+  .programs-page .hero-image {
+    order: -1;
+  }
+
+  .programs-page .hero-image img {
+    width: min(92%, 400px);
+  }
+
+  .programs-page .hero-text h1 {
+    font-size: 34px;
+
+    margin-bottom: 12px;
+  }
+
+  .programs-page .hero-text p {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+
+  /* SECTIONS */
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 28px);
+
+    margin-top: 32px;
+  }
+
+  .programs-page .program-list {
+    gap: 20px;
+  }
+
+
+  /* CARDS */
+
+  .programs-page .program-card,
+  .programs-page .program-card.left,
+  .programs-page .program-card.right {
+
+    width: 100%;
+
+    min-height: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 24px 15px 22px;
+
+    text-align: center;
+  }
+
+
+  /* IMAGE TOP */
+
+  .programs-page .program-card .program-image-box,
+  .programs-page .program-card.left .program-image-box,
+  .programs-page .program-card.right .program-image-box {
+
+    order: 1;
+
+    width: 145px;
+    min-width: 145px;
+
+    height: 145px;
+
+    margin: 0 auto;
+  }
+
+  .programs-page .program-image-box img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .programs-page .program-image-box h3 {
+    font-size: 13px;
+  }
+
+  .programs-page .program-image-box strong {
+    font-size: 6.5px;
+  }
+
+  .programs-page .program-image-box p {
+    font-size: 6px;
+  }
+
+
+  /* DESCRIPTION BELOW */
+
+  .programs-page .program-card .program-description,
+  .programs-page .program-card.left .program-description,
+  .programs-page .program-card.right .program-description {
+
+    order: 2;
+
+    width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+
+  /* SPECIAL HEADING */
+
+  .programs-page .special-programs h2 {
+    margin: 0 0 20px;
+
+    font-size: 34px;
+
+    text-align: center;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  /* BENEFITS */
+
+  .programs-page .benefits-section {
+    margin-top: 30px;
+
+    padding: 0 18px 45px;
+  }
+
+  .programs-page .benefits-section h2 {
+    margin-bottom: 28px;
+
+    font-size: 23px;
+  }
+
+  .programs-page .benefits-grid {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+  .programs-page .benefit-item p {
+    font-size: 13px;
+  }
+
+
+  /* ADMISSION */
+
+  .programs-page .admission-section {
+
+    min-height: 650px;
+
+    padding: 30px 15px 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    background: #fff0c5;
+  }
+
+  .programs-page .admission-image-wrapper {
+
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .programs-page .admission-image {
+
+    width: min(85%, 300px);
+  }
+
+  .programs-page .admission-content {
+
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .programs-page .admission-title {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+  }
+
+  .programs-page .admission-description {
+
+    max-width: 500px;
+
+    margin: 18px auto 0;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+  }
+
+  .programs-page .admission-button {
+
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    transform: none;
+
+    width: min(80%, 240px);
+
+    height: 55px;
+
+    margin-top: 28px;
+
+    font-size: 23px;
+
+    border-radius: 12px;
+  }
+
+  .programs-page .admission-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .programs-page .admission-button:active {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   BELOW 450px
+========================================================= */
+
+@media (max-width: 449px) {
+
+  .programs-page .programs-hero {
+    width: calc(100% - 20px);
+
+    padding-top: 20px;
+  }
+
+  .programs-page .hero-text h1 {
+    font-size: 31px;
+  }
+
+  .programs-page .hero-text p {
+    font-size: 14px;
+  }
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 20px);
+  }
+
+  .programs-page .program-card {
+    padding: 22px 12px 20px;
+  }
+
+  .programs-page .program-image-box {
+    width: 135px !important;
+    min-width: 135px !important;
+
+    height: 135px !important;
+  }
+
+  .programs-page .program-image-box img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .programs-page .program-description {
+    font-size: 12.5px !important;
+  }
+
+  .programs-page .special-programs h2 {
+    font-size: 30px;
+  }
+
+  .programs-page .benefits-section h2 {
+    font-size: 21px;
+  }
+
+  .programs-page .admission-title {
+    font-size: 27px;
+  }
+
+  .programs-page .admission-description {
+    font-size: 16px;
+  }
+
+  .programs-page .admission-button {
+    width: 210px;
+
+    height: 52px;
+
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL
+   BELOW 360px
+========================================================= */
+
+@media (max-width: 359px) {
+
+  .programs-page .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .programs-page .hero-text p {
+    font-size: 13px;
+  }
+
+  .programs-page .special-programs h2 {
+    font-size: 27px;
+  }
+
+  .programs-page .program-image-box {
+    width: 125px !important;
+    min-width: 125px !important;
+
+    height: 125px !important;
+  }
+
+  .programs-page .program-description {
+    font-size: 12px !important;
+  }
+
+  .programs-page .admission-title {
+    font-size: 25px;
+  }
+}
+
+/* =========================================================
+   PROGRAMS PAGE — FINAL DESKTOP CORRECTION
+   Hero first → Regular Programs below → No overlap
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .programs-page .programs-hero {
+    width: calc(100% - 90px);
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding-top: 30px;
+    padding-bottom: 45px;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+
+    align-items: center;
+    column-gap: 45px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* HERO TEXT */
+
+  .programs-page .hero-text h1 {
+    margin: 0 0 14px;
+
+    font-size: clamp(42px, 4vw, 58px);
+
+    line-height: 1.08;
+
+    color: #07157b;
+  }
+
+
+  .programs-page .hero-text p {
+    max-width: 610px;
+
+    margin: 0;
+
+    font-size: clamp(16px, 1.35vw, 19px);
+
+    line-height: 1.5;
+  }
+
+
+  /* HERO IMAGE */
+
+  .programs-page .hero-image {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 1;
+  }
+
+
+  .programs-page .hero-image img {
+    width: 100%;
+
+    max-width: 520px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+  }
+
+
+  /* =====================================================
+     REGULAR PROGRAMS
+     IMPORTANT: KEEP IT BELOW HERO
+  ===================================================== */
+
+  .programs-page .regular-programs {
+
+    width: calc(100% - 150px);
+
+    max-width: 1150px;
+
+    margin: 35px auto 0;
+
+    padding: 0;
+  }
+
+
+  /* =====================================================
+     PROGRAM LIST
+  ===================================================== */
+
+  .programs-page .regular-programs .program-list {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+  }
+
+
+  /* =====================================================
+     PROGRAM CARDS
+     NARROWER + TALLER
+  ===================================================== */
+
+  .programs-page .regular-programs .program-card {
+
+    width: 100%;
+
+    min-height: 205px;
+
+    height: 205px;
+
+    padding: 18px 28px;
+
+    gap: 40px;
+
+    box-sizing: border-box;
+
+    border-radius: 14px;
+
+    overflow: visible;
+
+    display: flex;
+
+    align-items: center;
+  }
+
+
+  /* =====================================================
+     IMAGE BOX
+  ===================================================== */
+
+  .programs-page .regular-programs .program-image-box {
+
+    width: 175px !important;
+
+    min-width: 175px !important;
+
+    height: 175px !important;
+
+    flex-shrink: 0;
+
+    padding: 10px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  .programs-page .regular-programs .program-image-box img {
+
+    width: 82px !important;
+
+    height: 82px !important;
+
+    margin-bottom: 3px;
+  }
+
+
+  .programs-page .regular-programs .program-image-box h3 {
+
+    font-size: 16px !important;
+
+    line-height: 1.15;
+  }
+
+
+  .programs-page .regular-programs .program-image-box strong {
+
+    font-size: 8px !important;
+
+  }
+
+
+  .programs-page .regular-programs .program-image-box p {
+
+    max-width: 130px;
+
+    margin-top: 6px;
+
+    font-size: 7px !important;
+
+    line-height: 1.2;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
+
+  .programs-page .regular-programs .program-description {
+
+    flex: 1;
+
+    min-width: 0;
+
+    font-size: 15px !important;
+
+    line-height: 1.5 !important;
+
+  }
+
+
+  /* =====================================================
+     CARD DECORATIONS
+  ===================================================== */
+
+  .programs-page .regular-programs .program-decoration {
+
+    z-index: 10;
+
+    display: block;
+
+    visibility: visible;
+  }
+}
+
+
+/* =========================================================
+   1200px+
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .programs-page .programs-hero {
+
+    padding-bottom: 55px;
+  }
+
+
+  .programs-page .hero-image img {
+
+    max-width: 540px;
+  }
+
+
+  .programs-page .regular-programs {
+
+    width: min(1120px, calc(100% - 180px));
+
+    margin-top: 40px;
+  }
+
+
+  .programs-page .regular-programs .program-card {
+
+    height: 215px;
+
+    min-height: 215px;
+
+    padding-left: 30px;
+
+    padding-right: 30px;
+  }
+
+
+  .programs-page .regular-programs .program-image-box {
+
+    width: 180px !important;
+
+    min-width: 180px !important;
+
+    height: 180px !important;
+  }
+}
+
+
+/* =========================================================
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .programs-page .programs-hero {
+
+    width: min(1250px, calc(100% - 120px));
+
+    padding-top: 25px;
+
+    padding-bottom: 60px;
+  }
+
+
+  .programs-page .hero-image img {
+
+    max-width: 550px;
+  }
+
+
+  .programs-page .regular-programs {
+
+    width: 1120px;
+
+    margin-top: 45px;
+  }
+
+
+  .programs-page .regular-programs .program-card {
+
+    height: 220px;
+
+    min-height: 220px;
+
+    padding-left: 32px;
+
+    padding-right: 32px;
+
+    gap: 45px;
+  }
+
+
+  .programs-page .regular-programs .program-image-box {
+
+    width: 185px !important;
+
+    min-width: 185px !important;
+
+    height: 185px !important;
+  }
+}
+
+/* =========================================================
+   MOVE REGULAR PROGRAMS SLIGHTLY DOWN
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  .programs-page .regular-programs {
+    margin-top: 70px !important;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .programs-page .regular-programs {
+    margin-top: 180px !important;
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .programs-page .regular-programs {
+    margin-top: 85px !important;
+  }
+
+}
+
+/* =========================================================
+   LEARNING THROUGH PLAY
+   Reference PDF section
+========================================================= */
+
+.learning-play-section {
+  position: relative;
+
+  width: 100%;
+
+  margin: 70px 0 55px;
+
+  padding: 45px 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CLOUD BACKGROUND
+========================================================= */
+
+.learning-play-cloud {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background-image: url("../assets/images/cloud2.png");
+
+  background-repeat: repeat-x;
+
+  background-position: center;
+
+  background-size: 100% 100%;
+
+  opacity: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.learning-play-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1120px, calc(100% - 100px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  align-items: center;
+
+  gap: 45px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.learning-play-image {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+.learning-play-image img {
+  width: 100%;
+
+  max-width: 440px;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.learning-play-text {
+  max-width: 540px;
+
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+
+.learning-play-text h2 {
+  margin: 0 0 8px;
+
+  color: #087d55;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  font-size: 38px;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+
+.learning-play-text h3 {
+  margin: 0 0 10px;
+
+  color: #123f35;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+
+.learning-play-text p {
+  margin: 0;
+
+  color: #123f35;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  max-width: 500px;
+}
+
+
+/* =========================================================
+   1200px+
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .learning-play-section {
+    margin-top: 75px;
+
+    margin-bottom: 60px;
+
+    padding: 50px 0;
+  }
+
+
+  .learning-play-content {
+    width: min(1160px, calc(100% - 120px));
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 55px;
+  }
+
+
+  .learning-play-image img {
+    max-width: 460px;
+  }
+
+
+  .learning-play-text h2 {
+    font-size: 40px;
+  }
+
+
+  .learning-play-text h3 {
+    font-size: 23px;
+  }
+
+
+  .learning-play-text p {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1023px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .learning-play-section {
+    margin: 55px 0 45px;
+
+    padding: 38px 0;
+  }
+
+
+  .learning-play-content {
+    width: calc(100% - 60px);
+
+    grid-template-columns: 0.95fr 1.05fr;
+
+    gap: 25px;
+  }
+
+
+  .learning-play-image img {
+    max-width: 330px;
+  }
+
+
+  .learning-play-text {
+    max-width: 430px;
+  }
+
+
+  .learning-play-text h2 {
+    font-size: 30px;
+
+    margin-bottom: 7px;
+  }
+
+
+  .learning-play-text h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+  }
+
+
+  .learning-play-text p {
+    font-size: 14px;
+
+    line-height: 1.45;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .learning-play-section {
+    margin: 45px 0 40px;
+
+    padding: 35px 0;
+
+    min-height: auto;
+  }
+
+
+  .learning-play-cloud {
+    background-size: auto 100%;
+
+    background-position: center;
+  }
+
+
+  .learning-play-content {
+    width: calc(100% - 35px);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    text-align: center;
+  }
+
+
+  .learning-play-image {
+    width: 100%;
+  }
+
+
+  .learning-play-image img {
+    width: 100%;
+
+    max-width: 330px;
+
+    margin: 0 auto;
+  }
+
+
+  .learning-play-text {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+  }
+
+
+  .learning-play-text h2 {
+    font-size: 29px;
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+  }
+
+
+  .learning-play-text h3 {
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+  }
+
+
+  .learning-play-text p {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    max-width: 430px;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .learning-play-section {
+    margin-top: 40px;
+
+    padding: 30px 0;
+  }
+
+
+  .learning-play-content {
+    width: calc(100% - 25px);
+
+    gap: 15px;
+  }
+
+
+  .learning-play-image img {
+    max-width: 280px;
+  }
+
+
+  .learning-play-text h2 {
+    font-size: 25px;
+  }
+
+
+  .learning-play-text h3 {
+    font-size: 16px;
+  }
+
+
+  .learning-play-text p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .learning-play-image img {
+    max-width: 245px;
+  }
+
+
+  .learning-play-text h2 {
+    font-size: 23px;
+  }
+
+
+  .learning-play-text h3 {
+    font-size: 15px;
+  }
+
+
+  .learning-play-text p {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================================================
+   MOVE REGULAR PROGRAMS TEXT
+========================================================= */
+
+@media (min-width: 1024px) {
+  .programs-page .hero-text {
+    transform: translateY(65px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .programs-page .hero-text {
+    transform: translateY(30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .programs-page .hero-text {
+    transform: translateY(42px);
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-page .hero-text {
+    transform: translateY(38px);
+  }
+}
+/* =========================================================
+   DESKTOP - REGULAR PROGRAM BOXES
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  .programs-page .regular-programs {
+    max-width: 1080px !important;
+  }
+
+  .programs-page .regular-programs .program-card {
+    width: 100% !important;
+    height: 235px !important;
+    min-height: 235px !important;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .programs-page .regular-programs {
+    max-width: 1050px !important;
+  }
+
+  .programs-page .regular-programs .program-card {
+    height: 245px !important;
+    min-height: 245px !important;
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .programs-page .regular-programs {
+    max-width: 1040px !important;
+  }
+
+  .programs-page .regular-programs .program-card {
+    height: 250px !important;
+    min-height: 250px !important;
+  }
+
+}
+
+/* =========================================================
+   DESKTOP - REGULAR + SPECIAL PROGRAM BOXES
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    max-width: 1080px !important;
+  }
+
+  .programs-page .regular-programs .program-card,
+  .programs-page .special-programs .program-card {
+    width: 100% !important;
+    height: 235px !important;
+    min-height: 235px !important;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    max-width: 1050px !important;
+  }
+
+  .programs-page .regular-programs .program-card,
+  .programs-page .special-programs .program-card {
+    height: 245px !important;
+    min-height: 245px !important;
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    max-width: 1040px !important;
+  }
+
+  .programs-page .regular-programs .program-card,
+  .programs-page .special-programs .program-card {
+    height: 250px !important;
+    min-height: 250px !important;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .programs-page .regular-programs .program-card {
+    overflow: visible !important;
+  }
+
+  .programs-page .regular-programs .program-image-box {
+    overflow: visible !important;
+  }
+
+  .programs-page .regular-programs .program-decoration {
+    overflow: visible !important;
+    z-index: 20 !important;
+  }
+}

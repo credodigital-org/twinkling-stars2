@@ -1,0 +1,1491 @@
+
+/* =========================================================
+   SPECIAL PROGRAMS
+========================================================= */
+
+.special-programs-section,
+.special-programs-section * {
+  box-sizing: border-box;
+}
+
+
+.special-programs-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 860px;
+
+  background-image:
+    url("../../assets/images/background.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+
+  overflow: hidden;
+
+  font-family:
+    "Poppins",
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.special-programs-title {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  padding-top: 52px;
+
+  width: 100%;
+
+  text-align: center;
+
+  color: #db2385;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 64px;
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  opacity: 0;
+
+  animation:
+    specialTitleReveal
+    0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.1s
+    forwards;
+}
+
+
+@keyframes specialTitleReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(45px)
+      scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.special-programs-slider {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 104px;
+
+  animation:
+    sliderReveal
+    0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.25s
+    both;
+}
+
+
+@keyframes sliderReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(55px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   VIEWPORT
+========================================================= */
+
+.special-programs-viewport {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  scroll-snap-type: x proximity;
+}
+
+
+.special-programs-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.special-programs-track {
+  display: flex;
+
+  flex-wrap: nowrap;
+
+  align-items: flex-start;
+
+  width: max-content;
+
+  gap: 35px;
+
+  margin-left: 50px;
+
+  padding-right: 50px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.special-program-card {
+  position: relative;
+
+  flex: 0 0 437px;
+
+  width: 437px;
+
+  height: 540px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  background: #faffb6;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  scroll-snap-align: center;
+
+  opacity: 0;
+
+  animation:
+    specialCardReveal
+    0.85s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--animation-delay)
+    forwards;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   CARD REVEAL
+========================================================= */
+
+@keyframes specialCardReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(80px)
+      scale(0.86)
+      rotateX(8deg);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1)
+      rotateX(0);
+  }
+}
+
+
+/* =========================================================
+   CARD SHINE
+========================================================= */
+
+.special-program-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -130%;
+
+  width: 75%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+
+  transform:
+    skewX(-18deg);
+
+  transition:
+    left 0.8s ease;
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+
+.special-program-card:hover::before {
+  left: 140%;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.special-program-card:hover {
+  transform:
+    translateY(-15px)
+    scale(1.025);
+
+  box-shadow:
+    0 24px 48px
+    rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.special-program-icon {
+  width: 190px;
+  height: 190px;
+
+  margin-top: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+.special-program-icon img {
+  display: block;
+
+  width: 170px;
+  height: 190px;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  transform:
+    translateY(0)
+    scale(1)
+    rotate(0deg);
+
+  animation:
+    specialIconFloat
+    4s
+    ease-in-out
+    var(--animation-delay)
+    infinite;
+
+  transition:
+    transform 0.55s
+    cubic-bezier(0.22, 1, 0.36, 1),
+
+    filter 0.45s ease;
+}
+
+
+/* =========================================================
+   ICON FLOAT
+========================================================= */
+
+@keyframes specialIconFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-9px)
+      rotate(1.5deg);
+  }
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.special-program-card:hover
+.special-program-icon img {
+
+  transform:
+    translateY(-8px)
+    scale(1.1)
+    rotate(-3deg);
+
+  filter:
+    drop-shadow(
+      0 14px 10px
+      rgba(0, 0, 0, 0.12)
+    );
+
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.special-program-card h3 {
+
+  margin: 48px 0 0;
+
+  padding: 0;
+
+  color: #000000;
+
+  font-family:
+    "Poppins",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 31px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  animation:
+    specialContentReveal
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    calc(var(--animation-delay) + 0.25s)
+    forwards;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.special-program-card:hover h3 {
+  transform:
+    translateY(-4px);
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.special-program-card p {
+
+  margin: 30px 0 0;
+
+  padding: 0;
+
+  color: #000000;
+
+  font-family:
+    "Poppins",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1.18;
+
+  text-align: center;
+
+  opacity: 0;
+
+  animation:
+    specialContentReveal
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    calc(var(--animation-delay) + 0.4s)
+    forwards;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.special-program-card:hover p {
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   TEXT REVEAL
+========================================================= */
+
+@keyframes specialContentReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(22px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.special-programs-arrow {
+
+  position: absolute;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  z-index: 10;
+
+  width: 58px;
+  height: 58px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  color: #db2385;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.35s
+    cubic-bezier(0.22, 1, 0.36, 1),
+
+    background 0.3s ease,
+
+    color 0.3s ease,
+
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   ARROW ICON
+========================================================= */
+
+.special-programs-arrow span {
+
+  display: block;
+
+  transition:
+    transform 0.3s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.special-programs-arrow-left {
+  left: 18px;
+}
+
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.special-programs-arrow-right {
+  right: 18px;
+}
+
+
+/* =========================================================
+   ARROW HOVER
+========================================================= */
+
+.special-programs-arrow:hover {
+
+  transform:
+    translateY(-50%)
+    scale(1.1);
+
+  background:
+    #db2385;
+
+  color:
+    #ffffff;
+
+  box-shadow:
+    0 10px 25px
+    rgba(0, 0, 0, 0.2);
+}
+
+
+.special-programs-arrow-left:hover span {
+
+  transform:
+    translateX(-4px);
+}
+
+
+.special-programs-arrow-right:hover span {
+
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   ARROW ACTIVE
+========================================================= */
+
+.special-programs-arrow:active {
+
+  transform:
+    translateY(-50%)
+    scale(0.92);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.special-programs-arrow:focus-visible {
+
+  outline:
+    3px solid
+    rgba(219, 35, 133, 0.35);
+
+  outline-offset:
+    4px;
+}
+
+
+/* =========================================================
+   LAPTOP
+   1024px - 1199px
+========================================================= */
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+
+  .special-programs-section {
+    min-height: 820px;
+  }
+
+
+  .special-programs-title {
+
+    padding-top: 48px;
+
+    font-size: 66px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .special-programs-slider {
+
+    margin-top: 82px;
+  }
+
+
+  .special-programs-track {
+
+    gap: 30px;
+
+    margin-left: 55px;
+
+    padding-right: 55px;
+  }
+
+
+  .special-program-card {
+
+    flex-basis: 380px;
+
+    width: 380px;
+
+    height: 500px;
+  }
+
+
+  .special-program-icon {
+
+    width: 170px;
+    height: 170px;
+
+    margin-top: 52px;
+  }
+
+
+  .special-program-icon img {
+
+    width: 150px;
+    height: 170px;
+  }
+
+
+  .special-program-card h3 {
+
+    margin-top: 43px;
+
+    font-size: 29px;
+  }
+
+
+  .special-program-card p {
+
+    margin-top: 26px;
+
+    font-size: 22px;
+  }
+
+
+  .special-programs-arrow {
+
+    width: 52px;
+    height: 52px;
+
+    font-size: 28px;
+  }
+
+
+  .special-programs-arrow-left {
+    left: 12px;
+  }
+
+
+  .special-programs-arrow-right {
+    right: 12px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1023px
+========================================================= */
+
+@media (max-width: 1023px) and (min-width: 768px) {
+
+  .special-programs-section {
+
+    min-height: 760px;
+  }
+
+
+  .special-programs-title {
+
+    padding-top: 42px;
+
+    font-size: 56px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .special-programs-slider {
+
+    margin-top: 65px;
+  }
+
+
+  .special-programs-track {
+
+    gap: 24px;
+
+    margin-left: 35px;
+
+    padding-right: 35px;
+  }
+
+
+  .special-program-card {
+
+    flex-basis: 335px;
+
+    width: 335px;
+
+    height: 475px;
+  }
+
+
+  .special-program-icon {
+
+    width: 150px;
+    height: 150px;
+
+    margin-top: 48px;
+  }
+
+
+  .special-program-icon img {
+
+    width: 135px;
+    height: 150px;
+  }
+
+
+  .special-program-card h3 {
+
+    margin-top: 39px;
+
+    font-size: 27px;
+  }
+
+
+  .special-program-card p {
+
+    margin-top: 23px;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+  }
+
+
+  .special-programs-arrow {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .special-programs-section {
+
+    min-height: auto;
+
+    padding-bottom: 55px;
+  }
+
+
+  .special-programs-title {
+
+    padding-top: 35px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 44px;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .special-programs-slider {
+
+    margin-top: 48px;
+  }
+
+
+  .special-programs-viewport {
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+    touch-action: pan-x;
+  }
+
+
+  .special-programs-track {
+
+    gap: 18px;
+
+    margin-left: 20px;
+
+    padding-right: 20px;
+  }
+
+
+  .special-program-card {
+
+    flex: 0 0 88vw;
+
+    width: 88vw;
+
+    height: 450px;
+
+    border-radius: 12px;
+  }
+
+
+  .special-program-icon {
+
+    width: 145px;
+    height: 145px;
+
+    margin-top: 45px;
+  }
+
+
+  .special-program-icon img {
+
+    width: 130px;
+    height: 145px;
+  }
+
+
+  .special-program-card h3 {
+
+    margin-top: 35px;
+
+    font-size: 29px;
+
+    line-height: 1.2;
+  }
+
+
+  .special-program-card p {
+
+    margin-top: 24px;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+  }
+
+
+  .special-programs-arrow {
+    display: none;
+  }
+
+
+  .special-program-card:hover {
+
+    transform:
+      translateY(-7px)
+      scale(1.01);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .special-programs-section {
+
+    min-height: auto;
+
+    padding-bottom: 45px;
+  }
+
+
+  .special-programs-title {
+
+    padding-top: 32px;
+
+    font-size: 38px;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  .special-programs-slider {
+
+    margin-top: 38px;
+  }
+
+
+  .special-programs-track {
+
+    gap: 15px;
+
+    margin-left: 17px;
+
+    padding-right: 17px;
+  }
+
+
+  .special-program-card {
+
+    flex:
+      0 0
+      calc(100vw - 35px);
+
+    width:
+      calc(100vw - 35px);
+
+    height: 435px;
+
+    border-radius: 12px;
+  }
+
+
+  .special-program-icon {
+
+    width: 135px;
+    height: 135px;
+
+    margin-top: 42px;
+  }
+
+
+  .special-program-icon img {
+
+    width: 120px;
+    height: 135px;
+  }
+
+
+  .special-program-card h3 {
+
+    margin-top: 32px;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+  }
+
+
+  .special-program-card p {
+
+    margin-top: 22px;
+
+    font-size: 18px;
+
+    line-height: 1.25;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .special-programs-title {
+
+    padding-top: 28px;
+
+    font-size: 34px;
+  }
+
+
+  .special-programs-slider {
+
+    margin-top: 32px;
+  }
+
+
+  .special-programs-track {
+
+    margin-left: 15px;
+
+    padding-right: 15px;
+
+    gap: 15px;
+  }
+
+
+  .special-program-card {
+
+    flex-basis:
+      calc(100vw - 30px);
+
+    width:
+      calc(100vw - 30px);
+
+    height: 420px;
+  }
+
+
+  .special-program-icon {
+
+    width: 125px;
+    height: 125px;
+
+    margin-top: 38px;
+  }
+
+
+  .special-program-icon img {
+
+    width: 110px;
+    height: 125px;
+  }
+
+
+  .special-program-card h3 {
+
+    margin-top: 29px;
+
+    font-size: 25px;
+  }
+
+
+  .special-program-card p {
+
+    margin-top: 20px;
+
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .special-programs-title,
+  .special-programs-slider,
+  .special-program-card,
+  .special-program-card h3,
+  .special-program-card p,
+  .special-program-icon img {
+
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+
+  .special-programs-viewport {
+
+    scroll-behavior: auto;
+  }
+
+
+  .special-program-card,
+  .special-program-icon img,
+  .special-programs-arrow {
+
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   SPECIAL PROGRAM ANIMATION
+========================================================= */
+
+.special-programs-section {
+  overflow: hidden;
+}
+
+.special-programs-title {
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.special-programs-section.show
+.special-programs-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.special-programs-track
+.special-program-card {
+  opacity: 0;
+  transform:
+    translateY(55px)
+    scale(0.94);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.special-programs-section.show
+.special-programs-track
+.special-program-card {
+  opacity: 1;
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+.special-programs-section.show
+.special-programs-track
+.special-program-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.special-programs-section.show
+.special-programs-track
+.special-program-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.special-programs-section.show
+.special-programs-track
+.special-program-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.special-programs-section.show
+.special-programs-track
+.special-program-card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.special-program-card:hover {
+  transform:
+    translateY(-12px)
+    scale(1.025) !important;
+
+  box-shadow:
+    0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+.special-program-icon img {
+  transition:
+    transform 0.6s ease;
+}
+
+.special-program-card:hover
+.special-program-icon img {
+  transform:
+    scale(1.12)
+    rotate(4deg);
+}
+
+.special-programs-arrow {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.special-programs-arrow:hover {
+  transform: scale(1.12);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   FINAL — SPECIAL PROGRAMS
+   MEDIUM CARD SIZE + SLIGHTLY SMALLER HEADING
+========================================================= */
+
+
+/* =========================================================
+   DESKTOP — 1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .special-programs-title {
+    font-size: 50px !important;
+    padding-top: 48px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .special-programs-slider {
+    margin-top: 70px !important;
+  }
+
+  .special-programs-track {
+    gap: 28px !important;
+    margin-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
+  .special-program-card {
+    flex: 0 0 330px !important;
+    width: 330px !important;
+    height: 430px !important;
+  }
+
+  .special-program-icon {
+    width: 160px !important;
+    height: 160px !important;
+    margin-top: 45px !important;
+  }
+
+  .special-program-icon img {
+    width: 145px !important;
+    height: 160px !important;
+  }
+
+  .special-program-card h3 {
+    margin-top: 35px !important;
+    font-size: 23px !important;
+  }
+
+  .special-program-card p {
+    margin-top: 20px !important;
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+  }
+
+  .special-programs-arrow {
+    width: 54px !important;
+    height: 54px !important;
+    font-size: 29px !important;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP — 1200px to 1439px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .special-programs-title {
+    font-size: 47px !important;
+    padding-top: 46px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .special-programs-slider {
+    margin-top: 65px !important;
+  }
+
+  .special-programs-track {
+    gap: 25px !important;
+    margin-left: 45px !important;
+    padding-right: 45px !important;
+  }
+
+  .special-program-card {
+    flex: 0 0 315px !important;
+    width: 315px !important;
+    height: 415px !important;
+  }
+
+  .special-program-icon {
+    width: 150px !important;
+    height: 150px !important;
+    margin-top: 42px !important;
+  }
+
+  .special-program-icon img {
+    width: 140px !important;
+    height: 150px !important;
+  }
+
+  .special-program-card h3 {
+    margin-top: 32px !important;
+    font-size: 22px !important;
+  }
+
+  .special-program-card p {
+    margin-top: 18px !important;
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+  }
+
+  .special-programs-arrow {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 28px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE — 1024px to 1199px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  .special-programs-title {
+    font-size: 43px !important;
+    padding-top: 42px !important;
+    letter-spacing: -0.8px !important;
+  }
+
+  .special-programs-slider {
+    margin-top: 58px !important;
+  }
+
+  .special-programs-track {
+    gap: 22px !important;
+    margin-left: 38px !important;
+    padding-right: 38px !important;
+  }
+
+  .special-program-card {
+    flex: 0 0 280px !important;
+    width: 280px !important;
+    height: 395px !important;
+  }
+
+  .special-program-icon {
+    width: 140px !important;
+    height: 140px !important;
+    margin-top: 38px !important;
+  }
+
+  .special-program-icon img {
+    width: 130px !important;
+    height: 140px !important;
+  }
+
+  .special-program-card h3 {
+    margin-top: 29px !important;
+    font-size: 20px !important;
+  }
+
+  .special-program-card p {
+    margin-top: 16px !important;
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+  }
+
+  .special-programs-arrow {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 27px !important;
+  }
+}
+/* =========================================================
+   REDUCE GAP AFTER SPECIAL PROGRAMS
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  .special-programs-section {
+    min-height: 620px !important;
+  }
+
+}

@@ -1,0 +1,738 @@
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
+
+.gallery-section {
+  position: relative;
+  width: 100%;
+  min-height: 1160px;
+  padding: 38px 0 40px;
+  /* background: #ffffff; */
+  background-image: url(../../assets/images/background.jpeg);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.gallery-decoration {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  object-fit: contain;
+  opacity: 0.08;
+}
+
+.gallery-decoration-top {
+  width: 150px;
+  height: 150px;
+  top: 115px;
+  left: 31%;
+  transform: rotate(-8deg);
+}
+
+.gallery-decoration-right {
+  width: 170px;
+  height: 170px;
+  top: 105px;
+  right: 4%;
+  transform: rotate(7deg);
+}
+
+.gallery-decoration-bottom {
+  width: 190px;
+  height: 190px;
+  bottom: 30px;
+  left: 22%;
+  transform: rotate(-5deg);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.gallery-title {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 120px;
+
+  text-align: center;
+
+  color: #1095b5;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.gallery-grid {
+  position: relative;
+  z-index: 2;
+
+  width: min(1160px, calc(100% - 100px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.08fr 0.92fr;
+
+  gap: 50px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT COLUMN
+========================================================= */
+
+.gallery-left {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   MAIN LEFT IMAGE
+========================================================= */
+
+.gallery-main-image {
+  width: 100%;
+  height: 495px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   LEFT SMALL IMAGES
+========================================================= */
+
+.gallery-small-images {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.gallery-small-images img {
+  width: 100%;
+  height: 270px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   RIGHT COLUMN
+========================================================= */
+
+.gallery-right {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   RIGHT TOP IMAGE
+========================================================= */
+
+.gallery-top-image {
+  width: 100%;
+  height: 260px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   RIGHT LARGE IMAGE
+========================================================= */
+
+.gallery-large-image {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  margin-top: 36px;
+}
+
+
+/* =========================================================
+   VIEW MORE BUTTON
+========================================================= */
+
+.gallery-view-more {
+  position: relative;
+  z-index: 3;
+
+  display: block;
+
+  width: 260px;
+  height: 80px;
+
+  margin: 36px auto 0;
+
+  padding: 0;
+
+  background: #ddf4f3;
+  color: #123c32;
+
+  border: 1.5px solid #111111;
+  border-radius: 9px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 27px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: background-color 0.15s ease;
+}
+
+.gallery-view-more:hover {
+  background: #d3eeec;
+}
+
+.gallery-view-more:focus-visible {
+  outline: 2px solid #1095b5;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LAPTOP
+   1024px - 1199px
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .gallery-section {
+    min-height: 1000px;
+    padding-top: 38px;
+  }
+
+  .gallery-title {
+    margin-bottom: 90px;
+    font-size: 52px;
+  }
+
+  .gallery-grid {
+    width: calc(100% - 70px);
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 30px;
+  }
+
+  .gallery-main-image {
+    height: 420px;
+  }
+
+  .gallery-small-images {
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .gallery-small-images img {
+    height: 220px;
+  }
+
+  .gallery-top-image {
+    height: 220px;
+  }
+
+  .gallery-large-image {
+    height: 430px;
+    margin-top: 30px;
+  }
+
+  .gallery-view-more {
+    width: 230px;
+    height: 70px;
+    margin-top: 30px;
+    font-size: 24px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1023px
+========================================================= */
+
+@media (max-width: 1023px) {
+
+  .gallery-section {
+    min-height: auto;
+    padding: 35px 0 45px;
+  }
+
+  .gallery-title {
+    margin-bottom: 70px;
+    font-size: 48px;
+  }
+
+  .gallery-grid {
+    width: calc(100% - 50px);
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+  }
+
+  .gallery-main-image {
+    height: 350px;
+  }
+
+  .gallery-small-images {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .gallery-small-images img {
+    height: 180px;
+  }
+
+  .gallery-top-image {
+    height: 180px;
+  }
+
+  .gallery-large-image {
+    height: 370px;
+    margin-top: 25px;
+  }
+
+  .gallery-view-more {
+    width: 220px;
+    height: 65px;
+    margin-top: 28px;
+    font-size: 22px;
+  }
+
+  .gallery-decoration {
+    opacity: 0.06;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .gallery-section {
+    min-height: auto;
+
+    padding: 35px 0 40px;
+
+    overflow: hidden;
+  }
+
+  .gallery-title {
+    margin: 0 0 45px;
+
+    padding: 0 15px;
+
+    font-size: 44px;
+    line-height: 1;
+  }
+
+  /*
+    Mobile order:
+    1. Arts & Crafts
+    2. Swimming
+    3. Face Painting
+    4. Classroom
+    5. Dance
+  */
+
+  .gallery-grid {
+    width: calc(100% - 28px);
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .gallery-left,
+  .gallery-right {
+    display: contents;
+  }
+
+  .gallery-main-image {
+    width: 100%;
+    height: 300px;
+
+    order: 1;
+
+    border-radius: 8px;
+  }
+
+  .gallery-top-image {
+    width: 100%;
+    height: 300px;
+
+    order: 2;
+
+    border-radius: 8px;
+  }
+
+  .gallery-small-images {
+    display: contents;
+  }
+
+  .gallery-small-images img:nth-child(1) {
+    width: 100%;
+    height: 280px;
+
+    order: 3;
+
+    border-radius: 8px;
+  }
+
+  .gallery-small-images img:nth-child(2) {
+    width: 100%;
+    height: 280px;
+
+    order: 4;
+
+    border-radius: 8px;
+  }
+
+  .gallery-large-image {
+    width: 100%;
+    height: 320px;
+
+    order: 5;
+
+    margin-top: 0;
+
+    border-radius: 8px;
+  }
+
+  .gallery-view-more {
+    width: 220px;
+    height: 65px;
+
+    margin-top: 30px;
+
+    font-size: 22px;
+  }
+
+  .gallery-decoration {
+    opacity: 0.055;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .gallery-section {
+    padding: 30px 0 35px;
+  }
+
+  .gallery-title {
+    margin-bottom: 35px;
+
+    font-size: 40px;
+  }
+
+  .gallery-grid {
+    width: calc(100% - 24px);
+
+    gap: 14px;
+  }
+
+  .gallery-main-image,
+  .gallery-top-image {
+    height: 230px;
+  }
+
+  .gallery-small-images img:nth-child(1),
+  .gallery-small-images img:nth-child(2) {
+    height: 230px;
+  }
+
+  .gallery-large-image {
+    height: 245px;
+  }
+
+  .gallery-view-more {
+    width: 200px;
+    height: 62px;
+
+    margin-top: 25px;
+
+    font-size: 21px;
+
+    border-radius: 8px;
+  }
+
+  .gallery-decoration {
+    opacity: 0.045;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .gallery-title {
+    font-size: 36px;
+  }
+
+  .gallery-main-image,
+  .gallery-top-image,
+  .gallery-small-images img:nth-child(1),
+  .gallery-small-images img:nth-child(2) {
+    height: 215px;
+  }
+
+  .gallery-large-image {
+    height: 225px;
+  }
+
+  .gallery-view-more {
+    width: 190px;
+    height: 58px;
+
+    font-size: 20px;
+  }
+
+}
+
+/* =========================================================
+   FINAL — GALLERY DESKTOP SIZING
+   MATCH SPECIAL PROGRAMS
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  /* HEADING — SAME AS SPECIAL PROGRAMS */
+  .gallery-title {
+    font-size: 50px !important;
+    margin-bottom: 85px !important;
+  }
+
+  /* MAIN LEFT IMAGE — SLIGHTLY SMALLER */
+  .gallery-main-image {
+    height: 460px !important;
+  }
+
+  /* LEFT SMALL IMAGES */
+  .gallery-small-images {
+    gap: 25px !important;
+    margin-top: 25px !important;
+  }
+
+  .gallery-small-images img {
+    height: 250px !important;
+  }
+
+  /* RIGHT TOP IMAGE */
+  .gallery-top-image {
+    height: 245px !important;
+  }
+
+  /* RIGHT LARGE IMAGE */
+  .gallery-large-image {
+    height: 465px !important;
+    margin-top: 30px !important;
+  }
+
+  /* VIEW MORE */
+  .gallery-view-more {
+    margin-top: 30px !important;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP — 1200px to 1439px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  /* SAME AS SPECIAL PROGRAMS */
+  .gallery-title {
+    font-size: 47px !important;
+    margin-bottom: 75px !important;
+  }
+
+  .gallery-main-image {
+    height: 410px !important;
+  }
+
+  .gallery-small-images {
+    gap: 22px !important;
+    margin-top: 22px !important;
+  }
+
+  .gallery-small-images img {
+    height: 220px !important;
+  }
+
+  .gallery-top-image {
+    height: 215px !important;
+  }
+
+  .gallery-large-image {
+    height: 415px !important;
+    margin-top: 27px !important;
+  }
+
+  .gallery-view-more {
+    margin-top: 28px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE — 1024px to 1199px
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  /* SAME AS SPECIAL PROGRAMS */
+  .gallery-title {
+    font-size: 43px !important;
+    margin-bottom: 65px !important;
+  }
+
+  .gallery-grid {
+    gap: 25px !important;
+  }
+
+  .gallery-main-image {
+    height: 390px !important;
+  }
+
+  .gallery-small-images {
+    gap: 18px !important;
+    margin-top: 20px !important;
+  }
+
+  .gallery-small-images img {
+    height: 200px !important;
+  }
+
+  .gallery-top-image {
+    height: 205px !important;
+  }
+
+  .gallery-large-image {
+    height: 395px !important;
+    margin-top: 25px !important;
+  }
+
+  .gallery-view-more {
+    margin-top: 25px !important;
+  }
+}
+/* =========================================================
+   VIEW MORE — SMALLER BUTTON
+========================================================= */
+
+@media (min-width: 1440px) {
+  .gallery-view-more {
+    width: 190px !important;
+    height: 58px !important;
+    font-size: 20px !important;
+    margin-top: 28px !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .gallery-view-more {
+    width: 180px !important;
+    height: 55px !important;
+    font-size: 19px !important;
+    margin-top: 26px !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .gallery-view-more {
+    width: 170px !important;
+    height: 52px !important;
+    font-size: 18px !important;
+    margin-top: 24px !important;
+    border-radius: 7px !important;
+  }
+}
+/* =========================================================
+   REMOVE LARGE GAP AFTER GALLERY
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .gallery-section {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 35px !important;
+  }
+
+}
